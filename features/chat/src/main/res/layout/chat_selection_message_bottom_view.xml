@@ -1,0 +1,1704 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/transparent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/close"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ScrollView
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/dp_50">
+
+            <LinearLayout
+                android:id="@+id/backView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/lnMessageLeft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/dp_16"
+                        android:visibility="gone"
+                        tools:ignore="RtlSymmetry">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/ctlAvatarLeft"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/imvAvatarLeft"
+                                    android:layout_width="@dimen/dp_32"
+                                    android:layout_height="@dimen/dp_32"
+                                    android:scaleType="centerCrop"
+                                    tools:ignore="TooDeepLayout" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:orientation="horizontal"
+                                android:paddingStart="@dimen/dp_8"
+                                tools:ignore="RtlSymmetry,UselessParent">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <RelativeLayout
+                                        android:id="@+id/rlMessageLeft"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:id="@+id/lnNameMedia"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:paddingBottom="@dimen/dp_4"
+                                            android:visibility="gone">
+
+                                            <vn.hitu.ntb.widget.AppTextView
+                                                android:id="@+id/nameMediaOutLine"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:background="@drawable/bg_name_user_chat"
+                                                android:paddingLeft="@dimen/dp_8"
+                                                android:paddingTop="@dimen/dp_2"
+                                                android:paddingRight="@dimen/dp_8"
+                                                android:paddingBottom="@dimen/dp_2"
+                                                android:textSize="@dimen/sp_12" />
+
+                                        </LinearLayout>
+
+                                        <RelativeLayout
+                                            android:id="@+id/rltAudio"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/lnNameMedia"
+                                            android:adjustViewBounds="true"
+                                            android:background="@drawable/bg_chat_group_left"
+                                            android:orientation="horizontal"
+                                            android:padding="@dimen/dp_2"
+                                            android:visibility="gone">
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:orientation="horizontal"
+                                                android:padding="@dimen/dp_8">
+
+                                                <ImageView
+                                                    android:id="@+id/btnPlayAudio"
+                                                    android:layout_width="@dimen/dp_32"
+                                                    android:layout_height="@dimen/dp_32" />
+
+                                                <ProgressBar
+                                                    android:id="@+id/vprogressbar"
+                                                    style="?android:attr/progressBarStyleHorizontal"
+                                                    android:layout_width="@dimen/dp_10"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_marginStart="@dimen/dp_16"
+                                                    android:paddingLeft="@dimen/dp_1"
+                                                    android:paddingTop="@dimen/dp_3"
+                                                    android:paddingRight="@dimen/dp_1"
+                                                    android:progress="75"
+                                                    android:progressDrawable="@drawable/vetical_progressbar" />
+
+                                                <ProgressBar
+                                                    android:id="@+id/vprogressbar1"
+                                                    style="?android:attr/progressBarStyleHorizontal"
+                                                    android:layout_width="@dimen/dp_10"
+                                                    android:layout_height="match_parent"
+                                                    android:paddingLeft="@dimen/dp_1"
+                                                    android:paddingTop="@dimen/dp_3"
+                                                    android:paddingRight="@dimen/dp_1"
+                                                    android:progress="40"
+                                                    android:progressDrawable="@drawable/vetical_progressbar" />
+
+                                                <ProgressBar
+                                                    android:id="@+id/vprogressbar2"
+                                                    style="?android:attr/progressBarStyleHorizontal"
+                                                    android:layout_width="@dimen/dp_10"
+                                                    android:layout_height="match_parent"
+                                                    android:paddingLeft="@dimen/dp_1"
+                                                    android:paddingTop="@dimen/dp_3"
+                                                    android:paddingRight="@dimen/dp_1"
+                                                    android:progress="55"
+                                                    android:progressDrawable="@drawable/vetical_progressbar" />
+
+                                                <Chronometer
+                                                    android:id="@+id/time_audio"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginStart="@dimen/dp_10"
+                                                    android:layout_marginEnd="@dimen/dp_8"
+                                                    android:countDown="true"
+                                                    android:textColor="@color/main_bg"
+                                                    android:textSize="@dimen/sp_17" />
+                                            </LinearLayout>
+
+                                        </RelativeLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/lnTextLeft"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/lnNameMedia"
+                                            android:layout_marginBottom="@dimen/dp_8"
+                                            android:background="@drawable/bg_chat_group_left"
+                                            android:orientation="vertical">
+
+                                            <vn.hitu.ntb.widget.AppTextView
+                                                android:id="@+id/nameMedia"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:inputType="textMultiLine|textNoSuggestions"
+                                                android:paddingStart="@dimen/dp_8"
+                                                android:paddingTop="@dimen/dp_8"
+                                                android:paddingEnd="@dimen/dp_8"
+                                                android:textColor="@color/gray_text_title"
+                                                android:textSize="@dimen/sp_12" />
+
+                                            <RelativeLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:background="@color/transparent"
+                                                android:orientation="vertical"
+                                                android:paddingTop="@dimen/dp_8">
+
+                                                <LinearLayout
+                                                    android:id="@+id/file"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:orientation="vertical"
+                                                    android:paddingStart="@dimen/dp_8"
+                                                    android:paddingEnd="@dimen/dp_8"
+                                                    android:visibility="gone">
+
+                                                    <LinearLayout
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:orientation="horizontal">
+
+                                                        <ImageView
+                                                            android:id="@+id/imvTypeFile"
+                                                            android:layout_width="@dimen/dp_24"
+                                                            android:layout_height="@dimen/dp_32"
+                                                            android:layout_gravity="center"
+                                                            android:src="@drawable/icon_file_word" />
+
+                                                        <vn.hitu.ntb.widget.AppTextView
+                                                            android:id="@+id/tvNameFile"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center"
+                                                            android:layout_marginStart="@dimen/dp_8"
+                                                            android:autoLink="web"
+                                                            android:clickable="false"
+                                                            android:duplicateParentState="true"
+                                                            android:ellipsize="marquee"
+                                                            android:focusable="false"
+                                                            android:inputType="textMultiLine"
+                                                            android:lineSpacingExtra="2dp"
+                                                            android:maxWidth="@dimen/dp_200"
+                                                            android:maxLines="2"
+                                                            android:minWidth="@dimen/dp_50"
+                                                            android:singleLine="false"
+                                                            android:textColor="@color/black"
+                                                            android:textColorLink="@color/blue_600"
+                                                            tools:ignore="TextViewEdits" />
+
+                                                        <ImageButton
+                                                            android:id="@+id/tvOpen"
+                                                            style="@style/ImageButtonStyleCustom"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginStart="@dimen/dp_16"
+                                                            android:src="@drawable/ic_download_line_circle_pressed_24" />
+
+                                                    </LinearLayout>
+
+                                                    <LinearLayout
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="@dimen/dp_8">
+
+                                                        <vn.hitu.ntb.widget.AppTextView
+                                                            android:id="@+id/tvTypeFile"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center"
+                                                            android:clickable="false"
+                                                            android:duplicateParentState="true"
+                                                            android:ellipsize="marquee"
+                                                            android:gravity="center"
+                                                            android:maxWidth="@dimen/dp_50"
+                                                            android:singleLine="true"
+                                                            android:textColor="@color/gray_text_title"
+                                                            android:textSize="@dimen/sp_12"
+                                                            app:textAllCaps="true" />
+
+                                                        <vn.hitu.ntb.widget.AppTextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center"
+                                                            android:layout_marginStart="@dimen/dp_3"
+                                                            android:layout_marginEnd="@dimen/dp_3"
+                                                            android:clickable="false"
+                                                            android:duplicateParentState="true"
+                                                            android:gravity="center"
+                                                            android:text="@string/dot"
+                                                            android:textColor="@color/gray_text_title"
+                                                            android:textSize="@dimen/sp_10" />
+
+                                                        <vn.hitu.ntb.widget.AppTextView
+                                                            android:id="@+id/tvSizeFile"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center"
+                                                            android:clickable="false"
+                                                            android:duplicateParentState="true"
+                                                            android:gravity="center"
+                                                            android:textColor="@color/gray_text_title"
+                                                            android:textSize="@dimen/sp_12"
+                                                            tools:ignore="RtlHardcoded" />
+                                                    </LinearLayout>
+
+                                                </LinearLayout>
+
+                                                <RelativeLayout
+                                                    android:id="@+id/rltLink"
+                                                    android:layout_width="@dimen/dp_270"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_below="@+id/rltMessageLeft"
+                                                    android:layout_marginTop="@dimen/dp_8"
+                                                    android:background="@color/transparent"
+                                                    android:visibility="gone">
+
+                                                    <LinearLayout
+                                                        android:id="@+id/lnNewFeedLinkPost"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:orientation="vertical"
+                                                        android:visibility="visible">
+
+                                                        <RelativeLayout
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center">
+
+                                                            <ImageView
+                                                                android:id="@+id/imvMediaThumbPost"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:maxHeight="@dimen/dp_240" />
+                                                        </RelativeLayout>
+
+                                                        <vn.hitu.ntb.widget.AppTextViewBold
+                                                            android:id="@+id/tvMediaTitlePost"
+                                                            style="@style/LinkTitle"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center_vertical"
+                                                            android:layout_marginStart="@dimen/dp_8"
+                                                            android:layout_marginEnd="@dimen/dp_8"
+                                                            android:clickable="false"
+                                                            android:ellipsize="end"
+                                                            android:inputType="textMultiLine|textNoSuggestions"
+                                                            android:longClickable="false"
+                                                            android:paddingTop="@dimen/dp_8" />
+
+                                                        <vn.hitu.ntb.widget.AppTextView
+                                                            android:id="@+id/tvMediaSubTitlePost"
+                                                            style="@style/LinkSubTitle"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center_vertical"
+                                                            android:layout_marginStart="@dimen/dp_8"
+                                                            android:layout_marginEnd="@dimen/dp_8"
+                                                            android:clickable="false"
+                                                            android:ellipsize="end"
+                                                            android:inputType="textMultiLine|textNoSuggestions"
+                                                            android:longClickable="false"
+                                                            android:paddingBottom="@dimen/dp_8"
+                                                            android:textColor="@color/black" />
+                                                    </LinearLayout>
+                                                </RelativeLayout>
+
+                                                <LinearLayout
+                                                    android:id="@+id/lnContact"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:maxWidth="@dimen/dp_300"
+                                                    android:minWidth="@dimen/dp_200"
+                                                    android:orientation="vertical"
+                                                    android:visibility="gone">
+
+                                                    <LinearLayout
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_margin="@dimen/dp_8"
+                                                        android:orientation="horizontal">
+
+                                                        <de.hdodenhof.circleimageview.CircleImageView
+                                                            android:id="@+id/avatarContact"
+                                                            android:layout_width="@dimen/dp_48"
+                                                            android:layout_height="@dimen/dp_48"
+                                                            android:src="@drawable/ic_user_default" />
+
+                                                        <LinearLayout
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginStart="@dimen/dp_8"
+                                                            android:orientation="vertical">
+
+                                                            <vn.hitu.ntb.widget.AppTextViewBold
+                                                                android:id="@+id/nameContact"
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:textColor="@color/black" />
+
+                                                            <vn.hitu.ntb.widget.AppTextViewBold
+                                                                android:id="@+id/phoneContact"
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_marginTop="@dimen/dp_8"
+                                                                android:drawableStart="@drawable/icn_csc_parsephone_contact"
+                                                                android:drawablePadding="@dimen/dp_8"
+                                                                android:textColor="@color/black" />
+                                                        </LinearLayout>
+                                                    </LinearLayout>
+
+                                                    <View
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="@dimen/dp_0_5"
+                                                        android:background="#ffe0e0e0" />
+
+                                                    <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="@dimen/dp_8"
+                                                        android:layout_marginBottom="@dimen/dp_8"
+                                                        android:orientation="horizontal">
+
+                                                        <LinearLayout
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center"
+                                                            android:layout_weight="1"
+                                                            android:gravity="center">
+
+                                                            <vn.hitu.ntb.widget.AppTextViewBold
+                                                                android:id="@+id/btnCall"
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="@string/call"
+                                                                android:textAllCaps="true"
+                                                                android:textColor="@color/main_bg"
+                                                                android:textSize="@dimen/sp_12" />
+                                                        </LinearLayout>
+
+                                                        <View
+                                                            android:layout_width="@dimen/dp_0_5"
+                                                            android:layout_height="match_parent"
+                                                            android:layout_marginTop="@dimen/dp_2"
+                                                            android:layout_marginBottom="@dimen/dp_2"
+                                                            android:background="#ffe0e0e0" />
+
+                                                        <LinearLayout
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="match_parent"
+                                                            android:layout_gravity="center"
+                                                            android:layout_weight="1"
+                                                            android:gravity="center">
+
+                                                            <vn.hitu.ntb.widget.AppTextViewBold
+                                                                android:id="@+id/btnMessage"
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:text="@string/message"
+                                                                android:textAllCaps="true"
+                                                                android:textColor="@color/main_bg"
+                                                                android:textSize="@dimen/sp_13" />
+                                                        </LinearLayout>
+                                                    </LinearLayout>
+
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:id="@+id/reply"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:orientation="vertical"
+                                                    android:visibility="gone">
+
+                                                    <LinearLayout
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:orientation="horizontal"
+                                                        android:paddingStart="@dimen/dp_8"
+                                                        android:paddingEnd="@dimen/dp_8"
+                                                        tools:ignore="RtlSymmetry">
+
+                                                        <View
+                                                            android:layout_width="@dimen/dp_3"
+                                                            android:layout_height="match_parent"
+                                                            android:background="@drawable/chat_reply_line" />
+
+                                                        <RelativeLayout
+                                                            android:id="@+id/rltMedia"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center"
+                                                            android:layout_marginStart="8dp">
+
+                                                            <LinearLayout
+                                                                android:id="@+id/lnCardView"
+                                                                android:layout_width="@dimen/dp_40"
+                                                                android:layout_height="@dimen/dp_40"
+                                                                android:visibility="visible">
+
+                                                                <androidx.cardview.widget.CardView
+                                                                    android:layout_width="wrap_content"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:background="@drawable/bg_image_pinned"
+                                                                    app:cardElevation="0dp">
+
+                                                                    <ImageView
+                                                                        android:id="@+id/reply_image"
+                                                                        android:layout_width="@dimen/dp_40"
+                                                                        android:layout_height="@dimen/dp_40"
+                                                                        android:adjustViewBounds="true"
+                                                                        android:scaleType="centerCrop" />
+                                                                </androidx.cardview.widget.CardView>
+
+
+                                                            </LinearLayout>
+
+                                                            <ImageView
+                                                                android:id="@+id/imvPlayMedia"
+                                                                android:layout_width="@dimen/dp_16"
+                                                                android:layout_height="@dimen/dp_16"
+                                                                android:layout_centerInParent="true"
+                                                                android:background="@drawable/ic_play_video" />
+                                                        </RelativeLayout>
+
+                                                        <LinearLayout
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center_vertical"
+                                                            android:layout_marginStart="@dimen/dp_8"
+                                                            android:gravity="center_vertical"
+                                                            android:orientation="vertical">
+
+                                                            <vn.hitu.ntb.widget.AppTextViewBold
+                                                                android:id="@+id/reply_name"
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:ellipsize="end"
+                                                                android:inputType="textMultiLine|textNoSuggestions"
+                                                                android:maxLines="1"
+                                                                android:textColor="@color/color_text_chat"
+                                                                android:textSize="@dimen/sp_14" />
+
+                                                            <com.aghajari.emojiview.view.AXEmojiTextView
+                                                                android:id="@+id/reply_text"
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:autoLink="web"
+                                                                android:clickable="false"
+                                                                android:ellipsize="end"
+                                                                android:imeOptions="flagNoExtractUi"
+                                                                android:inputType="textMultiLine|textNoSuggestions"
+                                                                android:lineSpacingExtra="@dimen/dp_3"
+                                                                android:maxWidth="@dimen/dp_230"
+                                                                android:maxLines="5"
+                                                                android:minWidth="@dimen/dp_90"
+                                                                android:textColor="@color/color_time_chat"
+                                                                android:textColorLink="@color/blue_600"
+                                                                app:emojiSize="@dimen/dp_20" />
+                                                        </LinearLayout>
+                                                    </LinearLayout>
+
+                                                    <LinearLayout
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:background="@color/transparent"
+                                                        android:orientation="vertical"
+                                                        android:paddingStart="@dimen/dp_8"
+                                                        android:paddingTop="@dimen/dp_8"
+                                                        android:paddingEnd="@dimen/dp_8">
+
+                                                        <com.aghajari.emojiview.view.AXEmojiTextView
+                                                            android:id="@+id/tvMessageReply"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:autoLink="web"
+                                                            android:clickable="false"
+                                                            android:imeOptions="flagNoExtractUi"
+                                                            android:inputType="textMultiLine|textNoSuggestions"
+                                                            android:lineSpacingExtra="@dimen/dp_3"
+                                                            android:longClickable="false"
+                                                            android:maxWidth="@dimen/dp_260"
+                                                            android:minWidth="@dimen/dp_90"
+                                                            android:textColor="@color/black"
+                                                            android:textColorLink="@color/blue_600"
+                                                            android:textSize="@dimen/sp_16"
+                                                            app:emojiSize="@dimen/dp_20" />
+                                                    </LinearLayout>
+                                                </LinearLayout>
+
+                                                <RelativeLayout
+                                                    android:id="@+id/rltMessageLeft"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:paddingStart="@dimen/dp_8"
+                                                    android:paddingEnd="@dimen/dp_8">
+
+                                                    <com.aghajari.emojiview.view.AXEmojiTextView
+                                                        android:id="@+id/tvMessageLeft"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:autoLink="web"
+                                                        android:clickable="false"
+                                                        android:imeOptions="flagNoExtractUi"
+                                                        android:inputType="textMultiLine|textNoSuggestions"
+                                                        android:lineSpacingExtra="@dimen/dp_3"
+                                                        android:longClickable="false"
+                                                        android:maxWidth="@dimen/dp_260"
+                                                        android:maxHeight="@dimen/dp_350"
+                                                        android:minWidth="@dimen/dp_90"
+                                                        android:singleLine="false"
+                                                        android:textColor="@color/black"
+                                                        android:textColorLink="@color/blue_600"
+                                                        android:textSize="@dimen/sp_16"
+                                                        android:visibility="visible"
+                                                        app:emojiSize="@dimen/dp_20" />
+                                                </RelativeLayout>
+
+                                            </RelativeLayout>
+
+                                            <LinearLayout
+                                                android:id="@+id/lnTimeLeft"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal"
+                                                android:paddingStart="@dimen/dp_8"
+                                                android:paddingEnd="@dimen/dp_8"
+                                                android:paddingBottom="@dimen/dp_8"
+                                                android:visibility="gone">
+
+                                                <vn.hitu.ntb.widget.AppTextView
+                                                    android:id="@+id/tvTimeLeft"
+                                                    style="@style/ChatTimeStyle"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:clickable="false"
+                                                    android:minWidth="@dimen/dp_12"
+                                                    android:textColor="@color/color_time_chat"
+                                                    android:textSize="@dimen/sp_12"
+                                                    android:visibility="visible" />
+                                            </LinearLayout>
+                                        </LinearLayout>
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/rlt_video"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:adjustViewBounds="true"
+                                        android:background="@drawable/selected_chat_left"
+                                        android:orientation="horizontal"
+                                        android:padding="@dimen/dp_2"
+                                        android:visibility="gone">
+
+                                        <LinearLayout
+                                            android:id="@+id/lnImageOne"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical"
+                                            android:visibility="visible"
+                                            app:layout_constraintDimensionRatio="1:1"
+                                            app:layout_constraintLeft_toLeftOf="parent"
+                                            app:layout_constraintRight_toRightOf="parent">
+
+                                            <androidx.cardview.widget.CardView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:background="@drawable/bg_chat_group_image"
+                                                app:cardCornerRadius="@dimen/dp_8"
+                                                app:cardElevation="0dp">
+
+                                                <ImageView
+                                                    android:id="@+id/imgOneOne"
+                                                    android:layout_width="@dimen/dp_160"
+                                                    android:layout_height="@dimen/dp_160"
+                                                    android:adjustViewBounds="true"
+                                                    android:scaleType="centerCrop" />
+
+                                            </androidx.cardview.widget.CardView>
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/lnImageFourMore"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:visibility="gone">
+
+                                            <androidx.cardview.widget.CardView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                app:cardBackgroundColor="@color/transparent"
+                                                app:cardCornerRadius="@dimen/dp_8"
+                                                app:cardElevation="0dp">
+
+                                                <androidx.recyclerview.widget.RecyclerView
+                                                    android:id="@+id/rcImgMore"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="@dimen/dp_300"
+                                                    tools:ignore="RtlHardcoded" />
+                                            </androidx.cardview.widget.CardView>
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lnTimeLeftOut"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_40"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:gravity="center_vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/tvTimeLeftOut"
+                                style="@style/ChatTimeStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/bg_time_text"
+                                android:paddingStart="@dimen/dp_8"
+                                android:paddingEnd="@dimen/dp_8"
+                                android:textColor="@color/white" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnMessageRight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="end"
+                        android:orientation="vertical"
+                        android:paddingEnd="@dimen/dp_16"
+                        android:visibility="gone"
+                        tools:ignore="RtlSymmetry">
+
+                        <RelativeLayout
+                            android:id="@+id/rLTextRight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:id="@+id/lnTextRight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/selected_item_chat"
+                                android:orientation="vertical"
+                                tools:ignore="UselessParent">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/transparent"
+                                    android:orientation="vertical"
+                                    android:paddingStart="@dimen/dp_8"
+                                    android:paddingTop="@dimen/dp_8"
+                                    android:paddingEnd="@dimen/dp_8">
+
+                                    <com.aghajari.emojiview.view.AXEmojiTextView
+                                        android:id="@+id/tvMessageRight"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:autoLink="web"
+                                        android:clickable="false"
+                                        android:imeOptions="flagNoExtractUi"
+                                        android:inputType="textMultiLine|textNoSuggestions"
+                                        android:lineSpacingExtra="3.0dip"
+                                        android:longClickable="false"
+                                        android:maxWidth="@dimen/dp_260"
+                                        android:minWidth="@dimen/dp_90"
+                                        android:singleLine="false"
+                                        android:textColor="@color/black"
+                                        android:textColorLink="@color/blue_600"
+                                        android:textSize="@dimen/sp_16"
+                                        app:emojiSize="@dimen/dp_20" />
+
+                                </LinearLayout>
+
+                                <vn.hitu.ntb.widget.AppTextView
+                                    android:id="@+id/tvTimeRightText"
+                                    style="@style/ChatTimeStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:minWidth="@dimen/dp_12"
+                                    android:paddingStart="@dimen/dp_8"
+                                    android:paddingEnd="@dimen/dp_8"
+                                    android:paddingBottom="@dimen/dp_8"
+                                    android:textColor="@color/color_time_chat"
+                                    android:textSize="@dimen/sp_12"
+                                    android:visibility="visible" />
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rlt_video_Right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:background="@drawable/transparent"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/dp_2"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:id="@+id/lnImageOneRight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="visible"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/bg_chat_group_left"
+                                    app:cardCornerRadius="@dimen/dp_8"
+                                    app:cardElevation="0dp">
+
+                                    <ImageView
+                                        android:id="@+id/imgOneOneRight"
+                                        android:layout_width="@dimen/dp_160"
+                                        android:layout_height="@dimen/dp_160"
+                                        android:adjustViewBounds="true"
+                                        android:scaleType="centerCrop" />
+
+                                </androidx.cardview.widget.CardView>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lnImageFourMoreRight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:visibility="gone"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:cardBackgroundColor="@color/transparent"
+                                    app:cardCornerRadius="@dimen/dp_8"
+                                    app:cardElevation="0dp">
+
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/rcImgMoreRight"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/dp_300"
+                                        tools:ignore="RtlHardcoded" />
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/replyRight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_8"
+                            android:background="@drawable/selected_item_chat"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@color/transparent"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:paddingStart="@dimen/dp_8"
+                                    android:paddingTop="@dimen/dp_8"
+                                    android:paddingEnd="@dimen/dp_8"
+                                    android:paddingBottom="0dp"
+                                    tools:ignore="RtlSymmetry">
+
+                                    <View
+                                        android:layout_width="@dimen/dp_3"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/chat_reply_line" />
+
+                                    <RelativeLayout
+                                        android:id="@+id/rltMediaRight"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginStart="@dimen/dp_8">
+
+                                        <LinearLayout
+                                            android:id="@+id/lnCardViewRight"
+                                            android:layout_width="@dimen/dp_40"
+                                            android:layout_height="@dimen/dp_40"
+                                            android:visibility="visible">
+
+                                            <androidx.cardview.widget.CardView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:background="@drawable/bg_image_pinned"
+                                                app:cardElevation="0dp">
+
+                                                <ImageView
+                                                    android:id="@+id/reply_image_right"
+                                                    android:layout_width="@dimen/dp_40"
+                                                    android:layout_height="@dimen/dp_40"
+                                                    android:adjustViewBounds="true"
+                                                    android:scaleType="centerCrop" />
+                                            </androidx.cardview.widget.CardView>
+
+
+                                        </LinearLayout>
+
+                                        <ImageView
+                                            android:id="@+id/imvPlayMediaRight"
+                                            android:layout_width="@dimen/dp_16"
+                                            android:layout_height="@dimen/dp_16"
+                                            android:layout_centerInParent="true"
+                                            android:background="@drawable/ic_play_video" />
+                                    </RelativeLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginStart="@dimen/dp_8"
+                                        android:gravity="center_vertical"
+                                        android:orientation="vertical">
+
+                                        <vn.hitu.ntb.widget.AppTextViewBold
+                                            android:id="@+id/reply_name_right"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:ellipsize="end"
+                                            android:inputType="textMultiLine|textNoSuggestions"
+                                            android:maxLines="1"
+                                            android:textColor="@color/color_text_chat" />
+
+                                        <vn.hitu.ntb.widget.AppTextView
+                                            android:id="@+id/reply_text_right"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:autoLink="web"
+                                            android:clickable="false"
+                                            android:ellipsize="end"
+                                            android:imeOptions="flagNoExtractUi"
+                                            android:inputType="textMultiLine|textNoSuggestions"
+                                            android:lineSpacingExtra="@dimen/dp_3"
+                                            android:maxWidth="@dimen/dp_230"
+                                            android:maxLines="5"
+                                            android:minWidth="@dimen/dp_90"
+                                            android:textColor="@color/color_time_chat"
+                                            android:textColorLink="@color/blue_600"
+                                            app:emojiSize="@dimen/dp_20" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/transparent"
+                                    android:orientation="vertical"
+                                    android:paddingStart="@dimen/dp_8"
+                                    android:paddingTop="@dimen/dp_8"
+                                    android:paddingEnd="@dimen/dp_8">
+
+                                    <vn.hitu.ntb.widget.AppTextView
+                                        android:id="@+id/tvMessageReplyRight"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:autoLink="web"
+                                        android:clickable="false"
+                                        android:imeOptions="flagNoExtractUi"
+                                        android:inputType="textMultiLine|textNoSuggestions"
+                                        android:lineSpacingExtra="@dimen/dp_3"
+                                        android:longClickable="false"
+                                        android:maxWidth="@dimen/dp_260"
+                                        android:minWidth="@dimen/dp_90"
+                                        android:textColor="@color/black"
+                                        android:textColorLink="@color/blue_600"
+                                        android:textSize="@dimen/sp_16"
+                                        app:emojiSize="20dp" />
+                                </LinearLayout>
+
+                                <vn.hitu.ntb.widget.AppTextView
+                                    android:id="@+id/tvTimeRightReply"
+                                    style="@style/ChatTimeStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:minWidth="@dimen/sp_12"
+                                    android:paddingStart="@dimen/dp_8"
+                                    android:paddingEnd="@dimen/dp_8"
+                                    android:paddingBottom="@dimen/dp_8"
+                                    android:textColor="@color/color_time_chat"
+                                    android:textSize="@dimen/sp_12"
+                                    android:visibility="visible" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lnLinkRight"
+                            android:layout_width="@dimen/dp_270"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_chat_group_right"
+                            android:visibility="gone">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:orientation="vertical">
+
+                                <com.aghajari.emojiview.view.AXEmojiTextView
+                                    android:id="@id/tvMessageLink"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:autoLink="web"
+                                    android:clickable="false"
+                                    android:imeOptions="flagNoExtractUi"
+                                    android:inputType="textMultiLine|textNoSuggestions"
+                                    android:lineSpacingExtra="@dimen/dp_3"
+                                    android:maxWidth="@dimen/dp_260"
+                                    android:minWidth="@dimen/dp_65"
+                                    android:padding="@dimen/dp_8"
+                                    android:singleLine="false"
+                                    android:textColor="@color/color_text_chat"
+                                    android:textColorLink="@color/blue_600"
+                                    android:textSize="@dimen/sp_16"
+                                    app:emojiSize="@dimen/dp_20" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tvMessageLink"
+                                    android:orientation="vertical">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/transparent">
+
+                                        <LinearLayout
+                                            android:id="@+id/lnNewFeedLinkPostRight"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical"
+                                            android:visibility="visible">
+
+                                            <RelativeLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center">
+
+                                                <ImageView
+                                                    android:id="@+id/imvMediaThumbPostRight"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:maxHeight="@dimen/dp_240" />
+                                            </RelativeLayout>
+
+                                            <vn.hitu.ntb.widget.AppTextViewBold
+                                                android:id="@+id/tvMediaTitlePostRight"
+                                                style="@style/LinkTitle"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginStart="@dimen/dp_8"
+                                                android:layout_marginEnd="@dimen/dp_8"
+                                                android:clickable="false"
+                                                android:ellipsize="end"
+                                                android:inputType="textMultiLine|textNoSuggestions"
+                                                android:longClickable="false"
+                                                android:paddingTop="@dimen/dp_8" />
+
+                                            <vn.hitu.ntb.widget.AppTextView
+                                                android:id="@+id/tvMediaSubTitlePostRight"
+                                                style="@style/LinkSubTitle"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginStart="@dimen/dp_8"
+                                                android:layout_marginEnd="@dimen/dp_8"
+                                                android:clickable="false"
+                                                android:ellipsize="end"
+                                                android:inputType="textMultiLine|textNoSuggestions"
+                                                android:longClickable="false"
+                                                android:textColor="@color/black" />
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+
+                                    <TextView
+                                        android:id="@+id/tvTimeRightLink"
+                                        style="@style/ChatTimeStyle"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:clickable="false"
+                                        android:minWidth="@dimen/dp_12"
+                                        android:padding="@dimen/dp_8"
+                                        android:textColor="@color/color_time_chat"
+                                        android:textSize="@dimen/sp_12"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lnFileRight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_chat_group_right"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dp_8"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/imvTypeFileRight"
+                                    android:layout_width="@dimen/dp_24"
+                                    android:layout_height="@dimen/dp_32"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/icon_file_word" />
+
+                                <vn.hitu.ntb.widget.AppTextView
+                                    android:id="@+id/tvNameFileRight"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="@dimen/dp_8"
+                                    android:autoLink="web"
+                                    android:clickable="false"
+                                    android:duplicateParentState="true"
+                                    android:focusable="false"
+                                    android:inputType="textMultiLine"
+                                    android:lineSpacingExtra="@dimen/dp_2"
+                                    android:maxWidth="@dimen/dp_200"
+                                    android:minWidth="@dimen/dp_50"
+                                    android:singleLine="false"
+                                    android:textColor="@color/black"
+                                    android:textColorLink="@color/blue_600"
+                                    tools:ignore="TextViewEdits" />
+
+                                <ImageButton
+                                    android:id="@+id/tvOpenRight"
+                                    style="@style/ImageButtonStyleCustom"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/dp_16"
+                                    android:src="@drawable/ic_download_line_circle_pressed_24" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_8">
+
+                                <vn.hitu.ntb.widget.AppTextView
+                                    android:id="@+id/tvTypeFileRight"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:clickable="false"
+                                    android:duplicateParentState="true"
+                                    android:gravity="center"
+                                    android:textColor="@color/gray_text_title"
+                                    android:textSize="@dimen/sp_12"
+                                    app:textAllCaps="true" />
+
+                                <vn.hitu.ntb.widget.AppTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="@dimen/dp_3"
+                                    android:layout_marginEnd="@dimen/dp_3"
+                                    android:clickable="false"
+                                    android:duplicateParentState="true"
+                                    android:gravity="center"
+                                    android:text="@string/dot"
+                                    android:textColor="@color/gray_text_title"
+                                    android:textSize="@dimen/sp_10" />
+
+                                <vn.hitu.ntb.widget.AppTextView
+                                    android:id="@+id/tvSizeFileRight"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:clickable="false"
+                                    android:duplicateParentState="true"
+                                    android:gravity="center"
+                                    android:textColor="@color/gray_text_title"
+                                    android:textSize="@dimen/sp_12"
+                                    tools:ignore="RtlHardcoded" />
+                            </LinearLayout>
+
+                            <vn.hitu.ntb.widget.AppTextView
+                                android:id="@+id/tvTimeRightFile"
+                                style="@style/ChatTimeStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="false"
+                                android:minWidth="@dimen/dp_12"
+                                android:textColor="@color/color_time_chat"
+                                android:textSize="@dimen/sp_12"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/lnContactRight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_chat_group_right"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:maxWidth="@dimen/dp_300"
+                                android:minWidth="@dimen/dp_200"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/dp_8"
+                                    android:orientation="horizontal">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:id="@+id/avatarContactRight"
+                                        android:layout_width="@dimen/dp_48"
+                                        android:layout_height="@dimen/dp_48"
+                                        android:src="@drawable/ic_user_default" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/dp_48"
+                                        android:orientation="vertical">
+
+                                        <vn.hitu.ntb.widget.AppTextViewBold
+                                            android:id="@+id/nameContactRight"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/black" />
+
+                                        <vn.hitu.ntb.widget.AppTextViewBold
+                                            android:id="@+id/phoneContactRight"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/dp_8"
+                                            android:drawableStart="@drawable/icn_csc_parsephone_contact"
+                                            android:drawablePadding="@dimen/dp_8"
+                                            android:textColor="@color/black" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dp_0_5"
+                                    android:background="#ffe0e0e0" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_8"
+                                    android:layout_marginBottom="@dimen/dp_8"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1"
+                                        android:gravity="center">
+
+                                        <vn.hitu.ntb.widget.AppTextViewBold
+                                            android:id="@+id/btnCallRight"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/call"
+                                            android:textAllCaps="true"
+                                            android:textColor="@color/main_bg"
+                                            android:textSize="@dimen/sp_12" />
+                                    </LinearLayout>
+
+                                    <View
+                                        android:layout_width="@dimen/dp_0_5"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="@dimen/dp_2"
+                                        android:layout_marginBottom="@dimen/dp_2"
+                                        android:background="#ffe0e0e0" />
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1"
+                                        android:gravity="center">
+
+                                        <vn.hitu.ntb.widget.AppTextViewBold
+                                            android:id="@+id/btnMessageRight"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/message"
+                                            android:textAllCaps="true"
+                                            android:textColor="@color/main_bg"
+                                            android:textSize="@dimen/sp_13" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rltRightAudio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:id="@+id/lnAudio"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/selected_item_chat"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:padding="@dimen/dp_8">
+
+                                    <ImageView
+                                        android:id="@+id/btnPlayAudioRight"
+                                        android:layout_width="@dimen/dp_32"
+                                        android:layout_height="@dimen/dp_32" />
+
+                                    <ProgressBar
+                                        android:id="@+id/vprogressbarRight"
+                                        style="?android:attr/progressBarStyleHorizontal"
+                                        android:layout_width="@dimen/dp_10"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginStart="@dimen/dp_16"
+                                        android:paddingLeft="@dimen/dp_1"
+                                        android:paddingTop="@dimen/dp_3"
+                                        android:paddingRight="@dimen/dp_1"
+                                        android:progress="75"
+                                        android:progressDrawable="@drawable/vetical_progressbar" />
+
+                                    <ProgressBar
+                                        android:id="@+id/vprogressbar1Right"
+                                        style="?android:attr/progressBarStyleHorizontal"
+                                        android:layout_width="@dimen/dp_10"
+                                        android:layout_height="match_parent"
+                                        android:paddingLeft="@dimen/dp_1"
+                                        android:paddingTop="@dimen/dp_3"
+                                        android:paddingRight="@dimen/dp_1"
+                                        android:progress="40"
+                                        android:progressDrawable="@drawable/vetical_progressbar" />
+
+                                    <ProgressBar
+                                        android:id="@+id/vprogressbar2Right"
+                                        style="?android:attr/progressBarStyleHorizontal"
+                                        android:layout_width="@dimen/dp_10"
+                                        android:layout_height="match_parent"
+                                        android:paddingLeft="@dimen/dp_1"
+                                        android:paddingTop="@dimen/dp_3"
+                                        android:paddingRight="@dimen/dp_1"
+                                        android:progress="55"
+                                        android:progressDrawable="@drawable/vetical_progressbar" />
+
+                                    <Chronometer
+                                        android:id="@+id/time_audioRight"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/dp_10"
+                                        android:layout_marginEnd="@dimen/dp_8"
+                                        android:countDown="true"
+                                        android:textColor="@color/main_bg"
+                                        android:textSize="@dimen/sp_17" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lnTimeRightOut"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <vn.hitu.ntb.widget.AppTextView
+                                android:id="@+id/tvTimeRightOut"
+                                style="@style/ChatTimeStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/bg_time_text"
+                                android:paddingStart="@dimen/dp_8"
+                                android:paddingEnd="@dimen/dp_8"
+                                android:textColor="@color/white" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/dp_8"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:layout_marginEnd="@dimen/dp_8"
+                            android:layout_marginBottom="@dimen/dp_4"
+                            android:layout_weight="1"
+                            android:background="@drawable/reaction_popup_shadow"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageButton
+                                android:id="@+id/like_item"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/transparent"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:paddingStart="@dimen/dp_16"
+                                android:paddingTop="@dimen/dp_8"
+                                android:paddingBottom="@dimen/dp_8"
+                                android:src="@drawable/ic_like"
+                                tools:ignore="ContentDescription,NestedWeights" />
+
+                            <ImageButton
+                                android:id="@+id/love_item"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/transparent"
+                                android:gravity="center"
+                                android:padding="@dimen/dp_8"
+                                android:src="@drawable/ic_heart" />
+
+                            <ImageButton
+                                android:id="@+id/smile_item"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/transparent"
+                                android:gravity="center"
+                                android:padding="@dimen/dp_8"
+                                android:src="@drawable/ic_smile"
+                                tools:ignore="ContentDescription" />
+
+                            <ImageButton
+                                android:id="@+id/wow_item"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/transparent"
+                                android:gravity="center"
+                                android:padding="@dimen/dp_8"
+                                android:src="@drawable/ic_wow" />
+
+                            <ImageButton
+                                android:id="@+id/angry_item"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/transparent"
+                                android:gravity="center"
+                                android:padding="@dimen/dp_8"
+                                android:src="@drawable/ic_angry" />
+
+                            <ImageButton
+                                android:id="@+id/sad_item"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/transparent"
+                                android:gravity="center"
+                                android:paddingStart="@dimen/dp_8"
+                                android:paddingTop="@dimen/dp_8"
+                                android:paddingEnd="@dimen/dp_16"
+                                android:paddingBottom="@dimen/dp_8"
+                                android:src="@drawable/ic_sad" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/revokeReaction"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:layout_marginEnd="@dimen/dp_8"
+                            android:layout_marginBottom="@dimen/dp_4"
+                            android:background="@drawable/ic_revoke_reaction"
+                            android:orientation="horizontal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_8"
+                        android:background="@drawable/bg_border_reaction_popup_chat_white"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:baselineAligned="false"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center_vertical"
+                            android:minHeight="@dimen/dp_48"
+                            android:orientation="horizontal"
+                            android:paddingTop="@dimen/dp_8"
+                            android:paddingBottom="@dimen/dp_8">
+
+                            <LinearLayout
+                                android:id="@+id/btn_reply"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_32"
+                                    android:layout_height="@dimen/dp_32"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/ic_menu_reply" />
+
+                                <vn.hitu.ntb.widget.AppTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/reply" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/btn_share"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_32"
+                                    android:layout_height="@dimen/dp_32"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/ic_menu_share" />
+
+                                <vn.hitu.ntb.widget.AppTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/share_my_chat" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/btn_pinned"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_32"
+                                    android:layout_height="@dimen/dp_32"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/ic_menu_newtopic" />
+
+                                <vn.hitu.ntb.widget.AppTextView
+                                    android:id="@+id/tv_btn_delete"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/pin_my_chat" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:baselineAligned="false"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center_vertical"
+                            android:minHeight="@dimen/dp_48"
+                            android:orientation="horizontal"
+                            android:paddingTop="@dimen/dp_8"
+                            android:paddingBottom="@dimen/dp_8">
+
+                            <LinearLayout
+                                android:id="@+id/btn_information"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_32"
+                                    android:layout_height="@dimen/dp_32"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/ic_menu_info" />
+
+                                <vn.hitu.ntb.widget.AppTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/information" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/btn_copy"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/imvCopy"
+                                    android:layout_width="@dimen/dp_32"
+                                    android:layout_height="@dimen/dp_32"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/ic_menu_copy" />
+
+                                <vn.hitu.ntb.widget.AppTextView
+                                    android:id="@+id/tvCopy"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/copy_my_chat" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/btn_revoke"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_32"
+                                    android:layout_height="@dimen/dp_32"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/ic_menu_recall" />
+
+                                <vn.hitu.ntb.widget.AppTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/revoke_my_chat" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+</LinearLayout>

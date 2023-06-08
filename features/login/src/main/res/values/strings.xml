@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="forgot_password_question_mark" translatable="false">Bạn quên mật khẩu?</string>
+    <string name="go_to_login" translatable="false">Trở về đăng nhập</string>
+    <string name="get_otp" translatable="false">Nhận mã OTP</string>
+    <string name="phone" translatable="false">Số điện thoại</string>
+    <string name="error_phone" translatable="false">* Số điện thoại tối thiểu từ 10 đến 11 </string>
+    <string name="error_birthday" translatable="false">* Ngày sinh không lớn hơn ngày hiện tại</string>
+    <string name="error_name" translatable="false">* Tên tài khoản tối thiểu từ 2 đến 50 ký tự</string>
+    <string name="error_password" translatable="false">* Mật khẩu từ 4 đến 8 ký tự</string>
+    <string name="error_set_password" translatable="false">Mật khẩu từ 4 đến 8 ký tự</string>
+    <string name="password" translatable="false">Mật khẩu </string>
+    <string name="set_password" translatable="false">Cập nhật mật khẩu</string>
+    <string name="set_password_successful" translatable="false">Đặt lại mật khẩu thành công</string>
+    <string name="login" translatable="false">Đăng nhập</string>
+    <string name="note_no_account" translatable="false">Bạn chưa có tài khoản?</string>
+    <string name="register" translatable="false">Tạo tài khoản mới</string>
+    <string name="register_successful" translatable="false">Đăng ký thành công</string>
+    <string name="hint_last_name_member" translatable="false">Họ và tên</string>
+    <string name="choose_birthday" translatable="false">Ngày sinh</string>
+    <string name="gender" translatable="false">Giới tính</string>
+    <string name="male" translatable="false">Nam</string>
+    <string name="female" translatable="false">Nữ</string>
+    <string name="enter_password" translatable="false">Nhập mật khẩu mới</string>
+    <string name="retype_password" translatable="false">Nhập lại mật khẩu mới</string>
+    <string name="check_valid_birthday_false" translatable="false">Ngày sinh không được lớn hơn ngày hiện tại</string>
+    <string name="check_valid_rules_false" translatable="false">Vui lòng đồng ý với Chính sách bảo mật và Điều khoản sử dụng của Aloline</string>
+    <string name="check_valid_gender_false" translatable="false">Vui lòng chọn giới tính</string>
+    <string name="check_valid_phone_less_than_ten" translatable="false">Số điện thoại không thể ít hơn 10 kí tự, vui lòng nhập lại</string>
+    <string name="check_valid_password_minimum" translatable="false">Mật khẩu tối thiểu 4 đến 8 ký tự</string>
+    <string name="check_valid_retype_password_false" translatable="false">Mật khẩu nhập lại không khớp</string>
+    <string name="avatar_is_empty" translatable="false">Vui lòng chọn ảnh đại diện</string>
+    <string name="biometric_title" translatable="false">TouchID cho Aloline</string>
+    <string name="biometric_subtitle" translatable="false">Đăng nhập bằng thông tin xác thực sinh trắc học của bạn</string>
+    <string name="biometric_negative_button_text" translatable="false">Sử dụng mật khẩu</string>
+    <string name="update_user_info" translatable="false" tools:ignore="ExtraTranslation">Cập nhật thông tin cá nhân</string>
+    <string name="complete" translatable="false">Hoàn thành</string>
+    <string name="enter_otp" translatable="false">Nhập mã OTP</string>
+    <string name="your_code_will_be_sent_in" translatable="false">Mã của bạn sẽ được gửi trong</string>
+    <string name="click_here_to_send_otp_again" translatable="false">Nhấn vào đây để gửi lại mã OTP</string>
+    <string name="did_not_receive_otp" translatable="false">Không nhận được OTP ?</string>
+    <string name="content_otp" translatable="false">Một OTP đã được gửi qua SMS tới \n điện thoại của bạn, hãy mở tin nhắn điện thoại của bạn để xem và nhập OTP</string>
+    <string name="change_password" translatable="false">Thay đổi mật khẩu</string>
+    <string name="current_password" translatable="false">Nhập mật khẩu hiện tại</string>
+    <string name="current_password_alike" translatable="false">Mật khẩu mới không được trùng với mật khẩu hiện tại</string>
+    <string name="input_new_password" translatable="false">Nhập mật khẩu mới</string>
+    <string name="input_re_password" translatable="false">Nhập lại mật khẩu mới</string>
+    <string name="update_password" translatable="false">Cập nhật mật khẩu</string>
+    <string name="password_not_match" translatable="false">Mật khẩu nhập lại không khớp</string>
+    <string name="current_password_not_match" translatable="false">Mật khẩu hiện tại không chính xác.</string>
+    <string name="successfully_change_password" translatable="false">Bạn đã đổi mật khẩu thành công</string>
+    <string name="policy_title" translatable="false">Đồng ý với Chính sách bảo mật và Điều khoản sử dụng của aloLINE</string>
+    <string name="policy" translatable="false">Chan sách bảo mật</string>
+    <string name="terms_of_use" translatable="false">Điều khoản sử dụng</string>
+    <string name="authentication_failed" translatable="false">Quá trình xác thực đã thất bại</string>
+    <string name="otp_input_number_max" translatable="false">Bạn đã nhập quá số lần quy định</string>
+    <string name="content_signup" translatable="false">Don\'t you have an account?</string>
+    <string name="signup" translatable="false">Signup now</string>
+    <string name="sign_in" translatable="false">Sign in</string>
+    <string name="remember_me" translatable="false">Remember me</string>
+    <string name="forgot_password" translatable="false">Forgot password?</string>
+    <string name="mail_hint">admin@gmail.com</string>
+    <string name="email">Email</string>
+    <string name="sign_in_to_continue_to_chatvia17">Sign in to continue to ChatHITU</string>
+    <string name="title_sign_in">Sign In</string>
+    <string name="chatvia17">ChatHITU</string>
+    <string name="hide">*********</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="get_your_chatvia_account_now">Get your ChatHITU account now</string>
+    <string name="username">Username</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="sign_up">Sign up</string>
+    <string name="already_have_an_account">Already have an account ?</string>
+    <string name="signin">Signin</string>
+    <string name="done">Done</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="invalid_password">Invalid password</string>
+    <string name="invalid_email">Invalid email</string>
+    <string name="login_success">Login seccessful.</string>
+    <string name="login_failed">Authentication failed.</string>
+</resources>

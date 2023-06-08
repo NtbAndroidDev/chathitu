@@ -1,0 +1,33 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="description_place_image" translatable="false">A photo of the selected place</string>
+    <string name="agree" translatable="false">Đồng ý</string>
+    <string name="text_agree" translatable="false">ĐÃ LÀ BẠN BÈ</string>
+    <string name="refuse" translatable="false">Từ chối</string>
+    <string name="text_refuse" translatable="false">Đã từ chối kết bạn</string>
+    <string name="recall_notify" translatable="false" tools:ignore="ExtraTranslation">Đã thu hồi kết bạn</string>
+    <string name="recall" translatable="false">Thu hồi</string>
+    <string name="more_all" translatable="false">Xem tất cả</string>
+    <string name="all" translatable="false">Tất cả</string>
+    <string name="not_friend" translatable="false">Chưa là bạn</string>
+    <string name="just_visited" translatable="false">Mới truy cập</string>
+    <string name="request_friend" translatable="false">LỜI MỜI KẾT BẠN</string>
+
+    <string name="received" translatable="false">Đã nhận</string>
+    <string name="send" translatable="false">Đã gửi</string>
+    <string name="update" translatable="false">Cập nhật</string>
+    <string name="phone_book" translatable="false">Đồng bộ với Danh bạ trên thiết bị</string>
+    <string name="hint_phone_book" translatable="false">Cập nhật gần nhất:</string>
+    <string name="name_alo_line" translatable="false">Tên aloLINE:</string>
+    <string name="there_are" translatable="false">Có</string>
+    <string name="mutual_friend" translatable="false">bạn chung</string>
+    <string name="title_phone_book" translatable="false">Danh bạ máy</string>
+    <string name="contact_alo_line" translatable="false">Các liên hệ có dùng aloLINE</string>
+    <string name="icon_new" translatable="false">Mới</string>
+    <string name="permission_contact" translatable="false">Vui lòng mở cài đặt, Chọn quyền và bật ON mục danh bạ aloLINE</string>
+    <string name="empty_contact" translatable="false">Cập nhật danh bạ giúp tìm kiếm và liên lạc với bạn bè dễ dàng hơn. aloLINE cam kết dữ liệu của bạn sẽ được mã hóa và bảo mật tuyệt đối</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="calls">Calls</string>
+
+
+</resources>

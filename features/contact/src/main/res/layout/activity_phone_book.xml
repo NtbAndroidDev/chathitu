@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.activity.PhoneBookActivity">
+
+        <com.hjq.bar.TitleBar
+            android:id="@+id/headerTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_bg"
+            app:leftIcon="@drawable/ic_back_white"
+            app:lineDrawable="@color/color_line_header"
+            app:lineSize="0dp"
+            app:title="@string/title_phone_book"
+            app:titleColor="@color/white"
+            app:titleSize="@dimen/sp_14" />
+
+        <com.scwang.smart.refresh.layout.SmartRefreshLayout
+            android:id="@+id/srlContact"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/itemEmpty"
+                    layout="@layout/item_empty_contact"
+                    android:visibility="visible"
+
+
+                    />
+
+                <LinearLayout
+                    android:id="@+id/lnContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+
+
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/lnUpdate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/gray_100"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp_8">
+
+                        <ImageButton
+                            android:id="@+id/btnUpdate"
+                            android:layout_width="@dimen/dp_48"
+                            android:layout_height="@dimen/dp_48"
+                            android:background="@drawable/bg_sync"
+                            android:src="@drawable/ic_sync" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_16"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <vn.hitu.ntb.widget.AppTextViewBold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/phone_book"
+                                android:textColor="@color/blue_700"
+                                android:textSize="@dimen/sp_16" />
+
+                            <vn.hitu.ntb.widget.AppTextViewBold
+                                android:id="@+id/tvUpdateAt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/hint_phone_book"
+                                android:textColor="@color/gray_600"
+                                android:textSize="@dimen/sp_12" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SearchView
+                        android:id="@+id/svSaveBranch"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_32"
+                        android:layout_marginHorizontal="@dimen/dp_8"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:background="@drawable/bg_search"
+                        android:gravity="center_vertical"
+                        android:theme="@style/SearchView"
+                        app:closeIcon="@drawable/close_icon"
+                        app:iconifiedByDefault="false"
+                        app:queryBackground="@android:color/transparent"
+                        app:queryHint="@string/search"
+                        app:searchIcon="@drawable/ic_search" />
+
+                    <include
+                        android:id="@+id/itemRcv"
+                        layout="@layout/item_phone_book" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+    </LinearLayout>
+</layout>

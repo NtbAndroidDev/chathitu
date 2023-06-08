@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/dp_12">
+
+
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dp_8"
+            android:textSize="@dimen/sp_14"
+            android:visibility="visible"
+            app:shape_textColor="@color/orange_chat_view_page"
+            app:shape_textSelectedColor="@color/black"
+            tools:text="@string/send" />
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/tvAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_bg_amount_on"
+            android:paddingHorizontal="@dimen/dp_2"
+            android:layout_marginStart="@dimen/dp_8"
+            android:gravity="center"
+            android:textSize="@dimen/sp_12"
+            android:visibility="visible"
+            app:shape_textColor="@color/main_bg"
+            app:shape_textSelectedColor="@color/black"
+            />
+
+
+    </LinearLayout>
+</layout>

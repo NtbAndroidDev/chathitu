@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.activity.QrGroupActivity">
+
+        <com.hjq.bar.TitleBar
+            android:id="@+id/tbHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_bg"
+            android:elevation="0dp"
+            app:lineVisible="false"
+            app:title="@string/title_qr_group"
+            app:titleColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/ivQR"
+            android:layout_width="@dimen/dp_176"
+            android:layout_height="@dimen/dp_176"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/dp_32"
+            android:contentDescription="@string/description_place_image" />
+
+        <vn.hitu.ntb.widget.AppTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_24"
+            android:gravity="center"
+            android:text="@string/content_qr_group"
+            android:textColor="@color/primary_text" />
+
+        <vn.hitu.ntb.widget.AppTextView
+            android:id="@+id/tvLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_24"
+            android:background="@drawable/bg_form_input_on"
+            android:backgroundTint="@color/bg_main"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/dp_16"
+            android:paddingVertical="@dimen/dp_8"
+            android:text="@string/link_group"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_24"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/llCopy"
+                android:layout_width="@dimen/dp_64"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btnCopy"
+                    android:layout_width="@dimen/dp_64"
+                    android:layout_height="@dimen/dp_64"
+                    android:background="@drawable/border_gray_50dp"
+                    android:contentDescription="@string/description_place_image"
+                    android:src="@drawable/ic_copy"
+                    app:tint="@color/white" />
+
+                <vn.hitu.ntb.widget.AppTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:gravity="center"
+                    android:text="@string/copy_link_group" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llShare"
+                android:layout_width="@dimen/dp_64"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_32"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="@dimen/dp_64"
+                    android:layout_height="@dimen/dp_64"
+                    android:background="@drawable/border_gray_50dp"
+                    android:contentDescription="@string/description_place_image"
+                    android:src="@drawable/ic_send_input_off"
+                    app:tint="@color/white" />
+
+                <vn.hitu.ntb.widget.AppTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:lines="2"
+                    android:text="@string/share_link" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

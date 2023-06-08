@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource"
+
+    >
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_128"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_item_friend_request"
+        android:layout_marginEnd="@dimen/dp_16">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="@dimen/dp_16">
+            <ImageView
+                android:id="@+id/imgAvatar"
+                android:layout_width="@dimen/dp_64"
+                android:layout_height="@dimen/dp_64"
+                android:padding="@dimen/dp_4"
+                android:background="@drawable/bg_shimmer_25"
+                android:contentDescription="@string/description_place_image" />
+            <vn.hitu.ntb.widget.AppTextView
+                android:id="@+id/txtFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_shimmer_10"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_8"/>
+            <vn.hitu.ntb.widget.AppButton
+
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_32"
+                android:text="@string/agree"
+                android:textColor="@color/shimmer"
+                android:shadowRadius="0"
+                android:background="@drawable/bg_shimmer_25"/>
+            <vn.hitu.ntb.widget.AppButton
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_32"
+                android:text="@string/refuse"
+                android:textColor="@color/shimmer"
+                android:shadowRadius="0"
+                android:layout_marginTop="@dimen/dp_4"
+                android:background="@drawable/bg_shimmer_25"/>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

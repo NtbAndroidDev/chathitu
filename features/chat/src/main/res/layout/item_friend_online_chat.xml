@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout_ItemOnlineUser"
+    android:layout_marginLeft="@dimen/dp_8"
+    android:orientation="vertical"
+    tools:ignore="Deprecated">
+
+    <LinearLayout
+        android:layout_width="@dimen/dp_64"
+        android:layout_height="@dimen/dp_64"
+        android:layout_marginTop="@dimen/dp_24"
+        android:background="@drawable/chat_bg_border_radius_8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvOnlineUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_32"
+            android:layout_marginBottom="@dimen/dp_4"
+            android:ellipsize="end"
+            android:fontFamily="@font/public_sans_semi_bold"
+            android:maxLines="2"
+            android:lines="2"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/dp_4"
+            android:textAlignment="center"
+            android:textSize="@dimen/sp_12"
+            tools:ignore="RtlCompat"
+            tools:text="Nguyễn " />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/llStatusAvatar"
+        android:layout_width="@dimen/dp_48"
+        android:layout_height="@dimen/dp_48"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/civImage"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop" />
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/civOnlineCircle"
+            android:layout_width="@dimen/dp_12"
+            android:layout_height="@dimen/dp_12"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:src="@color/green_circle"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="1dp" />
+    </RelativeLayout>
+</RelativeLayout>

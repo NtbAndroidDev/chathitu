@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dp_8">
+
+
+    <LinearLayout
+        android:id="@+id/lnButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <vn.hitu.ntb.widget.AppTextView
+            android:id="@+id/tvAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            android:background="@drawable/bg_form_input_on"
+            android:padding="@dimen/dp_8"
+            android:text="@string/all"
+            android:textColor="@color/white" />
+
+        <vn.hitu.ntb.widget.AppTextView
+            android:id="@+id/tvNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            android:background="@drawable/bg_form_not_friend"
+            android:padding="@dimen/dp_8"
+            android:text="@string/not_friend"
+            android:textColor="@color/gray" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/sflContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/item_friend_shimmer" />
+
+                <include layout="@layout/item_friend_shimmer" />
+
+                <include layout="@layout/item_friend_shimmer" />
+
+                <include layout="@layout/item_friend_shimmer" />
+
+                <include layout="@layout/item_friend_shimmer" />
+
+                <include layout="@layout/item_friend_shimmer" />
+
+                <include layout="@layout/item_friend_shimmer" />
+
+                <include layout="@layout/item_friend_shimmer" />
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewMyFriend"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants"
+            android:nestedScrollingEnabled="true"
+            android:overScrollMode="never"
+            android:scrollbars="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:itemCount="1"
+            tools:listitem="@layout/item_friend" />
+
+        <LinearLayout
+            android:id="@+id/lnEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:visibility="gone">
+
+            <include layout="@layout/item_empty_default" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

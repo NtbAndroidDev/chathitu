@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="vn.techres.line.chat">
+    <!-- <dist:module -->
+    <!-- dist:instant="false" -->
+    <!-- dist:title="@string/title_chat"> -->
+    <!-- <dist:delivery> -->
+    <!-- <dist:on-demand /> -->
+    <!-- </dist:delivery> -->
+    <!-- <dist:fusing dist:include="true" /> -->
+    <!-- </dist:module> -->
+    <dist:module
+        dist:instant="false"
+        dist:title="@string/title_chat">
+        <dist:delivery>
+            <dist:install-time />
+        </dist:delivery>
+
+        <dist:fusing dist:include="true" />
+    </dist:module>
+
+    <application>
+        <activity
+            android:name="vn.hitu.ntb.chat.ui.activity.ImageClickActivity"
+            android:exported="false" />
+        <activity
+            android:name="vn.hitu.ntb.chat.ui.activity.ForwardingMessageActivity"
+            android:exported="false" />
+        <activity
+            android:name="vn.hitu.ntb.chat.ui.activity.ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name="vn.hitu.ntb.chat.ui.activity.SearchUserActivity"
+            android:exported="false" />
+        <activity
+            android:name="vn.hitu.ntb.chat.ui.activity.AddGroupActivity"
+            android:exported="false" />
+        <activity
+            android:name="vn.hitu.ntb.chat.ui.activity.AddMemberGroupActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="vn.hitu.ntb.chat.ui.activity.DetailChatActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="vn.hitu.ntb.chat.ui.activity.CreateGroupChatActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="vn.hitu.ntb.chat.ui.activity.QrGroupActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+    </application>
+
+</manifest>

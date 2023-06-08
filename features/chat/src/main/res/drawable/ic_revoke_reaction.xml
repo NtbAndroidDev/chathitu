@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/bg_shortcuts_white"/>
+    <item android:drawable="@drawable/revoke_reaction"
+        android:top="@dimen/dp_10"
+        android:left="@dimen/dp_10"
+        android:bottom="@dimen/dp_10"
+        android:right="@dimen/dp_10"/>
+</layer-list>

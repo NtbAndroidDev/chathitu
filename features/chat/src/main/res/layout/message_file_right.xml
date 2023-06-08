@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp">
+
+    <RelativeLayout
+        android:layout_width="252dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/background_right_message_item"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="12dp">
+            <ImageView
+                android:id="@+id/ivTypeFile"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_32"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_file_word"
+                android:contentDescription="@string/description_place_image" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvShowMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/public_sans_regular"
+                    android:text="Hello xin chao tat ca moi nguòi"
+                    android:textColor="@color/primary_text"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvShowTimeMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:drawableLeft="@drawable/ic_time_line"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="@color/secondary_text"
+                    android:text="2:05"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

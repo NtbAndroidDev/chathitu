@@ -1,0 +1,191 @@
+<resources>
+
+    <!-- Chat -->
+    <string name="chat" translatable="false">Trò chuyện</string>
+    <string name="contact" translatable="false">Danh bạ</string>
+    <string name="create_group" translatable="false">Tạo nhóm</string>
+
+    <!--String detail chat-->
+    <string name="page_user" translatable="false">Trang\ncá nhân</string>
+    <string name="page_group" translatable="false">Thêm thành viên</string>
+    <string name="image" translatable="false">Ảnh</string>
+    <string name="titleFile" translatable="false">File</string>
+    <string name="link" translatable="false">Link</string>
+    <string name="subscriber" translatable="false">Theo người gửi</string>
+    <string name="bythetime" translatable="false">Theo thời gian</string>
+    <string name="video" translatable="false">Video</string>
+    <string name="change_background" translatable="false">Đổi\nhình nền</string>
+    <string name="turn_off_notify" translatable="false">Tắt\nthông báo</string>
+    <string name="turn_on_notify" translatable="false">Bật\nthông báo</string>
+    <string name="photo_video_file_link_sent" translatable="false">Ảnh, video, file, link đã gửi</string>
+    <string name="create_group_with" translatable="false">Tạo nhóm với</string>
+    <string name="add" translatable="false">Thêm</string>
+    <string name="join_group" translatable="false">vào nhóm</string>
+    <string name="group_view" translatable="false">Xem nhóm chung</string>
+    <string name="add_member" translatable="false">Thêm\nthành viên</string>
+
+
+    <string name="incoming_call_alert" translatable="false">Báo cuộc gọi đến</string>
+
+    <string name="you" translatable="false">Bạn</string>
+    <string name="revoke_my" translatable="false">Bạn đã thu hồi tin nhắn</string>
+    <string name="revoke_you" translatable="false">Đã thu hồi 1 tin nhắn</string>
+    <string name="two_dots" translatable="false">:</string>
+    <string name="send_a_photo" translatable="false">đã gửi ảnh</string>
+    <string name="send_a_sticker" translatable="false">đã gửi nhãn dán</string>
+    <string name="send_a_video" translatable="false">đã gửi video</string>
+    <string name="send_a_file" translatable="false">đã gửi file</string>
+    <string name="send_a_reply" translatable="false">đã trả lời tin nhắn</string>
+    <string name="send_a_audio" translatable="false">đã gửi hội thoại</string>
+    <string name="pinned_user" translatable="false">đã ghim tin nhắn</string>
+    <string name="kick_member" translatable="false">đã mời một người ra khỏi group</string>
+    <string name="authorize_member" translatable="false">nhường quyền trưởng nhóm</string>
+    <string name="last_remove_pinned" translatable="false">đã thu hồi ghim</string>
+    <string name="last_revoke_message" translatable="false">đã thu hồi tin nhắn</string>
+    <string name="last_update_name" translatable="false">đã đổi tên nhóm</string>
+    <string name="last_update_avatar" translatable="false">đã đổi hình đại diện nhóm</string>
+    <string name="last_update_background" translatable="false">đã đổi hình nền nhóm</string>
+    <string name="last_member_leave_group" translatable="false">đã rời khỏi nhóm</string>
+    <string name="last_message_share" translatable="false">đã chia sẻ một tin nhắn</string>
+    <string name="last_message_link" translatable="false">đã chia sẻ một đường dẫn</string>
+    <string name="last_message_call_phone" translatable="false">Cuộc gọi thoại đi</string>
+
+    <string name="call_phone_to" translatable="false">Cuộc gọi thoại đến</string>
+    <string name="last_message_call_phone_miss_call" translatable="false">Cuộc gọi thoại nhỡ</string>
+    <string name="last_message_call_video" translatable="false">Cuộc gọi video đi</string>
+    <string name="search_message" translatable="false">Tìm tin nhắn</string>
+    <string name="send_now" translatable="false">Gửi ngay</string>
+    <string name="cancel" translatable="false">Hủy</string>
+    <string name="out" translatable="false">Thoát</string>
+    <string name="next" translatable="false">Tiếp tục</string>
+    <string name="txt_user_typing_without_name" translatable="false">Đang soạn tin</string>
+    <string name="new_message" translatable="false">Tin nhắn mới</string>
+    <string name="unread_messages" translatable="false">Tin chưa đọc</string>
+    <string name="message_reminds" translatable="false">Nhắc đến bạn</string>
+    <string name="brvah_loading" translatable="false">Đang tải…</string>
+    <string name="input_chat" translatable="false">Trò chuyện</string>
+    <string name="business_card" translatable="false">Danh thiếp</string>
+    <string name="document" translatable="false">Tài liệu</string>
+
+    <string name="long_press_record" translatable="false">Nhấn và giữ để ghi âm</string>
+    <string name="number_group_chat_content" translatable="false">Hiện có %s thành viên</string>
+    <string name="access_time" translatable="false">Vừa truy cập</string>
+    <string name="received" translatable="false">Đã nhận</string>
+    <string name="open" translatable="false">Mở</string>
+    <string name="call_back" translatable="false">Gọi lại</string>
+    <string name="call" translatable="false">Gọi điện</string>
+    <string name="message" translatable="false">Nhắn tin</string>
+    <string name="call_video_to" translatable="false">Cuộc gọi video đến</string>
+    <string name="no_message" translatable="false">Chưa có tin nhắn</string>
+    <string name="newly_created_group" translatable="false">Nhóm vừa được tạo</string>
+    <string name="title_group_chat_empty" translatable="false">Bạn chưa có nhóm chat</string>
+    <string name="block_chat_with" translatable="false">Chặn tin nhắn từ </string>
+
+    <string name="suggest" translatable="false">Gợi ý</string>
+    <string name="phonebook" translatable="false">Danh bạ</string>
+    <string name="recently" translatable="false">Gần đây</string>
+
+    <string name="title_recording" translatable="false">Thả ra để gửi, di chuyển sang trái để xóa</string>
+    <string name="you_can_only_enter_up_to_120_characters" translatable="false">Bạn chỉ có thể nhập tối đa 120 ký tự</string>
+    <string name="title_recording_hand_free" translatable="false">Chế độ ghi âm rảnh tay</string>
+    <string name="release_to_cancel_recording" translatable="false">Thả ra để hủy ghi âm</string>
+    <string name="title_audio" translatable="false">Nhấn và giữ để ghi âm</string>
+    <string name="send_link_copy" translatable="false">Gửi link vừa copy</string>
+
+    <string name="policy_browse_member" translatable="false">Người được chọn sẽ trở thành trưởng nhóm và có mọi quyền quản lý nhóm. Bạn sẽ mất quyền quản lý nhưng vẫn là một thành viên của nhóm. Hành động này không thể phục hồi</string>
+
+    <string name="title_dialog_policy_change" translatable="false">sẽ trở thành trưởng nhóm. Bạn sẽ trở thành một thành viên bình thường.</string>
+    <string name="title_dialog_policy_user" translatable="false">Chuyển quyền trường nhóm cho</string>
+
+
+    <string name="manage_member" translatable="false">Quản lý thành viên</string>
+    <string name="tab_member_key" translatable="false">Trưởng, phó nhóm có thể dyệt thành viên và  thay đổi các cài đặt của nhóm.</string>
+    <string name="add_deputy_team" translatable="false">Thêm phó nhóm</string>
+    <string name="all" translatable="false">Tất cả</string>
+    <string name="key_and_deputy" translatable="false">Trưởng, phó nhóm</string>
+    <string name="invited" translatable="false">Đã mời</string>
+    <string name="block" translatable="false">Đã chặn</string>
+
+    <string name="no_permission_update" translatable="false">Bạn không có quyền chỉnh sửa </string>
+    <string name="no" translatable="false">Không</string>
+    <string name="member" translatable="false">Thành viên </string>
+    <string name="owner" translatable="false">Trưởng nhóm </string>
+    <string name="deputy" translatable="false">Phó nhóm </string>
+    <string name="new_group" translatable="false">Nhóm mới</string>
+    <string name="add_member_group" translatable="false">Thêm thành viên</string>
+    <string name="add_member_deputy" translatable="false">Thêm phó nhóm</string>
+    <string name="hint_create_group" translatable="false">Đặt tên nhóm</string>
+    <string name="choose" translatable="false">Đã chọn:</string>
+    <string name="group_calendar" translatable="false">Lịch nhóm</string>
+    <string name="pinned_messages" translatable="false">Tin nhắn đã ghim</string>
+    <string name="vote" translatable="false">Bình chọn</string>
+    <string name="group_settings" translatable="false">Cài đặt nhóm</string>
+    <string name="view_members" translatable="false">Xem thành viên</string>
+    <string name="new_member_approval" translatable="false">Phê duyệt thành viên mới</string>
+    <string name="link_to_join_the_group" translatable="false">Link tham gia nhóm</string>
+    <string name="chat_pins" translatable="false">Ghim trò chuyện</string>
+    <string name="hide_chat" translatable="false">Ẩn trò chuyện</string>
+    <string name="privacy_setting" translatable="false">Cài đặt cá nhân</string>
+    <string name="bad_report" translatable="false">Báo xấu</string>
+    <string name="title_dialog_policy_right" translatable="false">Chuyển quyền trưởng nhóm</string>
+    <string name="chat_capacity" translatable="false">Dung lượng trò chuyện</string>
+    <string name="clear_chat_history" translatable="false">Xoá lịch sử trò chuyện</string>
+    <string name="leave_the_group" translatable="false">Rời nhóm</string>
+    <string name="delete_the_group" translatable="false">Xoá</string>
+    <string name="information" translatable="false">Thông tin</string>
+    <string name="tag_all_member" translatable="false">Báo cho cả nhóm   @All</string>
+    <string name="disband_group" translatable="false">Giải tán nhóm</string>
+    <string name="new_image_will_show_here" translatable="false">Hình mới nhất của trò chuyện sẽ xuất hiện tại đây</string>
+
+
+    <string name="content_empty" translatable="false">Hãy bắt đầu chia sẻ những câu chuyện thú vị cùng nhau</string>
+    <string name="to_day" translatable="false">Hôm nay</string>
+    <string name="font_tag_name_start" translatable="false">&lt;font color=&quot;#198be3&quot;&gt;</string>
+    <string name="read_more" translatable="false">Đọc thêm</string>
+    <string name="collapse" translatable="false">Thu gọn</string>
+
+    <string name="policy_out_group" translatable="false">Rời nhóm sẽ đồng thời xoá toàn bộ tin nhắn của nhóm đó. Bạn có muốn tiếp tục</string>
+    <string name="policy_delete_group" translatable="false">Toàn bộ nội dung cuộc trò chuyện sẽ bị xoá vĩnh viễn.\nBạn có chắc chắn muốn xoá?</string>
+    <string name="name_empty" translatable="false">Tên nhóm</string>
+    <string name="image_revoke" translatable="false">Đã thu hồi</string>
+    <string name="reply" translatable="false">Trả lời</string>
+    <string name="share_my_chat" translatable="false">Chuyển tiếp</string>
+    <string name="pin_my_chat" translatable="false">Ghim tin nhắn</string>
+    <string name="copy_my_chat" translatable="false">Sao chép</string>
+    <string name="revoke_my_chat" translatable="false">Thu hồi</string>
+    <string name="download" translatable="false">Tải xuống</string>
+    <string name="copy_chat" translatable="false">Tin nhắn được sao chép</string>
+    <string name="dow_is" translatable="false">Đang tải xuống</string>
+
+    <string name="pinned_image" translatable="false">[Hình ảnh]</string>
+    <string name="pinned_video" translatable="false">[Video]</string>
+    <string name="pinned_sticker" translatable="false">[Nhãn dán]</string>
+    <string name="title_out_group" translatable="false">Rời nhóm và xoá toàn hội thoại</string>
+    <string name="revoke_message">Tin nhắn đã được thu hồi</string>
+    <string name="validate_name" translatable="false">Tên nhóm không được để rỗng</string>
+    <string name="pinned_false" translatable="false">Bạn không được ghim quá 10 cuộc trò chuyện !</string>
+    <string name="me_message" translatable="false">Bạn</string>
+    <string name="type_image" translatable="false">[Image]</string>
+    <string name="type_video" translatable="false">[Video]</string>
+    <string name="type_sticker" translatable="false">[Sticker]</string>
+    <string name="type_audio" translatable="false">[Audio]</string>
+    <string name="type_file" translatable="false">[File]</string>
+    <string name="update_avt" translatable="false">đã đổi ảnh đại diện nhóm</string>
+    <string name="update_name" translatable="false">đã đổi tên nhóm</string>
+    <string name="me_update_avt" translatable="false">Đã thay đổi hình nền</string>
+    <string name="you_update_avt" translatable="false">đã thay đổi hình nền</string>
+    <string name="type_revoke_message" translatable="false">Tin nhắn đã được thu hồi</string>
+    <string name="me_remove_user" translatable="false">đã được bạn xoá khỏi nhóm</string>
+    <string name="enter_group_name">Enter group name</string>
+    <string name="group_members">Group members</string>
+    <string name="hint_search">Search user ...</string>
+    <string name="suggestions">Suggestions</string>
+    <string name="hint_search_user" translatable="false">Search users by name or email</string>
+    <string name="forwarding_message">Forwarding Message</string>
+    <string name="remove_message">Remove Message</string>
+    <string name="hint_message">Enter Message ...</string>
+    <string name="location">Vị trí</string>
+    <string name="appointment_reminder">Nhắc hẹn</string>
+    <string name="hint_chat">Enter Message ...</string>
+    <string name="title_chat_gpt">ChatGPT</string>
+</resources>

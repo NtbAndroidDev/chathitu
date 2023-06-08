@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/dp_8">
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_32">
+
+            <ImageView
+                android:id="@+id/ivIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"
+                android:padding="@dimen/dp_4"
+                tools:srcCompat="@drawable/ic_message_profile"
+                android:contentDescription="@string/description_place_image" />
+
+            <ImageView
+                android:id="@+id/ivActive"
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center"
+                tools:srcCompat="@drawable/ic_chat_active"
+                android:contentDescription="@string/description_place_image" />
+        </RelativeLayout>
+
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dp_8"
+            android:textSize="@dimen/sp_12"
+            android:visibility="visible"
+            app:shape_textColor="@color/orange_chat_view_page"
+            app:shape_textSelectedColor="@color/black"
+            tools:text="@string/chat" />
+        <vn.hitu.ntb.widget.AppTextViewBold
+            android:id="@+id/tvAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_amount"
+            android:paddingVertical="@dimen/dp_2"
+            android:paddingHorizontal="@dimen/dp_4"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="@dimen/sp_10"
+            android:textColor="@color/white"
+            android:layout_marginStart="@dimen/dp_4"
+           />
+
+    </LinearLayout>
+</layout>

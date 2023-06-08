@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/chat_background"
+    android:layout_height="match_parent"
+    android:id="@+id/rlChatLayout"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dp_4"
+        >
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            android:layout_marginStart="@dimen/dp_8"
+            app:cardCornerRadius="@dimen/dp_8"
+            app:cardUseCompatPadding="false"
+            >
+            <ImageView
+                android:layout_width="@dimen/dp_32"
+                android:layout_height="@dimen/dp_32"
+                android:src="@drawable/ic_chat_gpt"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            android:text="@string/title_chat_gpt"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/sp_22"
+            android:textStyle="bold"
+             />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llOptionsSent"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/chat_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:visibility="visible">
+
+        <EditText
+            android:id="@+id/etInputMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/chat_bg_border_radius_8dp"
+            android:hint="Enter Message ..."
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:textSize="14sp" />
+
+
+        <ImageView
+            android:id="@+id/btnSentEmoji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_emotion_happy_line" />
+
+
+        <ImageView
+            android:id="@+id/btnSentImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_image_fill" />
+
+        <ImageView
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/custom_button"
+            android:padding="8dp"
+            android:src="@drawable/ic_send_plane_2_fill" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvListChat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:descendantFocusability="afterDescendants"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:listSelector="@android:color/transparent"
+        android:paddingHorizontal="16dp"
+        app:layoutManager="LinearLayoutManager"
+        app:reverseLayout="true"
+        app:stackFromEnd="true"
+         />
+    <LinearLayout
+        android:id="@+id/lnTyping"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:paddingStart="@dimen/dp_8"
+        >
+        <include
+            android:id="@+id/itemTyping"
+            layout="@layout/chat_gpt_typing"/>
+    </LinearLayout>
+
+    <!--    <androidx.recyclerview.widget.RecyclerView-->
+    <!--        android:id="@+id/rcvListChat"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_marginTop="55dp"-->
+    <!--        android:layout_marginBottom="60dp"-->
+    <!--        android:paddingHorizontal="16dp"-->
+    <!--        app:layoutManager="LinearLayoutManager"/>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/llChatOption"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:visibility="gone"
+        android:gravity="center_vertical"
+        android:background="@drawable/background_chat_option">
+
+        <TextView
+            android:id="@+id/btnDeleteMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:layout_gravity="start"
+            android:fontFamily="@font/public_sans_semi_bold"
+            android:textColor="@color/secondary_text"
+            android:drawablePadding="5dp"
+            android:text="Remove Message"
+            android:layout_marginRight="50dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btnForwardingMessage"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:padding="5dp"
+            android:text="Forwarding Message"
+            />
+        <TextView
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:drawableRight="@drawable/ic_close"
+            android:drawableTint="@color/secondary_text" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

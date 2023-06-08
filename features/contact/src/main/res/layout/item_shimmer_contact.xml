@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <include layout="@layout/item_shimmer_title_request_friend" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/item_friend_request_shimmer" />
+
+            <include layout="@layout/item_friend_request_shimmer" />
+
+            <include layout="@layout/item_friend_request_shimmer" />
+        </LinearLayout>
+
+        <include layout="@layout/item_shimmer_title_contact" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_8"
+            android:background="@color/white">
+
+            <vn.hitu.ntb.widget.AppTextView
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/all"
+                android:textColor="@color/shimmer"
+                android:background="@drawable/bg_shimmer_25"
+                android:padding="@dimen/dp_8" />
+
+            <vn.hitu.ntb.widget.AppTextView
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/not_friend"
+                android:textColor="@color/shimmer"
+                android:background="@drawable/bg_shimmer_25"
+                android:padding="@dimen/dp_8" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+            <include layout="@layout/item_friend_shimmer" />
+
+            <include layout="@layout/item_friend_shimmer" />
+
+            <include layout="@layout/item_friend_shimmer" />
+
+            <include layout="@layout/item_friend_shimmer" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

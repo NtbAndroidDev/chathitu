@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_input_chat"
+            android:elevation="@dimen/dp_16"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/ibEmojiSticker"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="left|center_vertical|center_horizontal|center"
+                android:background="@drawable/bg_ripple_animation_button_back"
+                android:contentDescription="@string/description_place_image"
+                android:paddingLeft="@dimen/dp_8"
+                android:paddingRight="@dimen/dp_8"
+                android:scaleType="center"
+                android:src="@drawable/ic_emotion_input_selection" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.aghajari.emojiview.view.AXEmojiEditText
+                    android:id="@+id/edtChat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoLink="none"
+                    android:paddingStart="@dimen/dp_8"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="@string/input_chat"
+                    android:maxHeight="@dimen/dp_100"
+                    android:maxLines="3"
+                    android:minHeight="@dimen/dp_48"
+                    android:scrollbars="none"
+                    android:textColorHint="@color/gray_400"
+                    android:textSize="@dimen/sp_16" />
+
+                <vn.hitu.ntb.widget.AppTextView
+                    android:id="@+id/tvCountCharacter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="4dp"
+                    android:textSize="@dimen/sp_9"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+
+            <ImageButton
+                android:id="@+id/ibMore"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="left|center_vertical|center_horizontal|center"
+                android:background="@drawable/bg_ripple_animation_button_back"
+                android:contentDescription="@string/description_place_image"
+                android:paddingLeft="@dimen/dp_8"
+                android:paddingRight="@dimen/dp_8"
+                android:scaleType="center"
+                android:src="@drawable/ic_attach_input_selection"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/btnMic"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="left|center_vertical|center_horizontal|center"
+                android:background="@drawable/bg_ripple_animation_button_back"
+                android:contentDescription="@string/description_place_image"
+                android:paddingLeft="@dimen/dp_8"
+                android:paddingRight="@dimen/dp_8"
+                android:scaleType="center"
+                android:src="@drawable/ic_voice_input_selection"
+                android:visibility="gone" />
+
+
+            <ImageView
+                android:id="@+id/ivGallery"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="left|center_vertical|center_horizontal|center"
+                android:contentDescription="@string/description_place_image"
+                android:paddingLeft="@dimen/dp_8"
+                android:paddingRight="@dimen/dp_8"
+                android:src="@drawable/ic_image_input_selection" />
+
+            <ImageButton
+                android:id="@+id/ibSend"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="left|center_vertical|center_horizontal|center"
+                android:background="@drawable/bg_ripple_animation_button_back"
+                android:contentDescription="@string/description_place_image"
+                android:paddingLeft="@dimen/dp_8"
+                android:paddingRight="@dimen/dp_8"
+                android:scaleType="center"
+                android:src="@drawable/ic_send_input_off"
+                android:visibility="gone"
+                app:tint="@color/blue_700" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</layout>

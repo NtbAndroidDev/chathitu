@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/llContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_chat_group_left"
+        android:backgroundTint="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_8">
+
+        <ImageView
+            android:id="@+id/ivPlayAudio"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:background="@drawable/bg_audio_icon"
+            android:padding="@dimen/dp_10"
+            android:src="@drawable/ic_play_audio"
+            tools:ignore="ContentDescription" />
+
+        <ProgressBar
+            android:id="@+id/pbProgressbar1"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="@dimen/dp_10"
+            android:layout_height="@dimen/dp_32"
+            android:layout_marginStart="@dimen/dp_16"
+            android:paddingLeft="@dimen/dp_1"
+            android:paddingTop="@dimen/dp_3"
+            android:paddingRight="@dimen/dp_1"
+            android:progress="75"
+            android:progressDrawable="@drawable/vetical_progressbar" />
+
+        <ProgressBar
+            android:id="@+id/pbProgressbar2"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="@dimen/dp_10"
+            android:layout_height="@dimen/dp_32"
+            android:paddingLeft="@dimen/dp_1"
+            android:paddingTop="@dimen/dp_3"
+            android:paddingRight="@dimen/dp_1"
+            android:progress="40"
+            android:progressDrawable="@drawable/vetical_progressbar" />
+
+        <ProgressBar
+            android:id="@+id/pbProgressbar3"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="@dimen/dp_10"
+            android:layout_height="@dimen/dp_32"
+            android:paddingLeft="@dimen/dp_1"
+            android:paddingTop="@dimen/dp_3"
+            android:paddingRight="@dimen/dp_1"
+            android:progress="55"
+            android:progressDrawable="@drawable/vetical_progressbar" />
+
+        <Chronometer
+            android:id="@+id/timeAudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:countDown="true"
+            android:textColor="@color/gray_900"
+            android:textSize="@dimen/sp_14"
+            tools:ignore="UnusedAttribute"
+            tools:text="00:02" />
+    </LinearLayout>
+</layout>

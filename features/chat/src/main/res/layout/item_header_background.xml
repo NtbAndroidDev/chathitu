@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/llBackgroundView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/llHeaderBackground"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:background="@color/primary_background"
+            android:gravity="center_vertical"
+            android:paddingTop="@dimen/dp_8"
+            android:paddingBottom="@dimen/dp_8">
+
+            <ImageButton
+                android:id="@+id/ibCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dp_16"
+                android:background="@color/transparent"
+                android:contentDescription="@string/default_image"
+                android:src="@drawable/ic_delete_chat"
+                app:tint="@color/primary_text" />
+
+            <vn.hitu.ntb.widget.AppTextViewBold
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/change_backgroud"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageButton
+                android:id="@+id/ibConfirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:background="@drawable/circle_orange_900"
+                android:contentDescription="@string/default_image"
+                android:src="@drawable/ic_check_white" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/gray_300" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_8"
+            android:layout_marginTop="@dimen/dp_8"
+            android:background="@drawable/border_blue_8dp"
+            android:backgroundTint="@color/primary_background"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_8"
+
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:spanCount="5"
+                tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                tools:listitem="@layout/item_change_image"
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/cbCommon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:button="@drawable/ic_sw_selector"
+                    android:checked="true"
+                    android:textColor="@color/black" />
+
+                <vn.hitu.ntb.widget.AppTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="hêhh"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

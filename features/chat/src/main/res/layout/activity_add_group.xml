@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/primary_background"
+    android:layout_height="match_parent"
+    android:forceDarkAllowed="true">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:layout_alignParentTop="true"
+        android:background="@color/nav_background"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/dp_16">
+
+        <ImageView
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingRight="@dimen/dp_16"
+            android:src="@drawable/ic_arrow_left_s_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_4"
+                android:fontFamily="@font/public_sans_semi_bold"
+                tools:text="Create New Group"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/textView_numSelected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/public_sans_regular"
+                tools:text="Selected: 0"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/sp_10" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_background"
+        android:orientation="vertical"
+        android:layout_below="@+id/toolbar"
+        android:paddingHorizontal="@dimen/dp_24"
+        android:paddingVertical="@dimen/dp_8">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:fontFamily="@font/public_sans_semi_bold"
+            tools:text="Group name"
+            android:textSize="@dimen/sp_14" />
+
+        <EditText
+            android:id="@+id/editText_groupName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:background="@drawable/input_boder"
+            android:fontFamily="@font/public_sans_regular"
+            android:hint="@string/enter_group_name"
+            android:paddingHorizontal="@dimen/dp_8"
+            android:paddingVertical="@dimen/dp_8"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:fontFamily="@font/public_sans_semi_bold"
+            android:text="@string/group_members"
+            android:textSize="@dimen/sp_14" />
+
+        <androidx.appcompat.widget.SearchView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_32"
+            app:iconifiedByDefault="false"
+            android:theme="@style/AppSearchView"
+            app:searchIcon="@drawable/ic_search_line"
+            android:background="@drawable/input_boder"
+            app:submitBackground="@android:color/transparent"
+            app:queryBackground="@android:color/transparent"
+            android:id="@+id/searchView_SearchUser"
+            app:queryHint="Search name..."
+            android:layout_marginBottom="@dimen/dp_8"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_listFriend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_selectedMember"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/nav_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/dp_4"
+        android:paddingVertical="@dimen/dp_8">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_listSelected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <ImageView
+            android:id="@+id/imageView_btnGroup"
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_32"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_4"
+            android:layout_marginRight="@dimen/dp_8"
+            android:background="@drawable/btn_cycle"
+            android:src="@drawable/ic_arrow_right_s_line" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

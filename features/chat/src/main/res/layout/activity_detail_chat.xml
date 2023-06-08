@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/primary_background"
+        >
+        <RelativeLayout
+            android:id="@+id/profileToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_56"
+            android:background="@color/nav_background"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="@dimen/dp_16">
+
+            <ImageView
+                android:id="@+id/btnClose"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingRight="@dimen/dp_16"
+                android:layout_centerInParent="true"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/ic_arrow_left_s_line" />
+
+            <ImageButton
+                android:id="@+id/btnAddGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_gravity="right"
+                android:background="@drawable/border_gray_50dp"
+                android:padding="@dimen/dp_8"
+                android:src="@drawable/ic_add_member_chat" />
+
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/layout_Avatar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingStart="@dimen/dp_24"
+            android:paddingEnd="@dimen/dp_24"
+            android:layout_marginTop="@dimen/dp_48"
+            android:layout_marginBottom="@dimen/dp_24"
+            >
+            <RelativeLayout
+                android:id="@+id/rlParent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:id="@+id/civImage"
+                    android:layout_width="@dimen/dp_96"
+                    android:layout_height="@dimen/dp_96"
+                    app:civ_border_color="@color/gray_border"
+                    app:civ_border_width="@dimen/dp_4" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civPen"
+                    android:layout_width="@dimen/dp_32"
+                    android:layout_height="@dimen/dp_32"
+                    android:layout_alignRight="@id/civImage"
+                    android:layout_alignBottom="@+id/civImage"
+                    android:src="@drawable/ic_pencil_fill"
+                    app:civ_border_color="@color/secondary_background"
+                    app:civ_border_width="@dimen/dp_8"
+                    app:civ_circle_background_color="@color/secondary_background" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_marginTop="@dimen/dp_8"
+                android:id="@+id/textview_Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mạnh Tường"
+                android:gravity="center"
+                android:fontFamily="@font/public_sans_semi_bold"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/primary_text"
+                android:layout_marginBottom="@dimen/dp_4"
+                android:textStyle="bold"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civOnlineCircle"
+                    android:layout_width="@dimen/dp_8"
+                    android:layout_height="@dimen/dp_8"
+                    android:layout_marginRight="@dimen/dp_4"
+                    android:src="@color/white"
+                    app:civ_border_color="@color/green_circle"
+                    app:civ_border_width="@dimen/dp_4" />
+                <TextView
+                    android:id="@+id/textview_active"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Active"
+                    android:textSize="@dimen/sp_14"
+                    android:fontFamily="@font/public_sans_regular"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dp_16">
+
+
+            <LinearLayout
+                android:id="@+id/llAddMember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/btnAddMember"
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="@dimen/dp_48"
+                    android:background="@drawable/guide_indicator_unselected"
+                    android:backgroundTint="@color/gray_400"
+                    android:contentDescription="@string/description_place_image"
+                    android:padding="@dimen/dp_12"
+                    android:src="@drawable/ic_add_member_chat"
+                    app:tint="@color/white" />
+
+                <vn.hitu.ntb.widget.AppTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:gravity="center"
+                    android:text="@string/add_member"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llChangeBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_32"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="@dimen/dp_48"
+                    android:background="@drawable/guide_indicator_unselected"
+                    android:backgroundTint="@color/gray_400"
+                    android:contentDescription="@string/description_place_image"
+                    android:padding="@dimen/dp_12"
+                    android:src="@drawable/ic_change_background"
+                    app:tint="@color/white" />
+
+                <vn.hitu.ntb.widget.AppTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:gravity="center"
+                    android:text="@string/change_background"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llQrGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_32"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="@dimen/dp_48"
+                    android:background="@drawable/guide_indicator_unselected"
+                    android:backgroundTint="@color/gray_400"
+                    android:contentDescription="@string/description_place_image"
+                    android:padding="@dimen/dp_12"
+                    android:src="@drawable/ic_scan_qr"
+                    app:tint="@color/white" />
+
+                <vn.hitu.ntb.widget.AppTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:gravity="center"
+                    android:text="QR Group"
+                    android:textColor="@color/primary_text"
+                    android:lines="2"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp">
+
+            <LinearLayout
+                android:id="@+id/llGroupMember"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginEnd="@dimen/dp_24"
+                android:background="@color/nav_background"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/dp_16"
+                    android:paddingVertical="@dimen/dp_16"
+                    android:text="Group member"
+                    android:textSize="@dimen/sp_14"
+                    android:fontFamily="@font/public_sans_semi_bold"
+                    android:textColor="@color/primary_text"
+                    android:drawableLeft="@drawable/ic_group_line_off"
+                    android:drawablePadding="@dimen/dp_16"
+                    android:drawableTint="@color/primary_text" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/primary_background"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:id="@+id/recyclerView_GroupMember"
+                    android:background="@drawable/border_list_member"
+                    tools:listitem="@layout/search_users_item"
+                    />
+
+                <Button
+                    android:id="@+id/btn_leaveGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Leave group"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/public_sans_semi_bold"
+                    android:textAllCaps="false"
+                    android:background="@drawable/btn_red"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

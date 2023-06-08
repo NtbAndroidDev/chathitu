@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:layout_width="@dimen/dp_64"
+        android:layout_height="@dimen/dp_64"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_create_group_chat"
+        app:tint="@color/white"
+        android:background="@drawable/bg_sync"/>
+    <vn.hitu.ntb.widget.AppTextViewBold
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_4"
+        android:textColor="@color/main_bg"
+        android:text="@string/create_group"/>
+</LinearLayout>

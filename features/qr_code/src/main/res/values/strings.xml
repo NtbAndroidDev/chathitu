@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="scanQR" translatable="false">Quét QR</string>
+    <string name="title_scanQR" translatable="false">Di chuyển camera đến mã QR để quét</string>
+    <string name="myQR" translatable="false">QR của tôi</string>
+    <string name="share_my_qr" tools:ignore="MissingTranslation">Chia sẻ mã QR để</string>
+    <string name="share" tools:ignore="MissingTranslation">Chia sẻ</string>
+    <string name="download" translatable="false">Tải xuống</string>
+    <string name="addFriend" translatable="false">Kết bạn nhanh chóng, bảo mật</string>
+    <string name="permission_camera" translatable="false">Vui lòng mở cài đặt, Chọn quyền và bật ON mục máy ảnh cho aloLINE</string>
+
+</resources>

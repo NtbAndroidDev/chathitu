@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:paddingStart="@dimen/dp_8"
+        android:paddingEnd="@dimen/dp_8">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageCLip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end|center_vertical|center_horizontal|center"
+            android:layout_marginTop="@dimen/dp_8"
+            android:adjustViewBounds="true"
+            android:background="@drawable/bg_9patch_suggest_multiphoto"
+            android:scaleType="centerCrop"
+            app:riv_border_color="@color/white"
+            app:riv_border_width="1.7dp"
+            app:riv_corner_radius="@dimen/dp_8" />
+
+        <ImageButton
+            android:id="@+id/ibDelete"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:layout_alignEnd="@id/imageCLip"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="top|end|center_vertical|center_horizontal|center"
+            android:adjustViewBounds="true"
+            android:padding="@dimen/dp_2"
+            android:src="@drawable/ic_multisuggest_remove"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+</layout>

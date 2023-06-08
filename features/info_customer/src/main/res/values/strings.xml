@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gender" translatable="false">Giới tính</string>
+    <string name="birthday" translatable="false">Sinh nhật</string>
+    <string name="phone" translatable="false">Điện thoại</string>
+    <string name="email" translatable="false">Email</string>
+    <string name="street" translatable="false">Số nhà, Đường </string>
+    <string name="address_edit" translatable="false">Địa chỉ</string>
+    <string name="female" translatable="false">Nam</string>
+    <string name="male" translatable="false">Nữ</string>
+    <string name="off_text" translatable="false">******</string>
+    <string name="add_friend" translatable="false">Kết bạn</string>
+    <string name="friend" translatable="false">Bạn bè</string>
+    <string name="feedback" translatable="false">Phản hồi</string>
+    <string name="recall" translatable="false">Thu hồi</string>
+    <string name="chat" translatable="false">Trò chuyện</string>
+    <string name="no_update" translatable="false">Chưa cập nhật</string>
+</resources>

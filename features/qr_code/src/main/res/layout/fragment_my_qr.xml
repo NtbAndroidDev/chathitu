@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imvBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+             />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent_orange" />
+
+        <ImageButton
+            android:id="@+id/imageButtonClose"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:layout_marginTop="@dimen/dp_48"
+            android:padding="@dimen/dp_16"
+            android:layout_marginStart="@dimen/dp_16"
+            android:background="@drawable/bg_image_button"
+            android:contentDescription="@string/description_place_image"
+            android:src="@drawable/ic_close_on"
+            app:tint="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/dp_180">
+
+                <ImageView
+                    android:id="@+id/imvAvt"
+                    android:layout_width="@dimen/dp_64"
+                    android:layout_height="@dimen/dp_64" />
+            </androidx.cardview.widget.CardView>
+
+            <vn.hitu.ntb.widget.AppTextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                android:textStyle="bold" />
+
+            <vn.hitu.ntb.widget.AppTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:text="@string/share_my_qr"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14" />
+
+            <vn.hitu.ntb.widget.AppTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/addFriend"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/imvQRCode"
+                android:layout_width="@dimen/dp_232"
+                android:layout_height="@dimen/dp_232"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@color/white"
+                android:contentDescription="@string/description_place_image"
+                android:scaleType="centerCrop" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_24"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/imageButtonSend"
+                        android:layout_width="@dimen/dp_48"
+                        android:layout_height="@dimen/dp_48"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/bg_image_button"
+                        android:contentDescription="@string/description_place_image"
+                        android:padding="@dimen/dp_8"
+                        android:src="@drawable/ic_send" />
+
+                    <vn.hitu.ntb.widget.AppTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:gravity="center"
+                        android:text="@string/share"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_14" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_32"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/btnDownload"
+                        android:layout_width="@dimen/dp_48"
+                        android:layout_height="@dimen/dp_48"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/bg_image_button"
+                        android:contentDescription="@string/description_place_image"
+                        android:padding="@dimen/dp_8"
+                        android:src="@drawable/ic_download_white" />
+
+                    <vn.hitu.ntb.widget.AppTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:gravity="center"
+                        android:text="@string/download"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_14" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

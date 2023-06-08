@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="@dimen/dp_8"
+        android:layout_marginVertical="@dimen/dp_4"
+        android:background="@drawable/bg_banner"
+        android:gravity="center_vertical"
+        >
+
+        <ImageView
+            android:id="@+id/imgAvatar"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:background="@drawable/bg_shimmer_25"
+            android:contentDescription="TODO"
+            tools:ignore="ContentDescription,HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/imgAvatar"
+            android:layout_marginVertical="@dimen/dp_8"
+            android:orientation="vertical">
+            <vn.hitu.ntb.widget.AppTextViewBold
+                android:id="@+id/txtFullName"
+                android:layout_width="@dimen/dp_200"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_shimmer_10"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/black" />
+            <vn.hitu.ntb.widget.AppTextView
+                android:id="@+id/tvMutualFriend"
+                android:layout_width="@dimen/dp_200"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_4"
+                android:background="@drawable/bg_shimmer_10"
+                android:textSize="@dimen/sp_12"
+                />
+
+            <LinearLayout
+                android:id="@+id/llButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_4">
+
+                <vn.hitu.ntb.widget.AppButton
+                    android:id="@+id/btnRefuse"
+                    android:layout_width="@dimen/dp_272"
+                    android:layout_height="@dimen/dp_32"
+                    android:background="@drawable/bg_shimmer_25"
+                    android:elevation="0dp"
+                    android:gravity="center"
+                    android:stateListAnimator="@null"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</layout>
