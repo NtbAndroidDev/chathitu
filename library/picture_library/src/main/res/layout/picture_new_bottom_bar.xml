@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/select_bar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:visibility="gone"
+    android:layout_alignParentBottom="true"
+    android:background="@color/picture_color_grey">
+
+    <TextView
+        android:id="@+id/picture_id_preview"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:enabled="false"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="@string/picture_preview"
+        android:textColor="@color/picture_color_white"
+        android:textSize="14sp" />
+
+
+     <TextView
+        android:id="@+id/picture_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="15dp"
+        android:gravity="center"
+        android:text="@string/picture_cancel"
+         android:visibility="gone"
+        android:textColor="@color/picture_color_white"
+        android:textSize="14sp" />
+
+
+    <TextView
+        android:id="@+id/tv_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="15dp"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="@string/picture_select"
+        android:textColor="@color/picture_color_white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@id/tv_selected"
+        android:gravity="center"
+        android:textColor="@color/picture_color_white"
+        android:textSize="12sp" />
+
+    <View
+        android:id="@+id/btnCheck"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@color/picture_color_transparent" />
+
+</RelativeLayout>
