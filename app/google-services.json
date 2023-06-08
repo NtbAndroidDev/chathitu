@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "508944694639",
+    "firebase_url": "https://chathitu-33168-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "chathitu-33168",
+    "storage_bucket": "chathitu-33168.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:508944694639:android:0bbdb9460d51570bbbbc9a",
+        "android_client_info": {
+          "package_name": "vn.hitu.ntb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "508944694639-j3q36e2jd0p7ut91s99nhqkrcod2ep58.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vn.hitu.ntb",
+            "certificate_hash": "f79f4c99008e85e972452d539f1bb76478861bef"
+          }
+        },
+        {
+          "client_id": "508944694639-g0qcuefa6kskpi3hfpche6c5gv63netj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDg3DliZrNHwKndEUsZDYlWT0uZiQ08gts"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "508944694639-g0qcuefa6kskpi3hfpche6c5gv63netj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

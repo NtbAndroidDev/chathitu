@@ -1,0 +1,52 @@
+apply plugin : 'com.android.library'
+apply from : '../../common.gradle'
+
+android {
+
+    defaultConfig {
+        // Cấu hình làm xáo trộn mô-đun
+        consumerProguardFiles 'proguard-base.pro'
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            jniDebuggable true
+            zipAlignEnabled false
+            ndk {
+                abiFilters 'armeabi-v7a', 'arm64-v8a'
+            }
+        }
+
+        preview.initWith(debug)
+
+        preview {
+
+        }
+
+        release {
+            debuggable false
+            jniDebuggable false
+            zipAlignEnabled true
+            ndk {
+                abiFilters 'armeabi-v7a', 'arm64-v8a'
+            }
+        }
+    }
+
+    sourceSets {
+        main {
+            // res Cấu hình thư mục tài nguyên
+            res.srcDirs(
+                    'src/main/res',
+                    'src/main/res-sw',
+            )
+        }
+    }
+
+    dependencies {
+        //https://github.com/greenrobot/EventBus
+        api 'org.greenrobot:eventbus:3.2.0'
+        api 'org.simple:androideventbus:1.0.5.1'
+    }
+}

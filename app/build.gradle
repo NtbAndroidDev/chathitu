@@ -1,0 +1,377 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-aspectjx'
+apply from: '../common.gradle'
+apply plugin: 'org.jetbrains.kotlin.android'
+apply plugin: 'com.google.gms.google-services'
+android {
+    defaultConfig {
+
+        applicationId 'vn.hitu.ntb'
+
+        // Chỉ giữ lại tài nguyên hình ảnh xxhdpi (hiện tại độ phân giải chính là 1920 * 1080)
+        resConfigs 'xxhdpi'
+
+        proguardFiles 'proguard-sdk.pro', 'proguard-app.pro'
+
+        vectorDrawables.useSupportLibrary = true
+
+        // In log
+        buildConfigField('boolean', 'LOG_ENABLE', '' + LOG_ENABLE + '')
+
+        // Địa chỉ máy chủ
+        buildConfigField('String', 'HOST_URL', '"' + HOST_URL + '"')
+
+        // Môi trường máy chủ
+        buildConfigField('int', 'PRODUCTION_MODE', '' + PRODUCTION_MODE + '')
+
+        // Projectid
+        buildConfigField('String', 'PROJECT_ID', '"' + PROJECT_ID + '"')
+
+        //Port server
+        buildConfigField('int', 'SERVER_OAUTH', '' + SERVER_OAUTH + '')
+        buildConfigField('int', 'SERVER_ALOLINE', '' + SERVER_ALOLINE + '')
+        buildConfigField('int', 'SERVER_CHAT', '' + SERVER_CHAT + '')
+        buildConfigField('int', 'SERVER_UPLOAD', '' + SERVER_UPLOAD + '')
+        buildConfigField('int', 'SERVER_LOG', '' + SERVER_LOG + '')
+        buildConfigField('int', 'SERVER_OAUTH_NODE', '' + SERVER_OAUTH_NODE + '')
+
+        buildConfigField('int', 'SERVER_FRIEND', '' + SERVER_FRIEND + '')
+        buildConfigField('int', 'SERVER_POST', '' + SERVER_POST + '')
+        buildConfigField('int', 'SERVER_TIMELINE', '' + SERVER_TIMELINE + '')
+        buildConfigField('int', 'SERVER_COMMENT', '' + SERVER_COMMENT + '')
+        buildConfigField('int', 'SERVER_REACTION', '' + SERVER_REACTION + '')
+        buildConfigField('int', 'SERVER_USER', '' + SERVER_USER + '')
+        buildConfigField('int', 'SERVER_REPORT', '' + SERVER_REPORT + '')
+        buildConfigField('int', 'SERVER_CONVERSATION', '' + SERVER_CONVERSATION + '')
+        buildConfigField('int', 'SERVER_MESSAGE', '' + SERVER_MESSAGE + '')
+        buildConfigField('int', 'SERVER_LOG_NOTIFICATION', '' + SERVER_LOG_NOTIFICATION + '')
+    }
+    signingConfigs {
+        config {
+            storeFile file(StoreFile)
+            storePassword StorePassword
+            keyAlias KeyAlias
+            keyPassword KeyPassword
+        }
+    }
+
+    // xây dựng cấu hình：https://developer.android.google.cn/studio/build/build-variants
+    buildTypes {
+
+        debug {
+            // thêm hậu tố vào tên gói
+            //applicationIdSuffix '.debug'
+            // chế độ gỡ lỗi
+            debuggable true
+            jniDebuggable true
+            // nén
+            zipAlignEnabled false
+            // Loại bỏ các tài nguyên vô dụng
+            shrinkResources false
+            // xáo trộn mã
+            minifyEnabled false
+            // Cấu hình thông tin
+            signingConfig signingConfigs.config
+
+            addManifestPlaceholders(['app_name': 'ChatHITU Debug'])
+
+            // Chỉ giữ thư viện như vậy ở chế độ gỡ lỗi để cải thiện tốc độ đóng gói
+            ndk {
+                // abiFilters 'armeabi-v7a', 'arm64-v8a'
+                abiFilters 'armeabi-v7a', 'arm64-v8a'
+            }
+
+            proguardFiles 'proguard-sdk.pro', 'proguard-app.pro'
+        }
+
+        preview.initWith(debug)
+
+        preview {
+            applicationIdSuffix ''
+            addManifestPlaceholders(['app_name': 'ChatHITU Preview'])
+        }
+
+        release {
+            // chế độ gỡ lỗi
+            debuggable false
+            jniDebuggable false
+            // nén
+            zipAlignEnabled false
+            // Loại bỏ các tài nguyên vô dụng
+            shrinkResources false
+            // xáo trộn mã
+            minifyEnabled true
+            // Cấu hình thông tin
+            signingConfig signingConfigs.config
+
+            addManifestPlaceholders(['app_name': '@string/app_name'])
+        }
+    }
+
+    packagingOptions {
+        // Xóa tất cả các tệp trong gói này (thông tin chữ ký sẽ không bị xóa)
+        exclude 'META-INF/*******'
+    }
+
+    // Cấu hình AOP (chọn loại trừ hoặc bao gồm)
+    // Nó cần được cấu hình, nếu không nó sẽ gây ra xung đột, như sau:
+    // Kiểu đầu tiên: không thể biên dịch, lỗi: java.util.zip.Zip Ngoại lệ: Nguyên nhân: tệp zip trống
+    // Điều thứ hai: quá trình biên dịch có thể vượt qua, nhưng lỗi thời gian chạy: ClassNotFoundException: Không tìm thấy lớp trên đường dẫn: DexPathList
+    aspectjx {
+        // Loại trừ tên gói của một số thư viện bên thứ ba (xung đột Gson, LeakCanary và AOP)
+        // Loại trừ 'androidx', 'com.google', 'com.squareup', 'org.apache', 'com.alipay', 'com.taobao', 'version.9'
+        // Chỉ xử lý AOP cho các tên gói sau
+        include android.defaultConfig.applicationId
+    }
+
+    applicationVariants.all { variant ->
+        // apk cấu hình tên tệp đầu ra
+        variant.outputs.all { output ->
+            outputFileName = rootProject.getName() + '_v' + variant.versionName + '_' + variant.buildType.name
+            if (variant.buildType.name == buildTypes.release.getName()) {
+                outputFileName += '_' + new Date().format('MMdd')
+            }
+            outputFileName += '.apk'
+        }
+    }
+
+    //Generate Dynamic Feature
+    bundle {
+        //Generate APKs for devices with different screen densities//
+        density {
+            enableSplit false
+        }
+        //Generate APKs for devices with different CPU architectures//
+        abi {
+            enableSplit false
+            //Create a split APK for each language//
+        }
+        language {
+            enableSplit true
+        }
+    }
+
+    //View Binding
+    buildFeatures {
+        viewBinding true
+        //noinspection DataBindingWithoutKapt
+        dataBinding true
+    }
+
+
+    android {
+        packagingOptions {
+            exclude 'META-INF/NOTICE'
+            exclude 'META-INF/LICENSE'
+        }
+    }
+
+    // This is handled for you by the 2.0+ Gradle Plugin
+    aaptOptions {
+        additionalParameters "--no-version-vectors"
+    }
+
+
+    dynamicFeatures = [':features:login',
+                       ':features:contact',
+                       ':features:chat',
+                       ':features:qr_code',
+                       ':features:info_customer',
+    ]
+}
+
+configurations {
+    all {
+        //noinspection DuplicatePlatformClasses
+        exclude group: 'org.json', module: 'json'
+    }
+
+    all {
+        exclude group: 'androidx.lifecycle', module: 'lifecycle-viewmodel-ktx'
+    }
+}
+
+dependencies {
+    //Module
+    api 'com.google.android.play:core:1.10.3'
+
+    // Thư viện cơ sở
+    api project(':library:base')
+    // Widget
+    api project(':library:widget')
+
+    // Bàn phím emoji và sticker
+    api project(':library:AXEmojiView')
+    api project(':library:AXEmojiView-FacebookProvider')
+    api project(':library:picture_library')
+//    api project(':library:ratingstar')
+//    api project(':library:link-preview')
+
+    api 'com.github.getActivity:EasyHttp:11.2'
+    api 'com.squareup.okhttp3:okhttp:4.9.2'
+
+    //Android Swipe Layout của các pháp sư Trung Hoa-daimajia:https://github.com/daimajia/AndroidSwipeLayout
+    api "com.daimajia.swipelayout:library:1.2.0@aar"
+
+    // https://github.com/getActivity/XXPermissions
+    api 'com.github.getActivity:XXPermissions:16.0'
+
+    // https://github.com/getActivity/TitleBar
+    api 'com.github.getActivity:TitleBar:9.2'
+
+    // https://github.com/getActivity/ToastUtils
+    api 'com.github.getActivity:ToastUtils:10.5'
+
+    // Json：https://github.com/google/gson
+    api 'com.google.code.gson:gson:2.9.0'
+    // Gson：https://github.com/getActivity/GsonFactory
+    api 'com.github.getActivity:GsonFactory:6.2'
+
+    // Shape：https://github.com/getActivity/ShapeView
+    api 'com.github.getActivity:ShapeView:6.0'
+
+    // https://github.com/bumptech/glide
+    // https://github.com/Muyangmin/glide-docs-cn
+    api 'com.github.bumptech.glide:glide:4.13.0'
+//    kapt 'com.github.bumptech.glide:compiler:4.13.0'
+
+    // https://github.com/gyf-dev/ImmersionBar
+    api 'com.gyf.immersionbar:immersionbar:3.0.0'
+
+
+    //https://github.com/scwang90/SmartRefreshLayout
+    api 'com.scwang.smart:refresh-layout-kernel:2.0.3'
+    api 'com.scwang.smart:refresh-header-material:2.0.3'
+
+    //https://github.com/JakeWharton/timber
+    api 'com.jakewharton.timber:timber:5.0.1'
+
+    // MMKV：https://github.com/Tencent/MMKV
+    api 'com.tencent:mmkv-static:1.2.14'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // https://github.com/square/leakcanary
+    //debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.8.1'
+    //previewImplementation 'com.squareup.leakcanary:leakcanary-android:2.8.1'
+
+    api 'me.dm7.barcodescanner:zxing:1.9.13'
+
+    //link:https:https://github.com/lipangit/JiaoZiVideoPlayer
+    api 'cn.jzvd:jiaozivideoplayer:7.7.0'
+
+    //link:https://github.com/AndreiD/TSnackBar
+    api 'com.androidadvance:topsnackbar:1.1.1'
+
+    //https://developer.android.com/training/sign-in/biometric-auth
+    api 'androidx.biometric:biometric:1.2.0-alpha04'
+
+    //link:https://github.com/facebook/shimmer-android
+    api 'com.facebook.shimmer:shimmer:0.5.0@aar'
+
+    //link:https://github.com/ycuwq/DatePicker
+    api 'com.github.ycuwq:DatePicker:1.3.2'
+
+    //link:https:https://github.com/lipangit/JiaoZiVideoPlayer
+    api 'cn.jzvd:jiaozivideoplayer:6.2.10'
+
+    //https://github.com/kyleduo/SwitchButton
+    api 'com.kyleduo.switchbutton:library:2.1.0'
+
+    //https://github.com/socketio/socket.io-client-java
+    api 'io.socket:socket.io-client:2.0.1'
+
+    //https://github.com/gotev/android-upload-service
+    api 'net.gotev:uploadservice:4.7.0'
+
+    //https://github.com/hdodenhof/CircleImageView
+    api 'de.hdodenhof:circleimageview:3.1.0'
+
+    //https://github.com/MarkoMilos/Paginate
+    api 'com.github.markomilos:paginate:1.0.0'
+
+    //https://github.com/PierfrancescoSoffritti/android-youtube-player
+    api 'com.pierfrancescosoffritti.androidyoutubeplayer:core:11.1.0'
+
+    //https://developers.google.com/android/guides/setup
+    api 'com.google.android.gms:play-services-location:19.0.1'
+
+    //https://github.com/Karumi/Dexter
+    api 'com.karumi:dexter:6.2.3'
+
+    api 'com.zhihu.android:matisse:0.5.3-beta3'
+
+    api 'com.github.bingoogolapple.BGAQRCode-Android:zbar:1.3.8'
+
+    //Hoạt ảnh newsfeed
+    api 'com.flaviofaria:kenburnsview:1.0.7'
+
+    //https://github.com/Alireza-Farahani/EqualSpace-ItemDecoration
+    api 'me.farahani.spaceitemdecoration:spaceitemdecoration:1.0'
+
+    // thu vien theo mo hinh
+    api 'com.google.android.flexbox:flexbox:3.0.0'
+
+    //https://github.com/timehop/sticky-headers-recyclerview
+    api 'com.timehop.stickyheadersrecyclerview:library:0.4.3@aar'
+
+    api 'com.github.arhanashik:LinkPreview:1.2.3'
+
+
+    api 'com.squareup.picasso:picasso:2.8'
+
+
+    api 'com.pierfrancescosoffritti.androidyoutubeplayer:core:11.0.1'
+    //https://github.com/sbrukhanda/fragmentviewpager
+    api 'com.sbrukhanda.fragmentviewpager:fragmentviewpager:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.firebase:firebase-database-ktx:20.2.0'
+
+    def kohiiVersion = '1.1.0.2011003'
+    def exoPlayer_version = '2.10.4'
+    //noinspection GradleDependency
+    api "im.ene.kohii:kohii-core:${kohiiVersion}"
+    //noinspection GradleDependency
+    api "im.ene.kohii:kohii-exoplayer:${kohiiVersion}"
+    //noinspection GradleDependency
+    api "com.google.android.exoplayer:exoplayer:${exoPlayer_version}"
+
+    api "com.github.omegaes:Android-Link-Preview:1.0.2"
+    //su dung trong danh sach hinhvideolinkfile
+    api 'com.github.luizgrp:SectionedRecyclerViewAdapter:v3.2.0'
+
+    // 指示器框架：https://github.com/ongakuer/CircleIndicator
+    implementation 'me.relex:circleindicator:2.1.6'
+    // 手势 ImageView：https://github.com/Baseflow/PhotoView
+//    implementation 'com.github.Baseflow:PhotoView:2.3.0'
+
+    //https://github.com/airbnb/lottie-android
+    api 'com.airbnb.android:lottie:5.2.0'
+
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:31.1.1')
+
+
+    // TODO: Add the dependencies for Firebase products you want to use
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
+    implementation 'com.google.firebase:firebase-inappmessaging-display:19.0.3'
+    implementation 'com.google.firebase:firebase-appcheck-playintegrity'
+
+
+    api 'com.google.firebase:firebase-analytics'
+    api 'com.google.firebase:firebase-database'
+    api 'com.google.firebase:firebase-auth'
+    api 'com.google.firebase:firebase-storage:20.1.0'
+    api 'com.google.firebase:firebase-messaging:23.1.0'
+    api 'com.vanniktech:emoji-google:0.7.0'
+    api 'com.android.volley:volley:1.2.0'
+    api 'com.github.chrisbanes:PhotoView:2.2.0'
+
+    //Load Image with COIL: https://github.com/coil-kt/coil/issues?q=reload
+//    api 'io.coil-kt:coil:2.3.0'
+
+
+
+}
