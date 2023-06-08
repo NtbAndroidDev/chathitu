@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/primary_background"
+
+    >
+
+    <LinearLayout
+        android:id="@+id/llGroups"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary_background"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/dp_24"
+            android:paddingTop="@dimen/dp_24"
+            android:paddingBottom="@dimen/dp_8"
+            android:background="@color/primary_background"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primary_background"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="@dimen/dp_24"
+                >
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Groups"
+                    android:fontFamily="@font/public_sans_semi_bold"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/sp_22"
+                    android:padding="@dimen/dp_2"
+                    />
+
+                <ImageView
+                    android:id="@+id/btnAddGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_group_line_off"
+                    android:layout_marginLeft="@dimen/dp_2"
+                    android:layout_gravity="center_vertical"
+                    />
+            </LinearLayout>
+            <androidx.appcompat.widget.SearchView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:iconifiedByDefault="false"
+                android:theme="@style/AppSearchView"
+                app:searchIcon="@drawable/ic_search_line"
+                android:background="@drawable/chat_bg_border_radius_8dp"
+                app:submitBackground="@android:color/transparent"
+                app:queryBackground="@android:color/transparent"
+                android:id="@+id/searchView_Search"
+                app:queryHint="Search group..."
+                />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_GroupList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_8"
+            tools:listitem="@layout/group_item"
+            android:visibility="visible"
+            android:background="@color/primary_background"
+
+            />
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

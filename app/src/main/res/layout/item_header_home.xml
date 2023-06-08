@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/tbHeader"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:background="@color/main_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp_8"
+        android:paddingBottom="@dimen/dp_8">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_weight="1">
+
+            <vn.hitu.ntb.widget.AppTextViewBold
+                android:id="@+id/btnPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/bg_home_point"
+                android:drawableStart="@drawable/ic_gem_point"
+                android:drawablePadding="@dimen/dp_4"
+                android:gravity="center"
+                android:paddingStart="@dimen/dp_8"
+                android:paddingTop="@dimen/dp_6"
+                android:paddingEnd="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_4"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12"
+                android:visibility="gone"
+                tools:text="1.957.360" />
+
+            <ImageView
+                android:id="@+id/imvLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:fontFamily="@font/public_sans_semi_bold"
+                android:src="@drawable/ic_hitu"
+                app:tint="@color/white"
+                android:visibility="visible" />
+
+            <vn.hitu.ntb.widget.AppEditText
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_28"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/dp_4"
+                android:layout_marginStart="@dimen/dp_4"
+                android:layout_marginRight="@dimen/dp_16"
+                android:background="@drawable/bg_search"
+                android:clickable="true"
+                android:editTextColor="@color/orange_200"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="Nhập SĐT để kết bạn"
+                android:maxLength="11"
+                android:inputType="phone"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingStart="@dimen/dp_8"
+                android:paddingEnd="@dimen/dp_8"
+                android:theme="@style/SearchView"
+                android:visibility="gone"
+                app:closeIcon="@drawable/ic_delete_white"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@android:color/transparent"
+                tools:ignore="Deprecated" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:gravity="center_vertical">
+
+
+            <ImageButton
+                android:id="@+id/btnScan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:backgroundTint="@color/white"
+                android:background="@drawable/circle_orange_900"
+                android:padding="@dimen/dp_5"
+                android:src="@drawable/ic_scan_news_header"
+                app:tint="@color/main_bg" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <vn.hitu.ntb.widget.AppTextViewBold
+                    android:id="@+id/tvCountNotify"
+                    android:layout_width="@dimen/dp_18"
+                    android:layout_height="@dimen/dp_18"
+                    android:layout_marginLeft="@dimen/dp_24"
+                    android:background="@drawable/bg_notify"
+                    android:gravity="center"
+                    android:text="99+"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_8"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_8"
+        android:layout_marginVertical="@dimen/dp_4"
+        android:background="@drawable/bg_banner"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgAvatar"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:src="@drawable/ic_user_default" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dp_8"
+            android:layout_toRightOf="@id/imgAvatar"
+            android:orientation="vertical">
+
+            <vn.hitu.ntb.widget.AppTextViewBold
+                android:id="@+id/txtFullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
+
+            <vn.hitu.ntb.widget.AppTextView
+                android:id="@+id/tvMutualFriend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_4"
+                android:text=""
+                android:textSize="@dimen/sp_12" />
+
+            <vn.hitu.ntb.widget.AppTextView
+                android:id="@+id/tvToast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_4"
+                android:textColor="@color/main_bg"
+                android:textSize="@dimen/sp_12"
+                android:visibility="gone"
+                app:textAllCaps="true" />
+
+            <LinearLayout
+                android:id="@+id/llButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_4">
+
+                <vn.hitu.ntb.widget.AppButton
+                    android:id="@+id/btnDenied"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_32"
+                    android:background="@drawable/bg_refuse"
+                    android:elevation="0dp"
+                    android:gravity="center"
+                    android:stateListAnimator="@null"
+                    android:text="@string/refuse"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12"
+
+                    />
+
+                <vn.hitu.ntb.widget.AppButton
+                    android:id="@+id/btnAgree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_32"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:background="@drawable/bg_agree"
+                    android:backgroundTint="@color/blue_700"
+                    android:stateListAnimator="@null"
+                    android:text="@string/agree"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_12"
+
+                    />
+
+                <vn.hitu.ntb.widget.AppButton
+                    android:id="@+id/btnRefuse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_32"
+                    android:background="@drawable/bg_refuse_272"
+                    android:elevation="0dp"
+                    android:gravity="center"
+                    android:stateListAnimator="@null"
+                    android:text="@string/recall"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</layout>

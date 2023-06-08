@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbHeader"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:background="@color/main_bg">
+
+
+        <ImageButton
+            android:id="@+id/btnNotification"
+            style="@style/ImageButtonStyleCustom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:background="@drawable/circle_orange_900"
+            android:padding="@dimen/dp_8"
+            android:src="@drawable/ic_notification_news_header"
+            android:visibility="visible" />
+
+
+        <ImageButton
+            android:id="@+id/btnSearch"
+            style="@style/ImageButtonStyleCustom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            android:background="@drawable/circle_orange_900"
+            android:padding="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:src="@drawable/ic_search_white"
+            android:visibility="visible" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+</layout>

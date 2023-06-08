@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary_background"
+
+        >
+        <LinearLayout
+            android:id="@+id/llProfile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/primary_background"
+            android:clickable="true"
+            android:padding="@dimen/dp_24"
+            android:focusable="true"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="My Profile"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/sp_22"
+                android:textStyle="bold"
+                android:layout_marginBottom="@dimen/dp_48" />
+
+            <LinearLayout
+                android:id="@+id/lnAvarta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/dp_24">
+
+                <RelativeLayout
+                    android:id="@+id/rlParent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_24">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/civImage"
+                        android:layout_width="@dimen/dp_96"
+                        android:layout_height="@dimen/dp_96"
+                        app:civ_border_color="@color/gray_border"
+                        android:src="@drawable/ic_user_default"
+                        app:civ_border_width="@dimen/dp_4" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/civPen"
+                        android:layout_width="@dimen/dp_32"
+                        android:layout_height="@dimen/dp_32"
+                        android:layout_alignRight="@id/civImage"
+                        android:layout_alignBottom="@+id/civImage"
+                        android:src="@drawable/ic_pencil_fill"
+                        app:civ_border_color="@color/secondary_background"
+                        app:civ_border_width="@dimen/dp_8"
+                        app:civ_circle_background_color="@color/secondary_background" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Thanh Binh"
+                    android:gravity="center"
+                    android:fontFamily="@font/public_sans_semi_bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/primary_text"
+                    android:layout_marginBottom="@dimen/dp_4" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/civOnlineCircle"
+                        android:layout_width="@dimen/dp_8"
+                        android:layout_height="@dimen/dp_8"
+                        android:layout_marginRight="@dimen/dp_4"
+                        android:src="@color/white"
+                        app:civ_border_color="@color/green_circle"
+                        app:civ_border_width="@dimen/dp_4" />
+
+                    <TextView
+                        android:id="@+id/tvStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Active"
+                        android:textSize="@dimen/sp_12"
+                        android:fontFamily="@font/public_sans_regular" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnShowInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/dp_16"
+                android:paddingVertical="@dimen/dp_8"
+                android:background="@color/nav_background"
+                android:gravity="center_vertical"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Personal Info"
+                    android:textSize="@dimen/sp_12"
+                    android:fontFamily="@font/public_sans_semi_bold"
+                    android:textColor="@color/primary_text" />
+
+                <ImageView
+                    android:id="@+id/ivDropInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_right_s_line"
+                    android:layout_gravity="right"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/expandInfo"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_56"
+                    android:paddingVertical="@dimen/dp_8"
+                    android:background="@color/nav_background"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="@dimen/dp_16">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        android:textSize="@dimen/sp_14"
+                        android:fontFamily="@font/public_sans_regular"
+                        android:textColor="@color/secondary_text"
+                        android:layout_marginBottom="@dimen/dp_4" />
+
+                    <TextView
+                        android:id="@+id/tvProfileName"
+                        android:layout_width="wrap_content"
+                        android:text="Thanh Binh"
+                        android:textSize="@dimen/sp_12"
+                        android:textColor="@color/primary_text"
+                        android:fontFamily="@font/public_sans_semi_bold"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_56"
+                    android:paddingVertical="@dimen/dp_8"
+                    android:background="@color/nav_background"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="@dimen/dp_16">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:textSize="@dimen/sp_14"
+                        android:fontFamily="@font/public_sans_regular"
+                        android:textColor="@color/secondary_text"
+                        android:layout_marginBottom="@dimen/dp_4" />
+
+                    <TextView
+                        android:id="@+id/tvProfileEmail"
+                        android:layout_width="wrap_content"
+                        android:text="thanhbinhntn2018@gmail.com"
+                        android:textSize="@dimen/sp_12"
+                        android:textColor="@color/primary_text"
+                        android:fontFamily="@font/public_sans_semi_bold"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/dp_16"
+                android:paddingVertical="@dimen/dp_8"
+                android:gravity="center_vertical"
+                android:background="@color/nav_background"
+                android:id="@+id/btnShowOptions"
+                android:layout_marginTop="@dimen/dp_8">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Options"
+                    android:textSize="@dimen/sp_12"
+                    android:fontFamily="@font/public_sans_semi_bold"
+                    android:textColor="@color/primary_text" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_right_s_line"
+                    android:layout_gravity="right"
+                    android:id="@+id/iconDropOptions" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/expandOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/nav_background"
+                    android:paddingVertical="@dimen/dp_16"
+                    android:paddingHorizontal="@dimen/dp_16">
+
+                    <TextView
+                        android:id="@+id/expandedListItem"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Dark mode"
+                        android:textSize="@dimen/sp_12"
+                        android:fontFamily="@font/public_sans_semi_bold"
+                        android:textColor="@color/primary_text"
+                        android:layout_weight="1" />
+
+                    <Switch
+                        android:id="@+id/btnSwitchTheme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:switchMinWidth="@dimen/dp_32"
+                        tools:ignore="UseSwitchCompatOrMaterialXml"
+                        android:track="@drawable/custom_track_switch"
+                        android:thumb="@drawable/custom_thumb_switch" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/nav_background"
+                    android:paddingVertical="@dimen/dp_16"
+                    android:paddingHorizontal="@dimen/dp_16">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Show notification"
+                        android:textSize="@dimen/sp_12"
+                        android:fontFamily="@font/public_sans_semi_bold"
+                        android:textColor="@color/primary_text"
+                        android:layout_weight="1" />
+
+                    <Switch
+                        android:id="@+id/btnSwitchNotify"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:switchMinWidth="@dimen/dp_32"
+                        tools:ignore="UseSwitchCompatOrMaterialXml"
+                        android:track="@drawable/custom_track_switch"
+                        android:thumb="@drawable/custom_thumb_switch" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/nav_background"
+                    android:paddingVertical="@dimen/dp_16"
+                    android:paddingHorizontal="@dimen/dp_16">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Status"
+                        android:textSize="@dimen/sp_12"
+                        android:fontFamily="@font/public_sans_semi_bold"
+                        android:textColor="@color/primary_text"
+                        android:layout_weight="1" />
+
+                    <Switch
+                        android:id="@+id/btnSwitchStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:switchMinWidth="@dimen/dp_32"
+                        tools:ignore="UseSwitchCompatOrMaterialXml"
+                        android:track="@drawable/custom_track_switch"
+                        android:thumb="@drawable/custom_thumb_switch" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/nav_background"
+                    android:paddingVertical="@dimen/dp_16"
+                    android:paddingHorizontal="@dimen/dp_16">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Sign in with fingerprint or Face ID"
+                        android:textSize="@dimen/sp_12"
+                        android:fontFamily="@font/public_sans_semi_bold"
+                        android:textColor="@color/primary_text"
+                        android:layout_weight="1" />
+
+                    <Switch
+                        android:id="@+id/swBiometric"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:switchMinWidth="@dimen/dp_32"
+                        tools:ignore="UseSwitchCompatOrMaterialXml"
+                        android:track="@drawable/custom_track_switch"
+                        android:thumb="@drawable/custom_thumb_switch" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/logout"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                android:layout_marginTop="@dimen/dp_8"
+                android:fontFamily="@font/public_sans_semi_bold"
+                android:textAllCaps="false"
+                android:background="@drawable/custom_button"
+                android:padding="@dimen/dp_8" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</LinearLayout>

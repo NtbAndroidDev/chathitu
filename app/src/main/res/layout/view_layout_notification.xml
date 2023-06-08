@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_background"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_65"
+                android:layout_marginTop="@dimen/dp_1"
+                android:background="@color/white"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <vn.hitu.ntb.widget.AppTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:layout_marginBottom="@dimen/dp_4"
+                        android:text="@string/notice_from_the_diary"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_14"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/lnSettingNotificationDiary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:background="@drawable/border_gray_4dp"
+                    android:padding="@dimen/dp_8"
+                    android:paddingBottom="@dimen/dp_4">
+
+                    <ImageView
+                        android:id="@+id/imvDiary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_plus" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnHideNotificationDiary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_65"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <vn.hitu.ntb.widget.AppTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_4"
+                            android:layout_marginBottom="@dimen/dp_4"
+                            android:text="@string/interact_with_your_diary"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_14"
+                            android:textStyle="normal" />
+
+
+                    </LinearLayout>
+
+                    <com.kyleduo.switchbutton.SwitchButton
+                        android:layout_width="@dimen/dp_56"
+                        android:layout_height="@dimen/dp_32"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:checked="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_65"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <vn.hitu.ntb.widget.AppTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_4"
+                            android:layout_marginBottom="@dimen/dp_4"
+                            android:text="@string/interact_with_your_tabbed_logs"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_14"
+                            android:textStyle="normal" />
+
+
+                    </LinearLayout>
+
+
+                    <com.kyleduo.switchbutton.SwitchButton
+                        android:layout_width="@dimen/dp_56"
+                        android:layout_height="@dimen/dp_32"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:checked="true" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_65"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <vn.hitu.ntb.widget.AppTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_4"
+                            android:layout_marginBottom="@dimen/dp_4"
+                            android:text="@string/new_diary_from_your_friend"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_14"
+                            android:textStyle="normal" />
+
+
+                    </LinearLayout>
+
+
+                    <com.kyleduo.switchbutton.SwitchButton
+                        android:layout_width="@dimen/dp_56"
+                        android:layout_height="@dimen/dp_32"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:checked="true" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@color/white"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <vn.hitu.ntb.widget.AppTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:layout_marginBottom="@dimen/dp_4"
+                        android:text="@string/notifications_from_chat"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_14"
+                        android:textStyle="normal" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/lnSettingNotificationChat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:background="@drawable/border_gray_4dp"
+                    android:padding="@dimen/dp_8">
+
+                    <ImageView
+                        android:id="@+id/imvChat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_plus" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnHideSettingNotificationChat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_65"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <vn.hitu.ntb.widget.AppTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_4"
+                            android:layout_marginBottom="@dimen/dp_4"
+                            android:text="@string/friend_request"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_14"
+                            android:textStyle="normal" />
+
+
+                    </LinearLayout>
+
+
+                    <com.kyleduo.switchbutton.SwitchButton
+                        android:layout_width="@dimen/dp_56"
+                        android:layout_height="@dimen/dp_32"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:checked="false" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_65"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <vn.hitu.ntb.widget.AppTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_4"
+                            android:layout_marginBottom="@dimen/dp_4"
+                            android:text="@string/only_chat_with_friends"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_14"
+                            android:textStyle="normal" />
+
+                        <vn.hitu.ntb.widget.AppTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Chỉ trò chuyện với bạn bè"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/sp_12"
+                            android:textStyle="normal" />
+
+                    </LinearLayout>
+
+
+                    <com.kyleduo.switchbutton.SwitchButton
+                        android:layout_width="@dimen/dp_56"
+                        android:layout_height="@dimen/dp_32"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:checked="true" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_65"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@color/white"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <vn.hitu.ntb.widget.AppTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:layout_marginBottom="@dimen/dp_4"
+                        android:text="@string/notice_from_the_restaurant"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_14"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:background="@drawable/border_gray_4dp"
+                    android:padding="@dimen/dp_8"
+                    android:paddingBottom="@dimen/dp_4">
+
+                    <ImageView
+                        android:id="@+id/imvRestaurant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_plus" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

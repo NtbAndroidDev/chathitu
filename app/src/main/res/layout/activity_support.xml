@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.activity.SupportActivity">
+
+        <com.hjq.bar.TitleBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_bg"
+            app:title="@string/support"
+            app:titleColor="@color/white"
+            app:titleSize="@dimen/sp_14" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_16">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_gray_4dp"
+                    android:backgroundTint="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_8"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp_8"
+                        android:weightSum="3">
+
+                        <vn.hitu.ntb.widget.AppTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="H."
+                            android:textColor="@color/green_600"
+                            android:textSize="@dimen/sp_14" />
+
+                        <vn.hitu.ntb.widget.AppTextView
+                            android:layout_width="314dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="dolores eos qui ratione voluptatem sequi nesciunt amet?"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_14" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_up" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_0_1"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:background="@color/gray_200"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border_gray_4dp"
+                        android:backgroundTint="@color/white"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp_8"
+                        android:visibility="gone"
+                        android:weightSum="3">
+
+                        <vn.hitu.ntb.widget.AppTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="T."
+                            android:textColor="@color/orange_900"
+                            android:textSize="@dimen/sp_12" />
+
+                        <vn.hitu.ntb.widget.AppTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="dolores eos qui ratione voluptatem snesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam,"
+                            android:textColor="@color/gray_600"
+                            android:textSize="@dimen/sp_12" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:background="@drawable/border_gray_4dp"
+                    android:backgroundTint="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_8"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp_8"
+                        android:weightSum="3">
+
+                        <vn.hitu.ntb.widget.AppTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="H."
+                            android:textColor="@color/green_600"
+                            android:textSize="@dimen/sp_14" />
+
+                        <vn.hitu.ntb.widget.AppTextView
+                            android:layout_width="314dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="dolores eos qui ratione voluptatem sequi nesciunt amet?"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_14" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_up" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_0_1"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:background="@color/gray_200"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_8"
+                        android:background="@drawable/border_gray_4dp"
+                        android:backgroundTint="@color/white"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp_8"
+                        android:visibility="gone"
+                        android:weightSum="3">
+
+                        <vn.hitu.ntb.widget.AppTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="T."
+                            android:textColor="@color/orange_900"
+                            android:textSize="@dimen/sp_12" />
+
+                        <vn.hitu.ntb.widget.AppTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="dolores eos qui ratione voluptatem snesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam,"
+                            android:textColor="@color/gray_600"
+                            android:textSize="@dimen/sp_12" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:background="@drawable/border_gray_4dp"
+                    android:backgroundTint="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_8"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp_8"
+                        android:weightSum="3">
+
+                        <vn.hitu.ntb.widget.AppTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="H."
+                            android:textColor="@color/green_600"
+                            android:textSize="@dimen/sp_14" />
+
+                        <vn.hitu.ntb.widget.AppTextView
+                            android:layout_width="314dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="dolores eos qui ratione voluptatem sequi nesciunt amet?"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_14" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_up" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_0_1"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:background="@color/gray_200"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_8"
+                        android:background="@drawable/border_gray_4dp"
+                        android:backgroundTint="@color/white"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp_8"
+                        android:visibility="visible"
+                        android:weightSum="3">
+
+                        <vn.hitu.ntb.widget.AppTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="T."
+                            android:textColor="@color/orange_900"
+                            android:textSize="@dimen/sp_14" />
+
+                        <vn.hitu.ntb.widget.AppTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="dolores eos qui ratione voluptatem snesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam,"
+                            android:textColor="@color/gray_600"
+                            android:textSize="@dimen/sp_14" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:background="@drawable/border_gray_4dp"
+                    android:backgroundTint="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_8"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp_8"
+                        android:weightSum="3">
+
+                        <vn.hitu.ntb.widget.AppTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="H."
+                            android:textColor="@color/green_600"
+                            android:textSize="@dimen/sp_14" />
+
+                        <vn.hitu.ntb.widget.AppTextView
+                            android:layout_width="314dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="dolores eos qui ratione voluptatem sequi nesciunt amet?"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_14" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_up" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_0_1"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:background="@color/gray_200"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_8"
+                        android:background="@drawable/border_gray_4dp"
+                        android:backgroundTint="@color/white"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp_8"
+                        android:visibility="visible"
+                        android:weightSum="3">
+
+                        <vn.hitu.ntb.widget.AppTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="T."
+                            android:textColor="@color/orange_900"
+                            android:textSize="@dimen/sp_14" />
+
+                        <vn.hitu.ntb.widget.AppTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="dolores eos qui ratione voluptatem snesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam,"
+                            android:textColor="@color/gray_600"
+                            android:textSize="@dimen/sp_14" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:background="@drawable/border_gray_4dp"
+                    android:backgroundTint="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_8"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp_8"
+                        android:weightSum="3">
+
+                        <vn.hitu.ntb.widget.AppTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="H."
+                            android:textColor="@color/green_600"
+                            android:textSize="@dimen/sp_14" />
+
+                        <vn.hitu.ntb.widget.AppTextView
+                            android:layout_width="314dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="dolores eos qui ratione voluptatem sequi nesciunt amet?"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_14" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_up" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_0_1"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:background="@color/gray_200"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_8"
+                        android:background="@drawable/border_gray_4dp"
+                        android:backgroundTint="@color/white"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp_8"
+                        android:visibility="visible"
+                        android:weightSum="3">
+
+                        <vn.hitu.ntb.widget.AppTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="T."
+                            android:textColor="@color/orange_900"
+                            android:textSize="@dimen/sp_14" />
+
+                        <vn.hitu.ntb.widget.AppTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="dolores eos qui ratione voluptatem snesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam,"
+                            android:textColor="@color/gray_600"
+                            android:textSize="@dimen/sp_14" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:background="@drawable/border_gray_4dp"
+                    android:backgroundTint="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_8"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp_8"
+                        android:weightSum="3">
+
+                        <vn.hitu.ntb.widget.AppTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="H."
+                            android:textColor="@color/green_600"
+                            android:textSize="@dimen/sp_14" />
+
+                        <vn.hitu.ntb.widget.AppTextView
+                            android:layout_width="314dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="dolores eos qui ratione voluptatem sequi nesciunt amet?"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_14" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_up" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_0_1"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:background="@color/gray_200"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_8"
+                        android:background="@drawable/border_gray_4dp"
+                        android:backgroundTint="@color/white"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp_8"
+                        android:visibility="visible"
+                        android:weightSum="3">
+
+                        <vn.hitu.ntb.widget.AppTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="T."
+                            android:textColor="@color/orange_900"
+                            android:textSize="@dimen/sp_14" />
+
+                        <vn.hitu.ntb.widget.AppTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="dolores eos qui ratione voluptatem snesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam,"
+                            android:textColor="@color/gray_600"
+                            android:textSize="@dimen/sp_14" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:background="@drawable/border_gray_4dp"
+                    android:backgroundTint="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_8"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp_8"
+                        android:weightSum="3">
+
+                        <vn.hitu.ntb.widget.AppTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="H."
+                            android:textColor="@color/green_600"
+                            android:textSize="@dimen/sp_14" />
+
+                        <vn.hitu.ntb.widget.AppTextView
+                            android:layout_width="314dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="dolores eos qui ratione voluptatem sequi nesciunt amet?"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_14" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_up" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_0_1"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:background="@color/gray_200"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_8"
+                        android:background="@drawable/border_gray_4dp"
+                        android:backgroundTint="@color/white"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp_8"
+                        android:visibility="visible"
+                        android:weightSum="3">
+
+                        <vn.hitu.ntb.widget.AppTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="T."
+                            android:textColor="@color/orange_900"
+                            android:textSize="@dimen/sp_14" />
+
+                        <vn.hitu.ntb.widget.AppTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="dolores eos qui ratione voluptatem snesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam,"
+                            android:textColor="@color/gray_600"
+                            android:textSize="@dimen/sp_14" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:background="@drawable/border_gray_4dp"
+                    android:backgroundTint="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_8"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp_8"
+                        android:weightSum="3">
+
+                        <vn.hitu.ntb.widget.AppTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="H."
+                            android:textColor="@color/green_600"
+                            android:textSize="@dimen/sp_14" />
+
+                        <vn.hitu.ntb.widget.AppTextView
+                            android:layout_width="314dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="dolores eos qui ratione voluptatem sequi nesciunt amet?"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_14" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_up" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_0_1"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:background="@color/gray_200"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_8"
+                        android:background="@drawable/border_gray_4dp"
+                        android:backgroundTint="@color/white"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp_8"
+                        android:visibility="visible"
+                        android:weightSum="3">
+
+                        <vn.hitu.ntb.widget.AppTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="T."
+                            android:textColor="@color/orange_900"
+                            android:textSize="@dimen/sp_14" />
+
+                        <vn.hitu.ntb.widget.AppTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="dolores eos qui ratione voluptatem snesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam,"
+                            android:textColor="@color/gray_600"
+                            android:textSize="@dimen/sp_14" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:background="@drawable/border_gray_4dp"
+                    android:backgroundTint="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_8"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp_8"
+                        android:weightSum="3">
+
+                        <vn.hitu.ntb.widget.AppTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="H."
+                            android:textColor="@color/green_600"
+                            android:textSize="@dimen/sp_14" />
+
+                        <vn.hitu.ntb.widget.AppTextView
+                            android:layout_width="314dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="dolores eos qui ratione voluptatem sequi nesciunt amet?"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_14" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_up" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_0_1"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:background="@color/gray_200"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_8"
+                        android:background="@drawable/border_gray_4dp"
+                        android:backgroundTint="@color/white"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp_8"
+                        android:visibility="visible"
+                        android:weightSum="3">
+
+                        <vn.hitu.ntb.widget.AppTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="T."
+                            android:textColor="@color/orange_900"
+                            android:textSize="@dimen/sp_14" />
+
+                        <vn.hitu.ntb.widget.AppTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="dolores eos qui ratione voluptatem snesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam,"
+                            android:textColor="@color/gray_600"
+                            android:textSize="@dimen/sp_14" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <vn.hitu.ntb.widget.AppTextViewBold
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="H."
+                    android:textColor="@color/gray_600"
+                    android:textSize="@dimen/sp_14" />
+
+                <vn.hitu.ntb.widget.AppTextView
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:text="dolores eos qui ratione voluptatem sequi nesciunt amet?"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

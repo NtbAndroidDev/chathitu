@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource"
+     android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_gravity="bottom"
+    android:orientation="vertical"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:background="@drawable/bg_radius_10"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_radius_top_20"
+                android:padding="@dimen/dp_16"
+                android:orientation="vertical">
+
+                <vn.hitu.ntb.widget.AppTextViewBold
+                    android:id="@+id/titleDialog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="@dimen/dp_40"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:text="@string/common_confirm"
+                    android:textColor="@color/gray_500"
+                    android:textSize="@dimen/sp_14" />
+                <vn.hitu.ntb.widget.AppTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:gravity="center"
+                    android:text="@string/hint_confirm"
+                    android:textColor="@color/gray_500"
+                    android:textSize="@dimen/sp_12" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:background="#ececec" />
+            <vn.hitu.ntb.widget.AppTextView
+                android:id="@+id/tvType1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/dp_16"
+                android:gravity="center"
+                android:text="@string/content_type_1"
+                android:textColor="@color/black"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:background="#ececec" />
+            <vn.hitu.ntb.widget.AppTextView
+                android:id="@+id/tvType2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/dp_16"
+                android:gravity="center"
+                android:text="@string/content_type_2"
+                android:textColor="@color/black"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:background="#ececec" />
+            <vn.hitu.ntb.widget.AppTextView
+                android:id="@+id/tvType3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/dp_16"
+                android:gravity="center"
+                android:text="@string/content_type_3"
+                android:textColor="@color/black"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:background="#ececec" />
+            <vn.hitu.ntb.widget.AppTextView
+                android:id="@+id/tvType4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/dp_16"
+                android:gravity="center"
+                android:text="@string/content_type_4"
+                android:textColor="@color/black"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:background="#ececec" />
+            <vn.hitu.ntb.widget.AppTextView
+                android:id="@+id/tvType5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/dp_16"
+                android:gravity="center"
+                android:text="@string/content_type_5"
+                android:textColor="@color/black"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:background="#ececec" />
+            <vn.hitu.ntb.widget.AppTextView
+                android:id="@+id/tvType6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/dp_16"
+                android:gravity="center"
+                android:text="@string/content_type_6"
+                android:textColor="@color/black"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:background="#ececec" />
+            <vn.hitu.ntb.widget.AppTextView
+                android:id="@+id/tvType7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/dp_16"
+                android:gravity="center"
+                android:text="@string/content_type_7"
+                android:textColor="@color/black"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:background="#ececec" />
+            <vn.hitu.ntb.widget.AppTextView
+                android:id="@+id/tvType8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/dp_16"
+                android:gravity="center"
+                android:text="@string/content_type_8"
+                android:textColor="@color/black"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:background="#ececec" />
+            <vn.hitu.ntb.widget.AppTextView
+                android:id="@+id/tvType9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/dp_16"
+                android:gravity="center"
+                android:text="@string/content_type_9"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+        <vn.hitu.ntb.widget.AppButton
+            android:id="@+id/btnClose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_8"
+            android:background="@drawable/bg_btn_lvl"
+            android:text="Huỷ"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/unsafeArea"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="8"
+            android:elevation="0dp"
+            android:orientation="vertical"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:shape="rectangle">
+            <View
+                android:layout_width="@dimen/dp_32"
+                android:layout_height="@dimen/dp_4"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:background="@drawable/border_gray_4dp"
+                android:backgroundTint="@color/gray_300" />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_header_top_dialog"
+                android:padding="@dimen/dp_16">
+
+                <vn.hitu.ntb.widget.AppTextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="@dimen/dp_40"
+                    android:gravity="center"
+                    android:text="@string/terms_conditions"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_8"
+                tools:ignore="UselessParent">
+
+                <vn.hitu.ntb.widget.AppTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Chào mừng bạn đến với BILETLINGO – Trang thông tin điện tử và Ứng dụng do Công ty Nhị ngữ – Bilet sở hữu và/hoặc nắm quyền điều hành."
+                    android:textColor="@color/gray_600"
+                    android:textSize="@dimen/sp_14" />
+
+                <vn.hitu.ntb.widget.AppTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:text="Cảm ơn bạn đã quan tâm đến sản phẩm, dịch vụ và Ứng dụng của chúng tôi. Sản phẩm, dị ch vụ và Ứng dụng được cung cấp bởi Biletlingo có địa chỉ tại:"
+                    android:textColor="@color/gray_600"
+                    android:textSize="@dimen/sp_14" />
+
+                <vn.hitu.ntb.widget.AppTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:text="Tầng 12, Tòa nhà Licogi 13, Số 164 Khuất Duy Tiến, Phường Nhân Chính, Quận Thanh Xuân, Thành phố Hà Nội, Việt Nam"
+                    android:textColor="@color/gray_600"
+                    android:textSize="@dimen/sp_14" />
+
+                <vn.hitu.ntb.widget.AppTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:text="Sử dụng sản phẩm, dịch vụ và Ứng dụng của chúng tôi"
+                    android:textColor="@color/orange_900"
+                    android:textSize="@dimen/sp_14" />
+
+                <vn.hitu.ntb.widget.AppTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:text="Bằng việc sử dụng sản phẩm, dịch vụ và Ứng dụng của chúng tôi, bạn đồng ý tuân thủ các Điều khoản &amp; Điều kiện dưới đây:"
+                    android:textColor="@color/gray_600"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

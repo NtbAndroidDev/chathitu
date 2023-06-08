@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/dialog_ui_round_size"
+            app:cardElevation="0px"
+            tools:ignore="MissingDefaultResource">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp_16">
+
+                    <vn.hitu.ntb.widget.AppTextViewBold
+                        android:id="@+id/titleDialog"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginHorizontal="@dimen/dp_40"
+                        android:gravity="center"
+                        android:text="@string/confirm_account_emergency_lock"
+                        android:textColor="@color/gray_500"
+                        android:textSize="@dimen/sp_14" />
+
+                    <vn.hitu.ntb.widget.AppTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:gravity="center"
+                        android:text="@string/confirm_account_emergency_lock_title"
+                        android:textColor="@color/gray_500"
+                        android:textSize="@dimen/sp_12" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_size"
+                    android:background="#ececec" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp_16">
+
+
+                    <CheckBox
+                        android:id="@+id/cbConfirm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:button="@drawable/checkbox_background_orange"
+                        android:gravity="center"
+                        android:visibility="visible" />
+
+                    <vn.hitu.ntb.widget.AppTextView
+                        android:id="@+id/tvContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:text="@string/disable_password_when_locking_this_account"
+                        android:textColor="@color/gray_900"
+                        android:textSize="@dimen/sp_12"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <vn.hitu.ntb.widget.AppTextViewBold
+                    android:id="@+id/tvUiCancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/orange_900"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/dp_16"
+                    android:text="@string/understood_lock_now"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <vn.hitu.ntb.widget.AppButtonBold
+            android:id="@+id/btnClose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:background="@drawable/bg_btn_lvl"
+            android:backgroundTint="@color/blue_700"
+            android:paddingVertical="@dimen/dp_16"
+            android:text="@string/title_no"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_20" />
+    </LinearLayout>
+</LinearLayout>

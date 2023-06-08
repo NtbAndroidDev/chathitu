@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/dp_16"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_65"
+        android:layout_height="@dimen/dp_65"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/imgAvatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/ic_background_user"
+            android:contentDescription="@string/description_place_image"
+            android:padding="@dimen/dp_4"
+            android:src="@drawable/ic_user_default" />
+
+        <ImageView
+            android:id="@+id/ivOnline"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:contentDescription="@string/description_place_image"
+            android:src="@drawable/ic_online" />
+    </RelativeLayout>
+
+
+    <vn.hitu.ntb.widget.AppTextView
+        android:id="@+id/tvFullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:lines="2"
+        android:maxLines="2"
+        android:text="Quang Tùng Hồ" />
+
+</LinearLayout>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/dp_300"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dialog_ui_round_size"
+        app:cardElevation="0px"
+        tools:ignore="MissingDefaultResource">
+
+        <LinearLayout
+            android:id="@+id/ll_ui_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_8">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <vn.hitu.ntb.widget.AppTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nhập số lượng"
+                        android:textAllCaps="true"
+                        android:textColor="@color/main_bg"
+                        android:textSize="@dimen/sp_16"
+                        android:textStyle="bold" />
+
+                    <vn.hitu.ntb.widget.AppTextViewBold
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textColor="@color/gray_900"
+                        android:textSize="@dimen/sp_16"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+
+                    <CheckBox
+                        android:id="@+id/cbConfirm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:button="@drawable/checkbox_background_orange"
+                        android:gravity="center"
+                        android:visibility="visible" />
+
+                    <vn.hitu.ntb.widget.AppTextView
+                        android:id="@+id/tvContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:text="@string/confirm_un_friend"
+                        android:textColor="@color/gray_600"
+                        android:textSize="@dimen/sp_12"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <vn.hitu.ntb.widget.AppEditText
+                android:id="@+id/edtInputNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:background="@drawable/shape_skeleton_dialog"
+                android:backgroundTint="@color/gray_300"
+                android:completionThreshold="1"
+                android:gravity="center"
+                android:inputType="number"
+                android:lines="5"
+                android:maxLength="4"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_16"
+                android:paddingRight="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_8"
+                android:text="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray_500"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@color/common_line_color" />
+
+            <LinearLayout
+                android:id="@+id/llConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <vn.hitu.ntb.widget.AppTextViewBold
+                    android:id="@+id/tv_ui_cancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/blue_700"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/dp_16"
+                    android:text="@string/common_cancel"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14" />
+
+                <View
+                    android:id="@+id/v_ui_line"
+                    android:layout_width="@dimen/line_size"
+                    android:layout_height="match_parent"
+                    android:background="@color/common_line_color" />
+
+                <vn.hitu.ntb.widget.AppTextViewBold
+                    android:id="@+id/tvUiConFirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/main_bg"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/dp_16"
+                    android:text="@string/confirm"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14" />
+
+                <vn.hitu.ntb.widget.AppTextViewBold
+                    android:id="@+id/tvGrayConfirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/gray_300"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/dp_16"
+                    android:text="@string/confirm"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

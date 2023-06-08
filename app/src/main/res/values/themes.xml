@@ -1,0 +1,27 @@
+<resources>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+<!--    <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">-->
+<!--        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>-->
+<!--    </style>-->
+
+<!--    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">-->
+<!--        <item name="android:background">@color/transparent</item>-->
+<!--    </style>-->
+
+    <style name="CircularProgress">
+        <item name="colorAccent">@color/main_bg</item>
+    </style>
+    <style name="ClickableView">
+        <item name="colorControlHighlight">@android:color/darker_gray</item>
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+    </style>
+</resources>

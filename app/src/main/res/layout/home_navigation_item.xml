@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".ui.adapter.NavigationAdapter">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="@dimen/dp_2">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgIcon"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                tools:srcCompat="@drawable/home_message_selector"/>
+
+            <vn.hitu.ntb.widget.AppTextView
+                android:id="@+id/tvAmount"
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:layout_marginStart="@dimen/dp_16"
+                android:background="@drawable/bg_notify"
+                android:backgroundTint="@color/red"
+                android:text="99+"
+                android:gravity="center"
+                android:textSize="@dimen/sp_8"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                android:contentDescription="@string/description_place_image" />
+        </RelativeLayout>
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/txtTitle"
+            android:visibility="visible"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_2"
+            android:textSize="@dimen/sp_12"
+            app:shape_textColor="@color/secondary_text"
+            app:shape_textSelectedColor="@color/primary_color"
+            tools:text="@string/home_nav_home" />
+    </LinearLayout>
+</layout>

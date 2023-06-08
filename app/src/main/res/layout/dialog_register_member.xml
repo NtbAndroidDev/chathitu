@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/llDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:orientation="vertical"
+        style="@style/MyStyle">
+        <View
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_4"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:background="@drawable/border_gray_4dp"
+            android:backgroundTint="@color/gray_300" />
+        <include
+            layout="@layout/item_sign_up_success"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_8"
+            android:background="@color/bg_detail"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dp_8"
+            android:background="@color/white"
+            >
+
+            <vn.hitu.ntb.widget.AppTextViewBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/dp_8"
+                android:text="@string/you_are_member_of"
+                android:textColor="@color/black"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvRegisteredBrand"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/dp_8"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

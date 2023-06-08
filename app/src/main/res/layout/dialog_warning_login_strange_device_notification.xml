@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/dp_280"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dialog_ui_round_size"
+        app:cardElevation="0px"
+        tools:ignore="MissingDefaultResource">
+
+        <LinearLayout
+            android:id="@+id/llUiContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingTop="@dimen/dp_16">
+
+                    <vn.hitu.ntb.widget.AppTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sign_in_alert_from_unknown_device"
+                        android:textColor="@color/red_600"
+                        android:textSize="@dimen/sp_14"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/sp_16"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <vn.hitu.ntb.widget.AppTextView
+                        android:id="@+id/tvStrangeDevice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/your_account_has_been_successfully_locked."
+                        android:textColor="@color/gray_900"
+                        android:textSize="@dimen/sp_12" />
+
+                    <vn.hitu.ntb.widget.AppTextViewBold
+                        android:id="@+id/tvDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp_8"
+                        android:text="04/01/2023"
+                        android:textColor="@color/gray_900"
+                        android:textSize="@dimen/sp_12" />
+
+                    <vn.hitu.ntb.widget.AppTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cảnh báo: Nếu không phải bạn, hãy bấm nút Khóa tài khoản khẩn cấp để bảo vệ tài khoản"
+                        android:textColor="@color/gray_900"
+                        android:textSize="@dimen/sp_12" />
+
+                    <LinearLayout
+                        android:id="@+id/llConfirm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:orientation="vertical">
+
+                        <vn.hitu.ntb.widget.AppTextViewBold
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_btn_lvl"
+                            android:backgroundTint="@color/red_600"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:paddingVertical="@dimen/dp_16"
+                            android:text="@string/emergency_account_lockout"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_16" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:background="@drawable/bg_btn_lvl"
+                            android:backgroundTint="@color/gray_500"
+                            android:gravity="center"
+                            android:paddingVertical="@dimen/dp_16">
+
+
+                            <vn.hitu.widget.view.CountdownView
+                                android:id="@+id/cvPasswordForgetCountdown"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/dp_8"
+                                android:gravity="center"
+                                android:text="@string/title_cancel"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/sp_16"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@color/common_line_color" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

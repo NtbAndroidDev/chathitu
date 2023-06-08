@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="@dimen/dp_10"
+        tools:context=".ui.adapter.TabAdapter">
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/dp_12"
+            android:textSize="@dimen/sp_15"
+            app:shape_textColor="@color/black25"
+            app:shape_textSelectedColor="@color/common_accent_color"
+            tools:text="title" />
+
+        <View
+            android:id="@+id/vLine"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_2"
+            android:layout_alignStart="@id/txtTitle"
+            android:layout_alignEnd="@id/txtTitle"
+            android:layout_alignBottom="@id/txtTitle"
+            android:background="@color/common_accent_color" />
+
+    </RelativeLayout>
+</layout>

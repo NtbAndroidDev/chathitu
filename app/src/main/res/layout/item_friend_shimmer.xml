@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llInfoCustomer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/dp_16"
+    tools:ignore="MissingDefaultResource">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_48"
+        android:layout_height="@dimen/dp_48">
+
+        <ImageView
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:contentDescription="@string/description_place_image"
+            android:background="@drawable/bg_shimmer_25" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <vn.hitu.ntb.widget.AppTextViewBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:maxWidth="@dimen/dp_160"
+                android:textColor="@color/black"
+                android:background="@drawable/bg_shimmer_10"
+                android:textSize="@dimen/sp_16" />
+
+
+        </LinearLayout>
+
+        <vn.hitu.ntb.widget.AppTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_4"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:background="@drawable/bg_shimmer_10"
+            android:textColor="@color/gray_500"
+            android:textSize="@dimen/sp_12" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

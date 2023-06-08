@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_16">
+
+        <RelativeLayout
+            android:id="@+id/rltAvatar"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="@dimen/dp_80"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgAvatar"
+                android:src="@drawable/ic_user_default"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true" />
+
+            <ImageView
+                android:id="@+id/imgBgProfile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_avatar"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_16">
+
+            <vn.hitu.ntb.widget.AppTextViewBold
+                android:id="@+id/tvNameUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                tools:text="Hữu Thắng"
+                android:textSize="@dimen/sp_16" />
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dp_8"
+                android:id="@+id/lnAccountValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/border_orange_50dp"
+                android:paddingStart="@dimen/dp_12"
+                android:paddingTop="@dimen/dp_4"
+                android:paddingEnd="@dimen/dp_12"
+                android:paddingBottom="@dimen/dp_4"
+                android:visibility="visible">
+
+                <vn.hitu.ntb.widget.AppTextViewBold
+                    android:id="@+id/tvValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableStart="@drawable/ic_gem_point"
+                    android:drawablePadding="@dimen/dp_4"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_12" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

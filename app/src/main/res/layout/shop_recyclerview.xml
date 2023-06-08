@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="142dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <vn.hitu.ntb.widget.AppTextView
+            android:id="@+id/sticker_title"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_24"
+            android:textSize="@dimen/sp_18"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_8" />
+
+        <vn.hitu.ntb.widget.AppTextView
+            android:id="@+id/sticker_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_16"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_32"/>
+
+        <vn.hitu.ntb.widget.AppButton
+            android:id="@+id/sticker_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="14dp"
+            android:text="add"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_16"
+            android:layout_gravity="right"
+            android:textAllCaps="true"
+            android:layout_marginTop="@dimen/dp_8"
+            android:backgroundTint="@color/main_bg" />
+
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/stickers_rv"
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
+        android:layout_marginTop="60dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</FrameLayout>

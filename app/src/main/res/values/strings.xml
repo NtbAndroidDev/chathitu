@@ -1,0 +1,436 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">AloLine</string>
+    <string name="title_chat">Chat</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="common_loading">Đang tải&#8230;</string>
+    <string name="common_network_error">Mạng hiện tại không khả dụng, vui lòng kiểm tra cài đặt mạng</string>
+    <string name="home_exit_hint">Bấm lần nữa để thoát ứng dụng</string>
+    <string name="registry_advertisement_success">Đăng ký quảng cáo\nthành công</string>
+    <string name="manager_advertisement">Quản lý quảng cáo</string>
+    <string name="loading_advertisement">Đang chờ duyệt</string>
+    <string name="reservation_information" translatable="false">Thông tin Booking</string>
+    <string name="order_review" translatable="false">Đánh giá đơn hàng</string>
+    <string name="notification" translatable="false">Thông báo</string>
+    <string name="privacy_policy" translatable="false">Chính sách bảo mật</string>
+    <string name="app_reviews" translatable="false">Đánh giá ứng dụng</string>
+    <string name="support" translatable="false">Trợ giúp</string>
+    <string name="suggestions_for_developers" translatable="false">Góp ý cho nhà phát triển</string>
+    <string name="delete_post" translatable="false">Xoá bài đăng</string>
+    <string name="title_delete_post" translatable="false">Bài đăng này sẽ ẩn khỏi Nhật ký</string>
+    <!--    Setting Account-->
+    <string name="title_audio" translatable="false">Nhấn và giữ để ghi âm</string>
+    <string name="title_recording" translatable="false">Thả ra để gửi, di chuyển sang trái để xóa</string>
+
+    <string name="setting_notification">Cài đặt thông báo</string>
+    <string name="setting_advertisement">Cài đặt quảng cáo</string>
+    <string name="setting_account">Cài đặt tài khoản</string>
+    <string name="setting_user">Cài đặt cá nhân</string>
+    <string name="title_browse_policy">Chọn trưởng nhóm mới</string>
+    <string name="setting_member_brows_member">Duyệt thành viên</string>
+    <string name="setting_chat">Cài đặt nhóm</string>
+    <string name="setting_login">Cài đặt đăng nhập</string>
+    <string name="nation">Quốc Gia</string>
+    <string name="earth">Ngôn Ngữ</string>
+    <string name="forgot_password">Đổi mật khẩu</string>
+    <string name="application_information">Thông tin ứng dụng</string>
+    <string name="logout">Đăng xuất</string>
+    <string name="notice_from_the_restaurant">Thông báo từ Nhà hàng</string>
+    <string name="only_chat_with_friends">Chỉ trò chuyện với bạn bè</string>
+    <string name="friend_request">Lời mời kết bạn</string>
+    <string name="notifications_from_chat">Thông báo từ Trò chuyện</string>
+    <string name="new_diary_from_your_friend">Nhật ký mới từ bạn của bạn</string>
+    <string name="interact_with_your_tabbed_logs">Tương tác với nhật ký gắn tab đến bạn</string>
+    <string name="interact_with_your_diary">Tương tác với nhật ký từ bạn</string>
+    <string name="notice_from_the_diary">Thông báo từ Nhật ký</string>
+    <string name="introduce">Giới thiệu</string>
+    <string name="library">Thư viện</string>
+    <string name="edit">Chỉnh sửa</string>
+    <string name="detail">Chi tiết</string>
+    <string name="text_all">Tất cả</string>
+    <string name="tvMyFriend">Bạn bè</string>
+    <string name="tvWork">Hoạt động</string>
+
+    <string name="my_beer_warehouse">Kho BEER của tôi</string>
+    <string name="my_restaurant">Nhà hàng của tôi</string>
+    <string name="address_restaurant">Địa chỉ / Các chi nhánh</string>
+    <string name="title_album">Thư viện</string>
+    <string name="title_menu">Thực đơn</string>
+    <string name="title_feeling_brand">Cảm nhận từ khách hàng</string>
+    <string name="ultility_restaurant">Các tiện ích</string>
+    <string name="order_management">Quản lý Đơn hàng</string>
+    <string name="subscribe_to_ads">Đăng ký Quảng cáo</string>
+    <string name="title_share">Bạn có cần tiêu đề cho chia sẻ của mình?</string>
+    <string name="share_you">Chia sẻ của bạn là gì nhỉ?</string>
+    <string name="review_restaurant">Cảm nhận của bạn về nhà hàng nào?</string>
+    <string name="title_setting_login">Bạn có thể lựa chọn đăng nhập bằng mật khẩu, vân tay hoặc Face ID</string>
+    <string name="optional_with_fingerprint">Tùy chọn với vân tay</string>
+    <string name="optional_with_face_id">Tùy chọn với Face ID</string>
+    <string name="sign_in_with_fingerprint">Đăng nhập bằng Vân tay</string>
+    <string name="title_sign_in_with_fingerprint">Sử dụng vân tay của bạn thay cho mật khẩu đăng nhập</string>
+    <string name="verify_transactions_by_fingerprint">Xác thực giao dịch bằng Vân tay</string>
+    <string name="title_verify_transactions_by_fingerprint">Sử dụng vân tay để xác nhận tất cả giao dịch trên aloLINE</string>
+    <string name="sign_in_with_face_id">Đăng nhập bằng Face ID</string>
+    <string name="title_sign_in_with_face_id">Sử dụng Face ID của bạn thay cho mật khẩu đăng nhập</string>
+    <string name="authenticate_transactions_with_face_id">Xác thực giao dịch bằng Face ID</string>
+    <string name="title_authenticate_transactions_with_face_id">Sử dụng Face ID để xác nhận tất cả giao dịch trên aloLINE</string>
+
+    <string name="review_order_service" translatable="false">Dịch vụ</string>
+    <string name="review_order_food" translatable="false">Món ăn</string>
+    <string name="review_order_price" translatable="false">Giá cả</string>
+    <string name="review_order_room" translatable="false">Không gian</string>
+    <string name="review_order_toilet" translatable="false">Vệ sinh</string>
+    <string name="bad" translatable="false">Tệ</string>
+    <string name="least" translatable="false">Kém</string>
+    <string name="okay" translatable="false">Tạm</string>
+    <string name="rather" translatable="false">Khá</string>
+    <string name="great" translatable="false">Tuyệt</string>
+    <string name="valid_review_order_service" translatable="false">Vui lòng chọn đánh giá sao dịch vụ trước khi đồng ý</string>
+    <string name="valid_review_order_food" translatable="false">Vui lòng chọn đánh giá sao món ăn trước khi đồng ý</string>
+    <string name="valid_review_order_price" translatable="false">Vui lòng chọn đánh giá sao giá cả trước khi đồng ý</string>
+    <string name="valid_review_order_room" translatable="false">Vui lòng chọn đánh giá sao không gian trước khi đồng ý</string>
+    <string name="valid_review_order_toilet" translatable="false">Vui lòng chọn đánh giá sao vệ sinh trước khi đồng ý</string>
+    <!-- 通用的 -->
+
+
+    <string name="common_confirm">Xác nhận</string>
+    <string name="confirm_account_emergency_lock">Xác nhận khóa khẩn cấp tài khoản</string>
+    <string name="hint_confirm">Không thông báo tin nhắn của hộp thoại này</string>
+    <string name="confirm_account_emergency_lock_title">LƯU Ý: Chỉ nên vô hiệu hóa mật khuẩu nếu vẫn còn sở hữu số điện thoại đã đăng kí aloLINE</string>
+    <string name="content_type_1">Thông tin không chính xác</string>
+    <string name="content_feedback_1">Yêu cầu nâng cấp, cải tiến</string>
+    <string name="content_type_2">Ngôn từ gây thù ghét</string>
+    <string name="content_feedback_2">Góp ý phát triển thêm</string>
+    <string name="content_type_3">Nội dung về tình dục hoặc ảnh khoả thân </string>
+    <string name="content_feedback_3">Báo lỗi </string>
+    <string name="not_found_timeline">Lỗi dữ liệu </string>
+    <string name="content_type_4">Bạo lực</string>
+    <string name="content_type_5">Thông tin sai sự thật </string>
+    <string name="content_type_6">Quấy rối</string>
+    <string name="content_type_7">Trang lừa đảo và giả mạo </string>
+    <string name="content_type_8">Bán hàng trái phép</string>
+    <string name="content_type_9">Quyền sở hữu trí tuệ</string>
+
+    <string name="other">Lý do khác</string>
+    <string name="common_cancel">Hủy bỏ</string>
+    <string name="title_report" translatable="false">Cảm ơn bạn đã gửi báo cáo</string>
+    <string name="title_notify_report" translatable="false">Chúng tôi sẽ xem xét báo cáo và thông báo cho bạn về quyết định của mình</string>
+    <string name="common_year">Năm</string>
+    <string name="common_month">Tháng</string>
+    <string name="common_day">Ngày</string>
+
+    <string name="common_hour">Giờ</string>
+    <string name="common_minute">Phút</string>
+    <string name="common_second">Giay</string>
+
+
+    <string name="common_crash_hint">Ứng dụng gặp sự cố nhỏ và đang khởi động lại</string>
+
+
+    <string name="common_permission_alert">Lời nhắc ủy quyền</string>
+    <string name="common_permission_fail_1">Cấp quyền không thành công, vui lòng cấp quyền chính xác</string>
+    <string name="common_permission_fail_2">Không xin được quyền, vui lòng cấp quyền theo cách thủ công</string>
+    <string name="common_permission_fail_3">Không xin được quyền, vui lòng cấp quyền theo cách thủ công%s</string>
+    <string name="common_permission_fail_4">Quyền vị trí nền không được cấp, vui lòng chọn "Luôn cho phép"</string>
+    <string name="common_permission_goto">Đi đến ủy quyền</string>
+
+    <string name="common_permission_calendar">Quyền lịch</string>
+    <string name="common_permission_camera">Cho phép máy ảnh</string>
+    <string name="common_permission_contacts">Quyền liên hệ</string>
+    <string name="common_permission_location">Quyền vị trí</string>
+    <string name="common_permission_location_background">Quyền vị trí nền</string>
+    <string name="common_permission_microphone">Quyền đối với micrô</string>
+    <string name="common_permission_phone">Quyền điện thoại</string>
+    <string name="common_permission_call_log">Quyền ghi nhật ký cuộc gọi</string>
+    <string name="common_permission_sensors">Quyền cảm biến cơ thể</string>
+    <string name="common_permission_activity_recognition">Quyền tập thể dục</string>
+    <string name="common_permission_sms">Quyền SMS</string>
+    <string name="common_permission_storage">Quyền lưu trữ</string>
+
+    <string name="common_permission_install">Cài đặt quyền ứng dụng</string>
+    <string name="common_permission_notification">Quyền của thanh thông báo</string>
+    <string name="common_permission_window">Quyền đối với cửa sổ nổi</string>
+    <string name="common_permission_setting">Quyền thiết lập hệ thống</string>
+
+    <string name="common_no_more_data">Không có thêm dữ liệu</string>
+
+    <string name="common_web_ssl_error_title">Chứng chỉ bảo mật trang web hiện tại đã hết hạn hoặc không đáng tin cậy\nTiếp tục duyệt</string>
+    <string name="common_web_ssl_error_allow">Tiếp tục duyệt</string>
+    <string name="common_web_ssl_error_reject">Quay lại trang cuối cùng</string>
+
+    <string name="common_web_location_permission_title">Trang web hiện tại cần có vị trí địa lý của bạn</string>
+    <string name="common_web_location_permission_allow">Ban cho</string>
+    <string name="common_web_location_permission_reject">Từ chối</string>
+
+    <string name="common_web_call_phone_title">Số lượng hiện tại %s</string>
+    <string name="common_web_call_phone_allow">Quay số</string>
+    <string name="common_web_call_phone_reject">Hủy bỏ</string>
+
+    <!-- Yêu cầu mạng -->
+
+    <string name="http_data_explain_error">Ngoại lệ phân tích cú pháp dữ liệu, vui lòng đợi</string>
+    <string name="http_server_out_time">Không có phản hồi từ máy chủ</string>
+    <string name="http_network_error">Yêu cầu không thành công, vui lòng kiểm tra cài đặt mạng</string>
+    <string name="http_response_error">Máy chủ phản hồi bất thường, vui lòng thử lại sau</string>
+    <string name="http_server_error">Lỗi kết nối máy chủ, vui lòng thử lại sau</string>
+    <string name="http_request_cancel">Yêu cầu đã bị gián đoạn, vui lòng thử lại</string>
+
+    <string name="http_response_null_body">Dữ liệu máy chủ trả về ngoại lệ, vui lòng thử lại sau</string>
+    <string name="http_response_md5_error">Tải xuống không thành công, xác minh tệp md5 không thành công</string>
+
+
+    <!-- 状态布局 -->
+    <string name="status_layout_no_data">Trống rỗng</string>
+    <string name="status_layout_error_request">Yêu cầu lỗi, vui lòng thử lại</string>
+    <string name="status_layout_error_network">Lỗi mạng, vui lòng thử lại</string>
+    <string name="status_layout_retry">Thử lại</string>
+
+    <!-- 地区对话框 -->
+    <string name="choose_branch_title">Vui lòng chọn nhà hàng</string>
+
+    <!-- 日期对话框 -->
+    <string name="date_title">Vui lòng chọn ngày</string>
+
+    <!-- 时间对话框 -->
+    <string name="time_title">Vui lòng chọn thời gian</string>
+
+    <!-- 升级对话框 -->
+    <string name="update_title_version">Phiên bản mới</string>
+
+    <string name="update_content">Cập nhật nội dung</string>
+
+    <string name="update_yes_version">Cập nhật ngay</string>
+    <string name="confirm">Đồng ý</string>
+    <string name="cancel_friend" translatable="false">Từ chối</string>
+    <string name="version_update"> Để sau</string>
+    <string name="discover_nearby">Khám phá quanh bạn</string>
+    <string name="please_on_location">Vui lòng bật định vị để trải nghiệm tính năng này</string>
+
+
+    <string name="update_notification_channel_id">update</string>
+    <string name="update_notification_channel_name">Thông báo nâng cấp</string>
+
+
+    <!-- 支付密码对话框 -->
+
+    <!-- 选择对话框 -->
+    <string name="select_min_hint">至少要选择 %d 项</string>
+    <string name="select_max_hint">最多只能选择 %d 项</string>
+
+
+    <!-- Trang chủ -->
+    <string name="home_nav_home">Trang chủ</string>
+    <string name="home_nav_food">Thực phẩm</string>
+    <string name="home_nav_message">Trò chuyện</string>
+    <string name="home_nav_account">Tài khoản</string>
+
+
+    <string name="title_login">Module Login</string>
+    <string name="title_advertising_management">Module Advertising Management</string>
+    <string name="title_favorite_restaurant">Module Favorite Restaurant</string>
+    <string name="title_detail_media">Ảnh, File, Link đã gửi</string>
+    <string name="title_qr_group">Mã QR của bạn</string>
+    <string name="title_booking">Module Booking</string>
+    <string name="title_gift">Module Gift</string>
+    <string name="title_membership_card">Membership card</string>
+    <string name="title_activity_membership_card_manager">MembershipCardManagerActivity</string>
+    <string name="title_choose_branch_restaurant">Module Choose Branch Restaurant</string>
+    <string name="title_order_review">Module Order Review</string>
+    <string name="title_contact">Module Contact</string>
+    <string name="description_place_image">A photo of the selected place</string>
+    <string name="description_create_booking">Bạn có thông tin muốn nhắn lại cho nhà hàng không?</string>
+    <string name="title_news_feed">Module News Feed</string>
+    <string name="gift">Quà tặng</string>
+    <string name="title_phone_book">DANH BẠ MÁY</string>
+    <string name="cancel">HUỶ</string>
+
+    <!--    Upload-->
+    <string name="uploading">Tiến trình - [[PROGRESS]]</string>
+    <string name="upload_success">Tải thành công trong [[ELAPSED_TIME]]</string>
+    <string name="upload_error">Lỗi xảy ra khi tải lên</string>
+    <string name="multipart_upload">Tải lên Server</string>
+    <string name="cancel_upload">Hủy</string>
+    <string name="upload_cancelled">Trình tải lên đã hủy</string>
+
+    <string name="title_qr_code">QR Code</string>
+
+    <string name="title_update_profile">Update Profile</string>
+    <string name="search">Tìm kiếm</string>
+    <string name="zero">0</string>
+    <string name="denominations" translatable="false">đ</string>
+    <string name="dish" translatable="false">món</string>
+    <string name="new_message_no_rep">Tin nhắn chưa đọc.</string>
+    <string name="title_order_management">Module Order Management</string>
+    <string name="title_my_gift">Module My Gift</string>
+    <string name="title_choose_booking">Module Choose Booking</string>
+    <string name="title_detail_restaurant">DetailRestaurant</string>
+    <string name="title_new">Mới</string>
+    <string name="text_before">Trước đó</string>
+
+
+    <!--    Thông tin điểm-->
+    <string name="title_point_information">Thông tin ĐIỂM</string>
+    <string name="value">Value</string>
+    <string name="title_edit_profile">Module Edit Profile</string>
+    <string name="title_my_beer">Module My Beer</string>
+    <string name="delete_account">Xoá tài khoản</string>
+    <string name="terms_of_use">Điều khoản sử dụng</string>
+    <string name="terms_conditions">Điều khoản &amp; Điều kiện</string>
+    <string name="privacy_policy_privacy">Chính sách bảo mật &amp; Quyền riêng tư</string>
+    <string name="successfully_delete_account">Xoá tài khoản thành công</string>
+    <string name="cannot_delete_account">Không thể xoá tài khoản</string>
+    <string name="delete_account_policy">Hành động này sẽ không thể hoàn tác</string>
+    <string name="delete_account_title">Xoá tài khoản</string>
+    <string name="title_home">home</string>
+
+    <string name="title_notification">notification</string>
+    <string name="share_review">Chia sẻ cảm nhận về Nhà Hàng</string>
+    <string name="share_value">Chia sẻ giá trị cuộc sống của Bạn</string>
+    <string name="title_info_customer">info_customers</string>
+
+    <string name="lv">LV#</string>
+    <string name="restaurant_name">Tên nhà hàng</string>
+    <string name="empty">Hiện tại không có dữ liệu</string>
+    <string name="near_you">Gần bạn</string>
+    <string name="donate">Nạp:</string>
+    <string name="promotion">Khuyến mãi:</string>
+    <string name="accumulation">Tích lũy:</string>
+    <string name="rating">/999+</string>
+    <string name="member_of">Thành viên của </string>
+    <string name="member">Thành viên </string>
+    <string name="address">Địa chỉ</string>
+    <string name="default_image" translatable="false">Hình mặc định</string>
+    <string name="feedback_success">Đã gửi phản hồi</string>
+    <string name="km">km</string>
+    <string name="vnd">vnđ</string>
+    <string name="call_api_fail">Dữ liệu đang bị lỗi</string>
+    <string name="select_branch" translatable="false">Vui lòng chọn CHI NHÁNH</string>
+    <string name="all">Tất cả</string>
+    <string name="list_branch">Danh sách chi nhánh</string>
+    <string name="more">Xem thêm</string>
+    <string name="no_rules">Chưa có quy định</string>
+    <string name="request_friend">Đã gửi lời mời kết bạn thành công!</string>
+    <string name="like_successfully">Yêu thích thương hiệu thành công</string>
+    <string name="unlike_successfully">Bỏ yêu thích thương hiệu thành công</string>
+    <string name="personal_page" translatable="false">Xem trang cá nhân của</string>
+    <string name="hide_diary" translatable="false">Ẩn nhật ký của</string>
+    <string name="hide_new_feed" translatable="false">Toàn bộ bài đăng và khoảng khắc của</string>
+    <string name="block" translatable="false">sẽ không thấy toàn bộ bài đăng và khoảng khắc của bạn hoặc liên hệ với bạn</string>
+    <string name="block_user" translatable="false">Chặn</string>
+    <string name="un_friend" translatable="false">Huỷ kết bạn với</string>
+    <string name="title_media_slider">Module Media Slider</string>
+    <string name="agree">Đồng ý</string>
+    <string name="refuse">Từ chối</string>
+    <string name="recall" translatable="false">THU HỒI</string>
+    <string name="copy_text" translatable="false">Sao chép văn bản</string>
+    <string name="copied_clipboard" translatable="false">Đã sao chép văn bản vào bộ nhớ tạm</string>
+    <string name="finish_now">Vừa xong</string>
+    <string name="minute_ago">%d phút trước</string>
+    <string name="hour_ago">%d giờ trước</string>
+    <string name="day_ago">%d ngày trước</string>
+    <string name="month_ago">%d tháng trước</string>
+    <string name="more_news_feed">...Xem thêm</string>
+    <string name="compact_news_feed">Thu gọn</string>
+
+    <string name="title_commercial">Commercial</string>
+    <string name="video" translatable="false">Video</string>
+    <string name="banner" translatable="false">Banner</string>
+    <string name="second" translatable="false">Giây</string>
+    <string name="approved" translatable="false">Chưa bắt đầu</string>
+    <string name="refuse_advert" translatable="false">Hệ thống từ chối</string>
+    <string name="running" translatable="false">Đang chạy</string>
+    <string name="pending_a" translatable="false">Chờ duyệt</string>
+    <string name="cancel_advert" translatable="false">Đã huỷ</string>
+    <string name="complete_advert" translatable="false">Kết thúc</string>
+    <string name="pause" translatable="false">Tạm ngưng</string>
+    <string name="trash" translatable="false">Xoá bài đăng</string>
+    <string name="trash_new_feed" translatable="false">Bài đăng này sẽ ẩn khỏi nhật ký</string>
+    <string name="report" translatable="false">Báo xấu</string>
+    <string name="number_notification" translatable="false">99+</string>
+
+    <string name="you_are_member_of" translatable="false">Bạn hiện là thành viên của:</string>
+    <string name="btn_member">Đăng ký Thành viên</string>
+    <string name="max">+</string>
+    <string name="confirm_un_friend" translatable="false">Bạn có chắn chắn muốn huỷ kết với</string>
+    <string name="disable_password_when_locking_this_account" translatable="false">Vô hiệu hóa mật khẩu khi khóa tài khoản này</string>
+    <string name="validate_email">Email chưa đúng định dạng</string>
+    <string name="point" translatable="false">Điểm</string>
+    <string name="dong" translatable="false">VNĐ</string>
+    <string name="title_cancel" translatable="false">Đóng</string>
+    <string name="understood_lock_now" translatable="false">Đã hiểu, khóa ngay</string>
+    <string name="friend_of" translatable="false">Bạn bè của</string>
+    <string name="mutual_friends" translatable="false">bạn chung</string>
+    <string name="there_are" translatable="false">Hiện có</string>
+    <string name="friend" translatable="false">Bạn bè</string>
+    <string name="not_update" translatable="false">Chưa cập nhật</string>
+    <string name="register_success" translatable="false">Đăng ký thành công</string>
+
+    <string name="interactive" translatable="false">Giảm tương tác</string>
+    <string name="hide_diary_new_feed" translatable="false">Ẩn nhật ký 30 ngày</string>
+    <string name="un_follow" translatable="false">Bỏ theo dõi</string>
+    <string name="un_friend_new_feed" translatable="false">Huỷ kết bạn</string>
+    <string name="emergency_account_lockout" translatable="false">Khóa tài khoản khẩn cấp</string>
+
+
+    <!--    Thiết lập tin nhắn-->
+    <string name="setting_message" translatable="false">Thiết lập tin nhắn</string>
+    <string name="setting_notify" translatable="false">Thông báo</string>
+    <string name="setting_message_leader" translatable="false">Làm nổi tin nhắn từ Trưởng/ Phó nhóm</string>
+    <string name="setting_notify_chat_new" translatable="false">Báo tin nhắn mới</string>
+    <string name="setting_emoji_title" translatable="false">Thả emoji</string>
+    <string name="setting_emoji_chat" translatable="false">Hiển thị nút thả emoji trong hội thoại</string>
+    <string name="setting_message_member" translatable="false">Thành viên mới xem được tin nhắn gửi gần đây</string>
+    <string name="setting_share" translatable="false">Cài đặt chung</string>
+    <string name="setting_member" translatable="false">Thành viên</string>
+    <string name="setting_notify_message_title" translatable="false">Báo tin nhắn nhắc tên</string>
+    <string name="setting_notify_message" translatable="false">Nếu tắt thông báo tin nhắn mới, bạn vẫn nhận được thông báo tin nhắn nhắc tên. Khi đó, bạn có thể thay đổi cài đặt tại đây</string>
+    <string name="setting_manage_member" translatable="false">Quản lý thành viên</string>
+    <string name="setting_pin" translatable="false">Ghim ra màn hình</string>
+    <string name="setting_content" translatable="false">Tạo biểu tượng cho hội thoại này ngoài màn hình chính</string>
+    <string name="setting_browse_members" translatable="false">Duyệt thành viên</string>
+    <string name="setting_transfer_group_leader" translatable="false">Chuyển quyền trưởng nhóm</string>
+    <string name="setting_dissolution" translatable="false">Giải tán nhóm</string>
+    <string name="setting" translatable="false">Cài đặt</string>
+    <string name="setting_button_browse_member" translatable="false">Khi bật chế độ nà, thành viên mới phải được duyệt mới có thể tham gia được nhóm</string>
+    <string name="setting_media_aloline_title" translatable="false">Lưu ảnh và video chụp từ Aloline</string>
+    <string name="setting_media_aloline" translatable="false">Chỉ lưu các ảnh và video của cuộc trò chuyện</string>
+    <string name="setting_media_hd_title" translatable="false">Lưu lựa chọn HD</string>
+    <string name="setting_media_hd" translatable="false">Ghi nhớ lựa chọn chất lượng ảnh cho những lần sau</string>
+    <string name="setting_suggest_picture_title" translatable="false">Gợi ý ảnh vừa chụp</string>
+    <string name="setting_suggest_picture" translatable="false">Hiển thị đề xuất gửi ảnh vừa chụp gần đây</string>
+
+    <string name="content_qr_group" translatable="false">Bất kỳ ai có link này đều có thể tham gia nhóm.
+Chỉ chia sẻ với người mà bạn tin tưởng.</string>
+
+    <string name="link_group" translatable="false">hitu.edu.vn/u/khjdsfbseu74312</string>
+    <string name="copy_link_group" translatable="false">Sao chép Link</string>
+    <string name="share_link" translatable="false">Chia sẻ</string>
+    <string name="title_no" translatable="false">Không</string>
+    <string name="sign_in_alert_from_unknown_device" translatable="false">Cảnh báo đăng nhập từ thiết bị lạ</string>
+
+    <string name="link_youtube_1" translatable="false">youtu.be/</string>
+    <string name="link_youtube_2" translatable="false">youtube.com/</string>
+    <string name="link_youtube_4" translatable="false">youtube.com/watch?v=</string>
+    <string name="link_youtube_3" translatable="false">youtube.com/shorts/</string>
+    <string name="dot" translatable="false">•</string>
+    <string name="urgently_locked_account" translatable="false">Đã khóa khẩn cấp tài khoản!</string>
+    <string name="password_retrieval_title_two" translatable="false">Vui lòng chọn LẤY LẠI MẬT KHẨU khi đăng nhập để mở khóa tài khoản</string>
+    <string name="password_retrieval_title_one" translatable="false">Tài khoản của bạn đã được khóa khẩn cấp thành công. Vì lý do an toàn, mật khẩu của bạn đã bị vô hiệu hóa.</string>
+    <string name="please_login_quickly_to_take_control_of_your_account" translatable="false">Hãy mau chóng đăng nhập để đanh quyền kiểm soát tài khoản</string>
+    <string name="your_account_has_been_successfully_locked." translatable="false">Tài khoản của bạn đã được khóa khẩn cấp thành công.</string>
+    <string name="common_video_error_not_support">Video này không phù hợp để phát lại trên thiết bị này</string>
+    <string name="common_video_error_unknown">Không thể phát video này</string>
+    <string name="common_video_error_supplement">Loại lỗi：%d，mã lỗi：%d</string>
+    <string name="content_feedback." translatable="false">Chức năng này chỉ gửi nhanh các pản hồi đến TECHRES.VN. Nếu trong quá trình sử dụng phần mềm, bạn cần biết thêm thông tin và có như cầu được tư vấn, xin vui lòng liên hệ với TECHRES.VN qua các cách sau đây:</string>
+    <string name="content_note." translatable="false">Lưu ý: Khi gọi điện tổng đài 0904 010 143, bạn sẽ trả cước phí điện thoại theo quy định của nhà cung cấp dịch vụ viễn thông.</string>
+    <string name="content_feedback_bottom." translatable="false">Mọi ý kiến đóng góp, phản hồi của bạn là rất quý giá để TECHRES.VN có thể nâng cao chất lượng dịch vụ để phục vụ bạn ngày càng tốt hơn. Xin trân trọng cảm ơn.</string>
+    <string name="downloading" translatable="false">Đang tải xuống</string>
+    <string name="loading" translatable="false">Đang tải...</string>
+    <string name="group" translatable="false">Nhóm</string>
+    <string name="contact" translatable="false">Liên hệ</string>
+    <!--    <string name="default_notification_channel_id" translatable="false">121</string>-->
+    <string name="choose_file" translatable="false">Chọn file</string>
+    <string name="can_not_read_file" translatable="false">Không thể đọc file</string>
+    <string name="change_backgroud" translatable="false">Đổi hình nền</string>
+    <string name="chat_gpt" translatable="false">ChatGPT</string>
+
+</resources>

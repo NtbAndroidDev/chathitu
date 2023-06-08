@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/circle_white" />
+    <item android:drawable="@drawable/ic_volume_turn_off"
+        android:left="@dimen/dp_8"
+        android:right="@dimen/dp_8"
+        android:top="@dimen/dp_8"
+        android:bottom="@dimen/dp_8" />
+</layer-list>

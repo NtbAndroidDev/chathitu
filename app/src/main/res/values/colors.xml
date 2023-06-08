@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- App Màu sắc được tham chiếu trong các kiểu -->
+    <color name="common_primary_color">@color/white</color>
+    <color name="common_primary_dark_color">@color/black</color>
+    <color name="common_accent_color">@color/orange</color>
+    <color name="common_window_background_color">#F4F4F4</color>
+    <color name="common_text_color">#696A6C</color>
+    <color name="common_text_hint_color">#C5C6C9</color>
+
+    <!-- Màu của nút bấm -->
+    <color name="common_button_pressed_color">#FFA233</color>
+    <!-- Màu của nút khi nó bị tắt -->
+    <color name="common_button_disable_color">#E7E8EB</color>
+    <!-- màu của đường phân cách -->
+    <color name="common_line_color">#ECECEC</color>
+    <!-- màu biểu tượng vector -->
+    <color name="common_icon_color">#7C7C7C</color>
+
+    <!-- Màu văn bản của nút xác nhận hộp thoại -->
+    <color name="common_confirm_text_color">#007AFF</color>
+    <!-- Màu văn bản của nút hủy hộp thoại -->
+    <color name="common_cancel_text_color">#F44336</color>
+    <!-- Màu hộp thoại cảnh báo đăng nhập 2 thiết bị-->
+    <color name="red_e800">#E8002E</color>
+    <color name="text">#28282B</color>
+
+    <color name="main_bg">#7269EF</color>
+    <color name="bg_main">#7269EF</color>
+    <color name="imgbtn_bg">#28282B</color>
+    <color name="gray_background">#ffededed</color>
+    <color name="gray_main">#C5C6C9</color>
+    <color name="blue_main">#338DC9</color>
+    <color name="bg_blue_advert">#2DCEE3</color>
+    <color name="gray_text_title">#ff6d6d6d</color>
+    <color name="gray_800">#494A4D</color>
+    <color name="gray_900">#28282B</color>
+    <color name="grey">#7B7B7B</color>
+
+    <!--    Red-->
+    <color name="red_900">#BB0014</color>
+    <color name="red_700">#D70028</color>
+    <color name="red_600">#E8002E</color>
+    <color name="red_500">#F7002E</color>
+
+    <color name="orange">#FFA233</color>
+    <color name="orange_10">#1Affa233</color>
+    <color name="orange_20">#33ffa233</color>
+    <color name="orange_30">#4Dffa233</color>
+    <color name="orange_40">#66ffa233</color>
+    <color name="orange_50">#80ffa233</color>
+    <color name="orange_60">#99ffa233</color>
+    <color name="orange_70">#B3ffa233</color>
+    <color name="orange_80">#CCffa233</color>
+    <color name="orange_90">#E6ffa233</color>
+    <color name="orange_100">#FFF8EF</color>
+    <color name="orange_200">#FFF1E0</color>
+    <color name="orange_300">#FFE3C2</color>
+    <color name="orange_400">#FFCC8F</color>
+    <color name="orange_500">#FFBE70</color>
+    <color name="orange_700">#FFA233</color>
+    <color name="orange_900">#FF8B00</color>
+    <color name="orange_800">#FF8B00</color>
+    <color name="main_gray_dim">#696969</color>
+    <color name="overlay_dark_10">#1A000000</color>
+    <color name="overlay_dark_20">#33000000</color>
+    <color name="overlay_dark_30">#4D000000</color>
+    <color name="overlay_dark_40">#66000000</color>
+    <color name="overlay_dark_50">#80000000</color>
+    <color name="overlay_dark_60">#99000000</color>
+    <color name="overlay_dark_70">#B3000000</color>
+    <color name="overlay_dark_80">#CC000000</color>
+    <color name="overlay_dark_90">#E6000000</color>
+    <color name="transparent_black">#50000000</color>
+    <color name="transparent_orange">#51FFA233</color>
+    <color name="transparent_gray">#50E8E1E1</color>
+    <color name="app_color_fa">#fafafa</color>
+    <color name="gray_background_line">#F1F2F5</color>
+    <color name="gray_100">#F5F6FA</color>
+    <color name="gray_500">#A7A8AB</color>
+    <color name="gray_200">#F1F2F5</color>
+    <color name="gray_300">#E7E8EB</color>
+    <color name="gray_400">#C5C6C9</color>
+    <color name="gray_600">#7D7E81</color>
+    <color name="white_gray">#F1F0F0</color>
+    <color name="gray_background_login">#F1F2F5</color>
+    <color name="gray_component">#F1F2F5</color>
+    <color name="gray_dark">#6C6C6C</color>
+    <color name="primaryText">#1a1a1a</color>
+
+
+    <color name="blue_bg_create_chat_group">#EBF4FA</color>
+    <color name="blue_100">#EBF4FA</color>
+    <color name="blue_200">#CCE3F1</color>
+    <color name="blue_400">#EBF4FA</color>
+    <color name="blue_600">#338DC9</color>
+    <color name="blue_800">#99C6E4</color>
+    <color name="blue_900">#003C63</color>
+    <color name="orange_bg_item_chat_group">#FFF8EF</color>
+
+    <color name="orange_chat_view_page">#FFE3C2</color>
+
+    <color name="revenue_color">#418BCA</color>
+    <color name="gray_bg">#E5E5E5</color>
+    <color name="color_link">#15a4fa</color>
+    <color name="color_time_chat">#8399a6</color>
+    <color name="color_text_chat">#1c2427</color>
+    <color name="color_post_feed_attachment">#dbf0f5</color>
+    <color name="text_last_message">#8b9096</color>
+    <color name="text_name_message">#242424</color>
+    <color name="color_line_header">#FFB052</color>
+    <color name="bg_choose_vote">#FDCE90</color>
+
+    <!--    màu btn, background icon-->
+    <color name="bg_blue">#0071BB</color>
+    <color name="bg_header_scrollView">#F5F6FA</color>
+    <color name="blue_text">#338DC9</color>
+    <color name="blue_component">#0071BB</color>
+    <color name="bg_detail">#F5F6FA</color>
+    <color name="shimmer">#dddddd</color>
+    <color name="green_500">#00B43D</color>
+    <color name="green_600">#00A534</color>
+    <color name="green_100">#BFE8C6</color>
+    <color name="green_300">#65CB7A</color>
+    <color name="blue_700">#0071BB</color>
+    <color name="bg_view_member">#FFE3C2</color>
+    <color name="bg_view_not_member">#CCE3F1</color>
+    <color name="blue_cce">#CCE3F1</color>
+    <color name="state_bg">#50FFA233</color>
+    <color name="red_100">#FFC5D0</color>
+    <color name="expired">#E7E8EB</color>
+    <color name="color_success">#00A534</color>
+
+
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary_background">#F7F7FF</color>
+    <color name="secondary_background">#E6EBF5</color>
+    <color name="nav_background">#FFF</color>
+    <color name="nav_item_active">#F7F7FF</color>
+    <color name="gray_border">#f0eff5</color>
+    <color name="primary_text">#495057</color>
+    <color name="secondary_text">#7A7F9A</color>
+    <color name="chat_background">#FFF</color>
+    <color name="red_text">#EF476F</color>
+    <color name="red_background">#2EEF476F</color>
+    <color name="primary_color">#7269EF</color>
+    <color name="green_circle">#06D6A0</color>
+    <color name="yellow_circle">#FFD166</color>
+    <color name="transparent">#00000000</color>
+    <color name="message">#F5F7FB</color>
+</resources>
