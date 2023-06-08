@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="jbr-17" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/features" />
+            <option value="$PROJECT_DIR$/features/chat" />
+            <option value="$PROJECT_DIR$/features/contact" />
+            <option value="$PROJECT_DIR$/features/info_customer" />
+            <option value="$PROJECT_DIR$/features/login" />
+            <option value="$PROJECT_DIR$/features/qr_code" />
+            <option value="$PROJECT_DIR$/library" />
+            <option value="$PROJECT_DIR$/library/AXEmojiView" />
+            <option value="$PROJECT_DIR$/library/AXEmojiView-FacebookProvider" />
+            <option value="$PROJECT_DIR$/library/base" />
+            <option value="$PROJECT_DIR$/library/picture_library" />
+            <option value="$PROJECT_DIR$/library/widget" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
