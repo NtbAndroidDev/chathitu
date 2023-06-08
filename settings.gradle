@@ -1,0 +1,17 @@
+include ':app'
+include ':library:base'
+include ':library:widget'
+include ':library:AXEmojiView'
+include ':library:picture_library'
+include ':library:AXEmojiView-FacebookProvider'
+//include ':library:ratingstar'
+//include ':library:link-preview'
+
+//DynamicFeatures module
+include ':features'
+
+include ':features:login' // Đăng nhập, Đăng kí tài khoản mới, Quên mật khẩu, Đổi mật khẩu
+include ':features:contact'// Danh bạ
+include ':features:chat'
+include ':features:qr_code'
+include ':features:info_customer'

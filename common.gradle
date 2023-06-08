@@ -1,0 +1,81 @@
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+// Cấu hình chung
+android {
+
+    compileSdkVersion 33
+    defaultConfig {
+        // Phiên bản cài đặt tối thiểu
+        minSdkVersion 23
+        // Phiên bản cài đặt thích ứng
+        targetSdkVersion 31
+        versionName '1.0.0'
+        versionCode 1
+    }
+
+    // Java JDK 8
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+    // Bộ nhớ thư mục của các tập tin
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    buildTypes {
+        // bản debug
+        debug {}
+        // bản beta
+        preview {}
+        // bản live
+        release {}
+    }
+
+    // Cấu hình cảnh báo mã
+    lintOptions {
+        // Tắt cảnh báo mã cứng văn bản
+        disable 'HardcodedText'
+        // Tắt cảnh báo mô tả hình ảnh
+        disable 'ContentDescription'
+    }
+}
+
+afterEvaluate {
+    if (android.defaultConfig.applicationId == null) {
+        generateReleaseBuildConfig.enabled = false
+        generatePreviewBuildConfig.enabled = false
+        generateDebugBuildConfig.enabled = false
+    }
+}
+
+dependencies {
+    // Nhận tất cả thư viện đuôi jar, aar từ libs
+    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+
+    // AndroidX：https://github.com/androidx/androidx
+    implementation("io.coil-kt:coil-compose:2.2.2")
+    // Material：https://github.com/material-components/material-components-android
+    implementation 'com.google.android.material:material:1.4.0'
+
+    // Kotlin：https://github.com/Kotlin/kotlinx.coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
+
+    // Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:31.1.0')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-messaging-directboot:23.1.0'
+    implementation 'com.google.firebase:firebase-messaging:23.1.0'
+
+    // Room components
+    api "androidx.room:room-ktx:2.4.1"
+    kapt "androidx.room:room-compiler:2.4.1"
+    androidTestImplementation "androidx.room:room-testing:2.4.1"
+
+}

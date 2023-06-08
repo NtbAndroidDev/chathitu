@@ -1,0 +1,63 @@
+apply from : 'configs.gradle'
+
+buildscript {
+
+    apply from : 'maven.gradle'
+    ext.kotlin_version = '1.6.10'
+
+    repositories {
+        //Gradle：https://maven.aliyun.com/mvn/guide
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        addCommonMaven(repositories)
+        mavenCentral()
+        google()
+        maven { url "https://jitpack.io" }
+    }
+
+    // Studio：https://github.com/getActivity/StudioPlugins
+    dependencies {
+        // Gradle：https://developer.android.google.cn/studio/releases/gradle-plugin.html#updating-plugin
+        // noinspection GradleDependency
+        classpath 'com.android.tools.build:gradle:7.0.3'
+        // Kotlin：https://plugins.jetbrains.com/plugin/6954-kotlin
+        // noinspection GradleDependency
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // AOP：https://github.com/HujiangTechnology/gradle_plugin_android_aspectjx
+        classpath 'com.hujiang.aspectjx:gradle-android-plugin-aspectjx:2.0.10'
+        // Add the dependency for the Google services Gradle plugin
+        classpath 'com.google.gms:google-services:4.3.15'
+    }
+}
+
+allprojects {
+    repositories {
+        addCommonMaven(repositories)
+        google()  // Google's Maven repository
+        mavenCentral()  // Maven Central repository
+    }
+
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+    tasks.withType(Javadoc) {
+        options {
+            encoding 'UTF-8'
+            charSet 'UTF-8'
+            links 'http://docs.oracle.com/javase/7/docs/api'
+        }
+    }
+
+    //Support @JvmDefault
+    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+        kotlinOptions {
+            freeCompilerArgs = ['-Xjvm-default=enable'] //enable or compatibility
+            jvmTarget = "1.8"
+        }
+    }
+
+    setBuildDir(new File(rootDir, "build/${path.replaceAll(':', '/')}"))
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

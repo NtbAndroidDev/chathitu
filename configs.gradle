@@ -1,0 +1,68 @@
+ext {
+
+    def SERVER_TYPE_TEST = "test"
+    def SERVER_TYPE_PREVIEW = "pre"
+    def SERVER_TYPE_PRODUCT = "product"
+
+    def taskName = project.gradle.startParameter.taskNames[0]
+
+    if (taskName == null) {
+        taskName = ""
+    }
+
+    def serverType = SERVER_TYPE_PRODUCT
+
+    if (taskName.endsWith("Debug")) {
+        serverType = SERVER_TYPE_TEST
+    } else if (taskName.endsWith("Preview")) {
+        serverType = SERVER_TYPE_PREVIEW
+    }
+
+    //Gradle：./gradlew assembleRelease -P ServerType="test"
+    if (project.hasProperty("ServerType")) {
+        serverType = project.properties["ServerType"]
+    }
+
+    PROJECT_ID = "net.aloline.vn"
+
+    SERVER_OAUTH = 8888
+    SERVER_ALOLINE = 8082
+    SERVER_CHAT = 1485
+
+    SERVER_LOG = 1487
+    SERVER_OAUTH_NODE = 9999
+    SERVER_FRIEND = 7001
+    SERVER_USER = 7002
+    SERVER_UPLOAD = 7004
+    SERVER_POST = 7005
+    SERVER_TIMELINE = 7006
+    SERVER_COMMENT = 7007
+    SERVER_REACTION = 7008
+    SERVER_CONVERSATION = 7012
+    SERVER_REPORT = 7013
+    SERVER_MESSAGE = 7010
+    SERVER_LOG_NOTIFICATION = 7017
+
+    switch (serverType) {
+    //Bản beta
+        case SERVER_TYPE_TEST:
+            LOG_ENABLE = true
+//            HOST_URL = "http://172.16.2.243:8092/"
+//               HOST_URL = "http://techres.ddns.net:8092/"
+               HOST_URL = "https://chatgpt-bvy8.onrender.com/api/v1/chatgpt"
+            PRODUCTION_MODE = 0 //chuyển thành 1 -- 0
+            break
+            //Bản staging
+        case SERVER_TYPE_PREVIEW:
+            LOG_ENABLE = true
+            HOST_URL = "http://172.16.10.72:8892/"
+            PRODUCTION_MODE = 1
+            break
+            //Bản live
+        case SERVER_TYPE_PRODUCT:
+            LOG_ENABLE = true
+            HOST_URL = "https://api.gateway.techres.vn/"
+            PRODUCTION_MODE = 1
+            break
+    }
+}

@@ -1,0 +1,12 @@
+static def addCommonMaven(RepositoryHandler handler) {
+    handler.maven { url 'https://maven.aliyun.com/repository/public' }
+    handler.maven { url 'https://maven.aliyun.com/repository/google' }
+    handler.maven { url 'https://repo.huaweicloud.com/repository/maven' }
+    handler.maven { url 'https://jitpack.io' }
+    handler.mavenCentral()
+    handler.google()
+    // noinspection JcenterRepositoryObsolete
+    handler.jcenter()
+}
+
+ext.addCommonMaven = this.&addCommonMaven
