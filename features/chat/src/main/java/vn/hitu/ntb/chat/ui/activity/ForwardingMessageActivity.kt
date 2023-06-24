@@ -14,7 +14,7 @@ import vn.hitu.ntb.chat.databinding.ActivityForwardingMessageBinding
 import vn.hitu.ntb.chat.interfaces.ChooseItemListener
 import vn.hitu.ntb.model.entity.ChatMessage
 import vn.hitu.ntb.chat.ui.adapter.MyFriendAdapter
-import vn.hitu.ntb.chat.ui.handle.FCMSend
+import vn.hitu.ntb.utils.FCMSend
 import vn.hitu.ntb.model.entity.DbReference
 import vn.hitu.ntb.model.entity.Friend
 import vn.hitu.ntb.model.entity.GroupData
@@ -204,10 +204,12 @@ class ForwardingMessageActivity : AppActivity(), ChooseItemListener {
                     val user: UserData? = snapshot.getValue(UserData::class.java)
                     FCMSend.pushNotification(
                         applicationContext,
+                        idGroup,
                         didUserChat,
                         user!!.name,
                         finalNotification,
-                        user.image
+                        user.image,
+                        notification
                     )
                     finish()
 

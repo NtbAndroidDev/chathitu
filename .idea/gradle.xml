@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/features/info_customer" />
             <option value="$PROJECT_DIR$/features/login" />
             <option value="$PROJECT_DIR$/features/qr_code" />
+            <option value="$PROJECT_DIR$/features/story" />
             <option value="$PROJECT_DIR$/library" />
             <option value="$PROJECT_DIR$/library/AXEmojiView" />
             <option value="$PROJECT_DIR$/library/AXEmojiView-FacebookProvider" />

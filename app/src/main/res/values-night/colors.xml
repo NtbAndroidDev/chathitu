@@ -18,7 +18,10 @@
     <color name="transparent">#00000000</color>
     <color name="message">#F5F7FB</color>
     <color name="main_bg">#303841</color>
+    <color name="contact_bg">#303841</color>
+    <color name="contact_text">#e1e9f1</color>
     <color name="blue_bg_create_chat_group">#36404a</color>
+
 
 
 

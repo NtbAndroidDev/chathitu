@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--PictureSelector-->
-    <color name="picture_color_grey">#7269EF</color>
+    <color name="picture_color_grey">@color/main_bg</color>
     <color name="picture_color_black">#000000</color>
     <color name="picture_color_white">#FFFFFF</color>
     <color name="picture_color_blue">#7D7DFF</color>

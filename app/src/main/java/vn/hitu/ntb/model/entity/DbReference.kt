@@ -99,7 +99,7 @@ object DbReference {
         mDatabase = getInstance()
         mDatabase!!.child("Groups").child(gid!!).child("background").setValue(background).addOnCompleteListener {
             if (it.isSuccessful)
-                AppUtils.sendMessage("đã thay đổi hình nền chat", gid)
+                AppUtils.sendMessage("đã thay đổi hình nền chat", gid, AppConstants.NOTIFICATION)
         }
     }
     fun disbandTheGroup(gid: String?) {
@@ -182,6 +182,13 @@ object DbReference {
         val groupUpdates: MutableMap<String, Any> = HashMap()
         groupUpdates["/Leader/$gId"] = groupValues
         mDatabase!!.updateChildren(groupUpdates)
+    }
+    fun newStory(story: Story){  //story
+        mDatabase = getInstance()
+        val storyValues: Map<String, Any> = story.toMap()
+        val storyUpdates: MutableMap<String, Any> = HashMap()
+        storyUpdates["/Storys/${story.uId}/${story.sId}"] = storyValues
+        mDatabase!!.updateChildren(storyUpdates)
     }
 
     fun requestFriend(userId : String, context : Context){

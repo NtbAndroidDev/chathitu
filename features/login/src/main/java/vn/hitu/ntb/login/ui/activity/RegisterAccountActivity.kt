@@ -129,7 +129,7 @@ class RegisterAccountActivity : AppActivity() {
                     if (task.isSuccessful) {
                         val user = mAuth!!.currentUser
                         DbReference.writeNewUser(
-                            Auth.getAuth(),
+                            mAuth!!.currentUser!!.uid,
                             binding.editTextEmailRegister.text.toString(),
                             binding.editTextUserNameRegister.text.toString(),
                             "avtdefault.jpg",

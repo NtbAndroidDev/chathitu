@@ -177,6 +177,7 @@ android {
                        ':features:chat',
                        ':features:qr_code',
                        ':features:info_customer',
+                       ':features:story'
     ]
 }
 

@@ -180,7 +180,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="8dp"
-                    android:src="@drawable/ic_image_fill" />
+                    android:src="@drawable/ic_image_fill"
+                    app:tint="@color/primary_text" />
 
                 <ImageView
                     android:id="@+id/btnMic"

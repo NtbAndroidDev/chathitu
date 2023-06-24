@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_156"
+        android:layout_height="@dimen/dp_232">
+
+        <ImageView
+            android:id="@+id/ivStory"
+            android:layout_width="@dimen/dp_156"
+            android:layout_height="@dimen/dp_232"
+            android:scaleType="fitXY"
+            />
+        <ImageView
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:src="@drawable/ic_add"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:textStyle="bold"
+            android:text="@string/add_story"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            />
+    </RelativeLayout>
+</layout>

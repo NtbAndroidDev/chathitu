@@ -56,7 +56,7 @@ import vn.hitu.ntb.chat.databinding.ActivityChatMessageBinding
 import vn.hitu.ntb.model.entity.ChatMessage
 import vn.hitu.ntb.chat.ui.adapter.ChangeBackgroundAdapter
 import vn.hitu.ntb.chat.ui.adapter.MessageAdapter
-import vn.hitu.ntb.chat.ui.handle.FCMSend
+import vn.hitu.ntb.utils.FCMSend
 import vn.hitu.ntb.constants.AppConstants
 import vn.hitu.ntb.constants.ModuleClassConstants
 import vn.hitu.ntb.eventbus.EventbusChangeBackground
@@ -538,10 +538,12 @@ class ChatActivity : AppActivity(), MessageAdapter.ChatHandle, MessageAdapter.On
                     val user: UserData = snapshot.getValue(UserData::class.java)!!
                     FCMSend.pushNotification(
                         applicationContext,
+                        group.gid,
                         didUserChat,
                         user.name,
                         notification,
-                        user.image
+                        user.image,
+                        chat.typeMessage
                     )
                 }
 

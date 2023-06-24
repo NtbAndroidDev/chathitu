@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_156"
+        android:layout_height="@dimen/dp_232"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:layout_marginEnd="@dimen/dp_8"
+        >
+
+        <ImageView
+            android:id="@+id/ivStory"
+            android:layout_width="@dimen/dp_156"
+            android:layout_height="@dimen/dp_232"
+            android:scaleType="fitXY"
+            android:src="@drawable/cute1"
+            />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/cvAvt"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            app:civ_border_width="@dimen/dp_4"
+            app:civ_border_color="@color/gray_border"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_marginTop="@dimen/dp_8"
+
+            />
+        <vn.hitu.ntb.widget.AppTextViewBold
+            android:id="@+id/tvQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:background="@drawable/bg_image_button"
+            android:paddingVertical="@dimen/dp_2"
+            android:paddingHorizontal="@dimen/dp_8"
+            tools:text="2"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:textStyle="bold"
+            android:text="@string/add_story"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            />
+    </RelativeLayout>
+</layout>

@@ -63,7 +63,7 @@ class AppConstants {
         const val FRAGMENT_MESSAGE = 3
 
         const val CODE_REGISTER_MEMBER = "TECHRES"
-        const val LINK_GROUP = "aloline.vn/u/"
+        const val LINK_GROUP = "hitu.vn/u/"
         const val TYPE_COMMENT = "TYPE_COMMENT"
 
         const val NEWSFEED_TYPE_KEY = "NEWSFEED_TYPE_KEY"
@@ -106,6 +106,16 @@ class AppConstants {
         const val UPLOAD_IMAGE = "http://172.16.10.85:9007/api/v1/media/upload"
         const val API_ORDER = "http://172.16.2.240:1483"
         const val PROGRESS = "progress"
+        const val STORY_LIST = "STORY_LIST"
+        const val GROUP_ID = "GROUP_ID"
+        const val NOTIFICATION_ID = "NOTIFICATION_ID"
+
+        const val TEXT = "text"
+        const val IMAGE = "image"
+        const val VIDEO = "video"
+        const val FILE = "file"
+        const val AUDIO = "audio"
+        const val NOTIFICATION = "notification"
 
     }
 

@@ -32,7 +32,7 @@ import vn.hitu.ntb.chat.constants.MessageChatConstants
 import vn.hitu.ntb.chat.databinding.ActivityDetailChatBinding
 import vn.hitu.ntb.model.entity.ChatMessage
 import vn.hitu.ntb.chat.ui.adapter.MemberChatAdapter
-import vn.hitu.ntb.chat.ui.handle.FCMSend
+import vn.hitu.ntb.utils.FCMSend
 import vn.hitu.ntb.constants.AppConstants
 import vn.hitu.ntb.constants.ModuleClassConstants
 import vn.hitu.ntb.eventbus.EventbusChangeBackground
@@ -131,7 +131,7 @@ class DetailChatActivity : AppActivity(), MemberChatAdapter.ClickUser {
                                 this@DetailChatActivity,
                                 HomeActivity::class.java
                             )
-                            AppUtils.sendMessage("${UserDataCache.getUser().name} đã rời khỏi nhóm", group.gid)
+                            AppUtils.sendMessage("${UserDataCache.getUser().name} đã rời khỏi nhóm", group.gid, AppConstants.NOTIFICATION)
                             startActivity(intent)
                         }
 
@@ -401,10 +401,12 @@ class DetailChatActivity : AppActivity(), MemberChatAdapter.ClickUser {
                     val user: UserData = snapshot.getValue(UserData::class.java)!!
                     FCMSend.pushNotification(
                         applicationContext,
+                        group.gid,
                         didUserChat,
                         user.name,
                         notification,
-                        user.image
+                        user.image,
+                        MessageChatConstants.NOTIFICATION
                     )
                 }
 

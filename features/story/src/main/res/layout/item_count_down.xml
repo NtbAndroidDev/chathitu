@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ProgressBar
+        android:id="@+id/pgbCountDown"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progressDrawable="@drawable/ic_count_down"
+        android:layout_marginEnd="@dimen/dp_4"
+        />
+</LinearLayout>

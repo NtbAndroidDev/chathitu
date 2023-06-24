@@ -119,12 +119,7 @@
             android:name="vn.hitu.ntb.ui.activity.VideoPlayActivity"
             android:launchMode="singleTop"
             android:theme="@style/FullScreenTheme" />
-        <activity
-            android:name="vn.hitu.ntb.ui.activity.AllMyFriendActivity"
-            android:exported="false" />
-        <activity
-            android:name="vn.hitu.ntb.ui.activity.FeedBackActivity"
-            android:exported="false" />
+
 
         <receiver
             android:name="vn.hitu.ntb.utils.GpsLocationReceiver"
@@ -134,6 +129,13 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+        </receiver>
+        <receiver
+            android:exported="true"
+            android:name=".broadcast.DirectReplyReceiver"
+            android:enabled="true"
+            >
+
         </receiver>
 
         <activity
@@ -182,18 +184,7 @@
             android:launchMode="singleTop"
             android:process=":crash"
             android:screenOrientation="landscape" />
-        <activity
-            android:name="vn.hitu.ntb.ui.activity.SettingAccountActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="vn.hitu.ntb.ui.activity.SettingNotificationActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="vn.hitu.ntb.ui.activity.NotificationActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait" />
+
         <activity
             android:name="vn.hitu.ntb.ui.activity.RestartActivity"
             android:launchMode="singleTop"
@@ -210,6 +201,7 @@
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
+
         </service>
         <!--
             Set custom default icon. This is used when no icon is set for incoming notification messages.

@@ -429,8 +429,7 @@ class PhoneBookActivity : AppActivity(), BaseAdapter.OnItemClickListener, MyFrie
                         contactDeviceDao!!.deleteAllData()
                     }
 
-                    val dateFormat =
-                        SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.getDefault())
+                    val dateFormat = SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.getDefault())
 
                     while (contacts!!.moveToNext()) {
                         val ojb = ContactDevice()
@@ -439,8 +438,7 @@ class PhoneBookActivity : AppActivity(), BaseAdapter.OnItemClickListener, MyFrie
                         ojb.phone =
                             formatPhone(contacts.getString(contacts.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER)))
 
-                        val date =
-                            contacts.getString(contacts.getColumnIndex(ContactsContract.CommonDataKinds.Phone.CONTACT_LAST_UPDATED_TIMESTAMP))
+                        val date = contacts.getString(contacts.getColumnIndex(ContactsContract.CommonDataKinds.Phone.CONTACT_LAST_UPDATED_TIMESTAMP))
                                 .toLong()
                         ojb.isNew = TimeFormat.checkTimeIn24HourPhoneBook(
                             dateFormat.format(date),

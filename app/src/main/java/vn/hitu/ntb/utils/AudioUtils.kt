@@ -71,4 +71,20 @@ object AudioUtils {
         set3.play(progressAnimator7).before(progressAnimator8)
         set3.play(progressAnimator8).before(progressAnimator9)
     }
+    fun setProcessBarForCountDown(
+        set1: AnimatorSet,
+        pbProgressbar1: ProgressBar,
+    ) {
+        /**pbProgressbar1 && set1**/
+        pbProgressbar1.progress = 0
+        val progressAnimator1 = ObjectAnimator.ofInt(pbProgressbar1, AppConstants.PROGRESS, 0, 100)
+        progressAnimator1.duration = 3000
+        progressAnimator1.interpolator = LinearInterpolator()
+
+        set1.play(progressAnimator1)
+//        set1.start()
+
+
+    }
+
 }

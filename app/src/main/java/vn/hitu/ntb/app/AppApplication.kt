@@ -262,9 +262,9 @@ class AppApplication : Application(), IApp {
                     }
                 })
                 // Đặt số lần yêu cầu thử lại
-                .setRetryCount(3)
+                .setRetryCount(4)
                 // Đặt thời gian thử lại yêu cầu
-                .setRetryTime(10000).into()
+                .setRetryTime(3000).into()
 
             // Khởi tạo in nhật ký
             if (AppConfig.isLogEnable()) {

@@ -15,3 +15,4 @@ include ':features:contact'// Danh bạ
 include ':features:chat'
 include ':features:qr_code'
 include ':features:info_customer'
+include ':features:story'

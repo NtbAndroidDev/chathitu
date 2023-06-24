@@ -21,7 +21,7 @@ import vn.hitu.ntb.chat.interfaces.RemoveItemListener
 import vn.hitu.ntb.model.entity.ChatMessage
 import vn.hitu.ntb.chat.ui.adapter.ChooseFriendAdapter
 import vn.hitu.ntb.chat.ui.adapter.MyFriendAdapter
-import vn.hitu.ntb.chat.ui.handle.FCMSend
+import vn.hitu.ntb.utils.FCMSend
 import vn.hitu.ntb.model.entity.DbReference
 import vn.hitu.ntb.model.entity.Friend
 import vn.hitu.ntb.model.entity.GroupData
@@ -158,10 +158,12 @@ class AddMemberGroupActivity : AppActivity(), ChooseItemListener, RemoveItemList
                     val user: UserData = snapshot.getValue(UserData::class.java)!!
                     FCMSend.pushNotification(
                         applicationContext,
+                        group.gid,
                         didUserChat,
                         user.name,
                         notification,
-                        user.image
+                        user.image,
+                        MessageChatConstants.NOTIFICATION
                     )
                 }
 

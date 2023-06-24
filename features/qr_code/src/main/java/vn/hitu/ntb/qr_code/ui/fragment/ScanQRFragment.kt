@@ -252,7 +252,7 @@ class ScanQRFragment : AppFragment<HomeActivity>(),
                 goToProfile(result.split(":")[0], result.split(":")[1], result.split(":")[2])
             else if (result.split(":").last() == "QR_GROUP") {
                 DbReference.addUserGroup(Auth.getAuth(), result.split(":")[0])
-                AppUtils.sendMessage("${result.split(":")[1]} đã tham gia nhóm", result.split(":").first())
+                AppUtils.sendMessage("${result.split(":")[1]} đã tham gia nhóm", result.split(":").first(), AppConstants.NOTIFICATION)
                 val group = GroupData()
                 val gson = Gson()
                 val listType = object : TypeToken<ArrayList<String>>() {}.type

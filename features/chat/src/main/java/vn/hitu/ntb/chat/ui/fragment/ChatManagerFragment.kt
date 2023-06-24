@@ -15,14 +15,14 @@ import vn.hitu.ntb.constants.ModuleClassConstants.Companion.CONTACT
 import vn.hitu.ntb.eventbus.AmountContactEventBus
 import vn.hitu.ntb.eventbus.CurrentFragmentEventBus
 import vn.hitu.ntb.model.entity.Title
-import vn.hitu.ntb.ui.activity.SettingAccountActivity
+import vn.hitu.ntb.ui.activity.HomeActivity
 
 /**
  * @Author: Phạm Văn Nhân
  * @Date: 03/10/2022
  * @Update: NGUYEN THANH BINH
  */
-class ChatManagerFragment : AppFragment<SettingAccountActivity>(), TabChatAdapter.OnTabListener,
+class ChatManagerFragment : AppFragment<HomeActivity>(), TabChatAdapter.OnTabListener,
 ViewPager.OnPageChangeListener {
 
     private lateinit var binding: FragmentChatManagerBinding

@@ -1,16 +1,23 @@
 package vn.hitu.ntb.chat.ui.handle
 
 import android.animation.AnimatorSet
+import android.graphics.Bitmap
+import android.graphics.drawable.Drawable
 import android.media.MediaMetadataRetriever
 import android.media.MediaPlayer
 import android.os.SystemClock
 import android.util.Log
 import androidx.appcompat.content.res.AppCompatResources
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageMetadata
+import com.squareup.picasso.Picasso
 import vn.hitu.ntb.chat.databinding.MessageAudioRightBinding
 import vn.hitu.ntb.model.entity.ChatMessage
 import vn.hitu.ntb.chat.ui.adapter.MessageAdapter
 import vn.hitu.ntb.utils.AppUtils
 import vn.hitu.ntb.utils.AudioUtils
+import java.net.HttpURLConnection
+import java.net.URL
 
 /**
  * @Author: NGUYEN THANH BINH
@@ -29,6 +36,8 @@ class AudioRightHandle(
     private var set1 = AnimatorSet()
     private var set2 = AnimatorSet()
     private var set3 = AnimatorSet()
+    val mStorage = FirebaseStorage.getInstance().reference
+
     fun setData() {
         pauseTimeAudio()
 
@@ -69,16 +78,10 @@ class AudioRightHandle(
         // Get the duration of the audio file
         val duration = mediaPlayer.duration
 
-        // Get the width of the audio file (in pixels)
-        val width = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_WIDTH)?.toInt() ?: 0
 
-        // Calculate the seekTo position (in milliseconds) for the middle of the audio file
-        val seekTo = duration / 2
 
-        // Print the calculated values
-        Log.d("Width_Auido:", width.toString())
-        Log.d("SeekTo_Audio:", seekTo.toString())
-        val time = SystemClock.elapsedRealtime() + width - seekTo
+        Log.d("Duration_Auido:", duration.toString())
+        val time = SystemClock.elapsedRealtime() + duration - data.seekTo
         binding.audio.timeAudio.base = time
         binding.audio.timeAudio.start()
         binding.audio.ivPlayAudio.setImageDrawable(
@@ -107,16 +110,9 @@ class AudioRightHandle(
             // Get the duration of the audio file
             val duration = mediaPlayer.duration
 
-            // Get the width of the audio file (in pixels)
-            val width = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_WIDTH)?.toInt() ?: 0
+            Log.d("Duration_Auido:", duration.toString())
 
-            // Calculate the seekTo position (in milliseconds) for the middle of the audio file
-            val seekTo = duration / 2
-
-            // Print the calculated values
-            Log.d("Width_Auido:", width.toString())
-            Log.d("SeekTo_Audio:", seekTo.toString())
-            val time = SystemClock.elapsedRealtime() + width - seekTo
+            val time = SystemClock.elapsedRealtime() + duration - data.seekTo
             binding.audio.timeAudio.base = time
         }
         binding.audio.ivPlayAudio.setImageDrawable(
@@ -129,5 +125,9 @@ class AudioRightHandle(
         set2.end()
         set3.end()
         data.stop = false
+
+
     }
+
+
 }

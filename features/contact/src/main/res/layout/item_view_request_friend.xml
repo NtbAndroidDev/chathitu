@@ -72,7 +72,7 @@
         android:id="@+id/lnSync"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/gray_100"
+        android:background="@color/contact_bg"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:padding="@dimen/dp_16">

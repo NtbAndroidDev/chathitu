@@ -127,6 +127,7 @@ class FoodFragment : AppFragment<HomeActivity>(), ListGroupAdapter.OnListener {
                 gid = groupDataList[position].gid
                 name = groupDataList[position].name
                 imageId = groupDataList[position].imageId
+                background =  groupDataList[position].background
             }
 
             val uidChat: String =

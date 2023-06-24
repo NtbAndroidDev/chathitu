@@ -188,7 +188,6 @@ class GroupFragment : AppFragment<HomeActivity>(), OnRefreshLoadMoreListener,
             .addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     groupDataList.clear()
-                    groupUserList.clear()
                     groupUserList.add(GroupData())
                     for (dataSnapshot in snapshot.children) {
                         val group: GroupData? = dataSnapshot.getValue(GroupData::class.java)

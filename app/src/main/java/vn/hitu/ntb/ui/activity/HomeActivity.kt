@@ -1,11 +1,10 @@
 package vn.hitu.ntb.ui.activity
 
-import android.content.*
+import android.content.Intent
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.view.View
 import androidx.core.content.ContextCompat
-import com.google.android.gms.location.*
 import com.google.firebase.auth.FirebaseAuth
 import com.gyf.immersionbar.ImmersionBar
 import org.greenrobot.eventbus.EventBus
@@ -15,20 +14,21 @@ import vn.hitu.base.FragmentPagerAdapter
 import vn.hitu.ntb.R
 import vn.hitu.ntb.app.AppActivity
 import vn.hitu.ntb.app.AppFragment
-import vn.hitu.ntb.cache.UserCache
 import vn.hitu.ntb.constants.AppConstants
 import vn.hitu.ntb.constants.ModuleClassConstants
 import vn.hitu.ntb.databinding.HomeActivityBinding
-import vn.hitu.ntb.eventbus.*
+import vn.hitu.ntb.eventbus.CurrentFragmentEventBus
+import vn.hitu.ntb.eventbus.EventBusNewFeedClickTab
+import vn.hitu.ntb.eventbus.EventbusScrollNewFeed
+import vn.hitu.ntb.eventbus.EventbusSettingGroup
+import vn.hitu.ntb.eventbus.ThemeEventBus
 import vn.hitu.ntb.interfaces.PassAddress
 import vn.hitu.ntb.manager.ActivityManager
-import vn.hitu.ntb.model.entity.*
+import vn.hitu.ntb.model.entity.DbReference
+import vn.hitu.ntb.model.entity.Title
 import vn.hitu.ntb.other.DoubleClickHelper
 import vn.hitu.ntb.ui.adapter.NavigationAdapter
 import vn.hitu.ntb.ui.fragment.AccountFragment
-import vn.hitu.ntb.ui.fragment.FoodFragment
-import vn.hitu.ntb.utils.AppUtils
-import java.util.*
 
 
 /**
@@ -94,7 +94,7 @@ class HomeActivity : AppActivity(), NavigationAdapter.OnNavigationListener {
 
 
         titleHome.title = getString(R.string.home_nav_message)
-        titleFood.title = getString(R.string.group)
+        titleFood.title = getString(R.string.story_home)
         titleMessage.title = getString(R.string.chat_gpt)
         titleAccount.title = getString(R.string.home_nav_account)
         ImmersionBar.setTitleBar(this, binding.header.tbHeader)
@@ -106,10 +106,16 @@ class HomeActivity : AppActivity(), NavigationAdapter.OnNavigationListener {
                     ContextCompat.getDrawable(this@HomeActivity, R.drawable.home_message_selector)
                 )
             )
+//            addItem(
+//                NavigationAdapter.MenuItem(
+//                    titleFood,
+//                    ContextCompat.getDrawable(this@HomeActivity, R.drawable.home_group_selector)
+//                )
+//            )
             addItem(
                 NavigationAdapter.MenuItem(
                     titleFood,
-                    ContextCompat.getDrawable(this@HomeActivity, R.drawable.home_group_selector)
+                    ContextCompat.getDrawable(this@HomeActivity, R.drawable.home_story_selector)
                 )
             )
 //            addItem(
@@ -144,15 +150,9 @@ class HomeActivity : AppActivity(), NavigationAdapter.OnNavigationListener {
         pagerAdapter = FragmentPagerAdapter<AppFragment<*>>(this).apply {
             addFragment(Class.forName(ModuleClassConstants.CHAT)
                 .newInstance() as AppFragment<*>)
-            addFragment(FoodFragment.newInstance())
-//            addFragment(
-//                Class.forName(ModuleClassConstants.TIME_LINE_FRAGMENT)
-//                    .newInstance() as AppFragment<*>
-//            )
-            addFragment(
-                Class.forName(ModuleClassConstants.CALL_HISTORY)
-                    .newInstance() as AppFragment<*>
-            )
+//            addFragment(FoodFragment.newInstance())
+            addFragment(Class.forName(ModuleClassConstants.STORY_FRAGMENT).newInstance() as AppFragment<*>)
+            addFragment(Class.forName(ModuleClassConstants.CALL_HISTORY).newInstance() as AppFragment<*>)
             addFragment(AccountFragment.newInstance())
             binding.nsvPager.adapter = this
 

@@ -49,6 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/dp_16"
                 android:background="@drawable/circle_orange_900"
+                android:backgroundTint="@color/green_600"
                 android:contentDescription="@string/default_image"
                 android:src="@drawable/ic_check_white" />
 

@@ -13,6 +13,9 @@ import vn.hitu.ntb.chat.ui.adapter.MessageAdapter
 import vn.hitu.ntb.model.entity.UserData
 import vn.hitu.ntb.utils.AppUtils
 import vn.hitu.ntb.utils.AudioUtils
+import java.io.IOException
+import java.net.HttpURLConnection
+import java.net.URL
 
 /**
  * @Author: NGUYEN THANH BINH
@@ -81,16 +84,8 @@ class AudioLeftHandle(
         // Get the duration of the audio file
         val duration = mediaPlayer.duration
 
-        // Get the width of the audio file (in pixels)
-        val width = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_WIDTH)?.toInt() ?: 0
-
-        // Calculate the seekTo position (in milliseconds) for the middle of the audio file
-        val seekTo = duration / 2
-
-        // Print the calculated values
-        Log.d("Width_Auido:", width.toString())
-        Log.d("SeekTo_Audio:", seekTo.toString())
-        val time = SystemClock.elapsedRealtime() + width - seekTo
+        Log.d("Duration_Auido:", duration.toString())
+        val time = SystemClock.elapsedRealtime() + duration - data.seekTo
         binding.audio.timeAudio.base = time
         binding.audio.timeAudio.start()
         binding.audio.ivPlayAudio.setImageDrawable(
@@ -119,16 +114,10 @@ class AudioLeftHandle(
             // Get the duration of the audio file
             val duration = mediaPlayer.duration
 
-            // Get the width of the audio file (in pixels)
-            val width = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_WIDTH)?.toInt() ?: 0
-
-            // Calculate the seekTo position (in milliseconds) for the middle of the audio file
-            val seekTo = duration / 2
+            Log.d("Duration_Auido:", duration.toString())
 
             // Print the calculated values
-            Log.d("Width_Auido:", width.toString())
-            Log.d("SeekTo_Audio:", seekTo.toString())
-            val time = SystemClock.elapsedRealtime() + width - seekTo
+            val time = SystemClock.elapsedRealtime() + duration - data.seekTo
             binding.audio.timeAudio.base = time
         }
         binding.audio.ivPlayAudio.setImageDrawable(
@@ -142,4 +131,5 @@ class AudioLeftHandle(
         set3.end()
         data.stop = false
     }
+
 }

@@ -33,6 +33,7 @@ import com.bumptech.glide.load.MultiTransformation
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.CircleCrop
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
@@ -861,12 +862,53 @@ object AppUtils {
                 ).into(view)
         }
     }
-    fun sendMessage(content: String, gId : String) {
+    fun loadStory(view: ImageView, url: String, type: String) {
+        if (!url.contains("/")) {
+//            view.load(getLinkPhoto(url, type))
+//            {
+//                crossfade(true)
+//                placeholder(R.drawable.bg_white_default)
+//
+//                error(R.drawable.bg_white_default)
+//            }
+            Glide.with(view).load(getLinkPhoto(url, type))
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .apply(
+                    RequestOptions().placeholder(R.drawable.bg_white_default)
+                        .error(R.drawable.bg_white_default)
+                )
+                .transform(
+                    MultiTransformation(
+                        CenterCrop(), RoundedCorners(
+                            view.context.resources.getDimension(R.dimen.dp_10)
+                                .toInt()
+                        )
+                    )
+                ).into(view)
+        } else {
+            Glide.with(view).load(Uri.fromFile(File(url)))
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .apply(
+                    RequestOptions().placeholder(R.drawable.bg_white_default)
+                        .error(R.drawable.bg_white_default)
+                )
+                .transform(
+                    MultiTransformation(
+                        CenterCrop(), RoundedCorners(
+                            view.context.resources.getDimension(R.dimen.dp_10)
+                                .toInt()
+                        )
+                    )
+                ).into(view)
+        }
+    }
+    fun sendMessage(content: String, gId : String, type : String) {
         //path: ChatMessage
         val date = Date()
         val timestamp = Timestamp(date.time)
         val currentTime = timestamp.toString()
-        val chat = ChatMessage(currentTime, content, Auth.getAuth(), "notification", "")
+        val chat = ChatMessage(currentTime, content, Auth.getAuth(), type, "")
+
         val ref = FirebaseDatabase.getInstance().reference
         val messageId = ref.child("ChatMessage").child(gId).push().key
         chat.messageId = messageId!!
@@ -879,9 +921,14 @@ object AppUtils {
         val refMessageGroup = refGroups.child("lastMessage")
         val refTimeGroup = refGroups.child("lastTime")
         refTimeGroup.setValue(chat.messageTime)
-        val notification = when (chat.typeMessage) {
-            "notification" -> {
+        val notification = when (type) {
+            AppConstants.NOTIFICATION -> {
                 refMessageGroup.setValue("notification")
+                content
+                // :(
+            }
+            AppConstants.TEXT -> {
+                refMessageGroup.setValue(AppConstants.TEXT)
                 content
                 // :(
             }

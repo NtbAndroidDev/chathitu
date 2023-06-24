@@ -426,11 +426,15 @@ Chỉ chia sẻ với người mà bạn tin tưởng.</string>
     <string name="downloading" translatable="false">Đang tải xuống</string>
     <string name="loading" translatable="false">Đang tải...</string>
     <string name="group" translatable="false">Nhóm</string>
+    <string name="story_home" translatable="false">Tin</string>
     <string name="contact" translatable="false">Liên hệ</string>
     <!--    <string name="default_notification_channel_id" translatable="false">121</string>-->
     <string name="choose_file" translatable="false">Chọn file</string>
     <string name="can_not_read_file" translatable="false">Không thể đọc file</string>
     <string name="change_backgroud" translatable="false">Đổi hình nền</string>
     <string name="chat_gpt" translatable="false">ChatGPT</string>
+    <string name="title_story">Story</string>
+    <string name="add_story">Thêm vào tin</string>
+
 
 </resources>

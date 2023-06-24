@@ -36,6 +36,8 @@
     <color name="gray_800">#494A4D</color>
     <color name="gray_900">#28282B</color>
     <color name="grey">#7B7B7B</color>
+    <color name="contact_bg">#F5F6FA</color>
+    <color name="contact_text">#0071BB</color>
 
     <!--    Red-->
     <color name="red_900">#BB0014</color>

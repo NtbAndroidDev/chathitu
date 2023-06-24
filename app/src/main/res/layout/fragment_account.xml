@@ -50,7 +50,8 @@
                         android:layout_height="@dimen/dp_96"
                         app:civ_border_color="@color/gray_border"
                         android:src="@drawable/ic_user_default"
-                        app:civ_border_width="@dimen/dp_4" />
+                        app:civ_border_width="@dimen/dp_4"
+                        />
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/civPen"

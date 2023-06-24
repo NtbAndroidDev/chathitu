@@ -1,8 +1,12 @@
 package vn.hitu.ntb.contact.ui.fragment
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.content.Intent
+import android.graphics.Bitmap
+import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
 import android.util.Log
 import android.view.View
 import com.google.firebase.auth.FirebaseAuth
@@ -13,6 +17,8 @@ import com.google.firebase.database.ValueEventListener
 import com.google.gson.Gson
 import com.hjq.http.EasyHttp
 import com.hjq.http.listener.HttpCallback
+import com.luck.picture.lib.PictureSelector
+import com.luck.picture.lib.config.PictureConfig
 import com.paginate.Paginate
 import com.scwang.smart.refresh.layout.api.RefreshLayout
 import com.scwang.smart.refresh.layout.listener.OnRefreshLoadMoreListener
@@ -22,6 +28,7 @@ import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
 import vn.hitu.base.BaseDialog
 import vn.hitu.ntb.app.AppFragment
+import vn.hitu.ntb.cache.Auth
 import vn.hitu.ntb.cache.UserCache
 import vn.hitu.ntb.constants.AccountConstants
 import vn.hitu.ntb.constants.AppConstants
@@ -45,6 +52,8 @@ import vn.hitu.ntb.utils.AppUtils
 import vn.hitu.ntb.utils.AppUtils.hide
 import vn.hitu.ntb.utils.AppUtils.show
 import vn.techres.line.contact.databinding.FragmentContactBinding
+import java.io.ByteArrayOutputStream
+import java.io.IOException
 
 /**
  * @Author: NGUYEN THANH BINH
@@ -159,6 +168,7 @@ class ContactFragment : AppFragment<HomeActivity>(), OnRefreshLoadMoreListener,
 
     }
 
+
     /**
      * Gọi api lấy danh sách bạn bè
      */
@@ -172,7 +182,7 @@ class ContactFragment : AppFragment<HomeActivity>(), OnRefreshLoadMoreListener,
                 if (dataSnapshot.exists()){
                     for (data in dataSnapshot.children){
                         val item = data.getValue(IsFriend::class.java)
-                        if (item!!.mId == mAuth.currentUser!!.uid){
+                        if (item!!.mId == Auth.getAuth()){
                             FirebaseDatabase.getInstance().getReference("Users")
                                 .child(item.yId)
                                 .addValueEventListener(object : ValueEventListener {

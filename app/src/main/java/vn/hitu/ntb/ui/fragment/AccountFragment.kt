@@ -89,7 +89,7 @@ class AccountFragment : AppFragment<HomeActivity>() {
                 binding.tvProfileName.text = user.name
                 binding.tvProfileEmail.text = user.email
 
-                UserDataCache.saveUser(UserData(user.uid, user.name, user.name))
+                UserDataCache.saveUser(UserData(user.uid, user.name, user.image))
 
 
                 //img
@@ -317,24 +317,6 @@ class AccountFragment : AppFragment<HomeActivity>() {
             }
         }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == 200 && data != null) {
-            imageUri = data.data
-            var bmp: Bitmap? = null
-            try {
-                bmp = MediaStore.Images.Media.getBitmap(requireContext().contentResolver, imageUri)
-            } catch (e: IOException) {
-                e.printStackTrace()
-            }
-            val baos = ByteArrayOutputStream()
-
-            //here you can choose quality factor in third parameter(ex. i choosen 25)
-            bmp!!.compress(Bitmap.CompressFormat.JPEG, 25, baos)
-            val fileInBytes = baos.toByteArray()
-            uploadImageToFirebase(fileInBytes)
-        }
-    }
 
     private fun uploadImageToFirebase(fileInBytes: ByteArray): String {
         showDialog()

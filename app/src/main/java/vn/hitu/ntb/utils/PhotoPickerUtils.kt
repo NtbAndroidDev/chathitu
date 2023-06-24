@@ -86,6 +86,27 @@ object PhotoPickerUtils {
 
 
     }
+    fun showImagePickerChooseStory(
+        activity: Activity, intent: ActivityResultLauncher<Intent>
+    ) {
+        PictureSelector.create(activity).openGallery(PictureMimeType.ofAll())
+            .imageEngine(GlideEngine.createGlideEngine()).setLanguage(7)
+            .setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED)
+            .setRecyclerAnimationMode(AnimationType.DEFAULT_ANIMATION)
+            .imageSpanCount(4)// Số lượng hình ảnh của mỗi dòng
+            .minSelectNum(0)
+            .isReturnEmpty(false) // Có thể quay lại khi nhấp vào nút khi không có dữ liệu nào được chọn không
+            .isOriginalImageControl(true) // Sử dụng ảnh gốc
+            .selectionMode(PictureConfig.SINGLE).isPreviewImage(false) // Cho review hình ảnh
+            .isCamera(true) // Bật camera
+            .isZoomAnim(true) // Nhấp vào danh sách hình ảnh Hiệu ứng thu phóng Mặc định true
+            .isGif(false) // Không sử dụng ảnh gif
+            .isOpenClickSound(true) // Sử dụng âm thanh
+            .isEnableCrop(true).forResult(intent)
+
+
+
+    }
 
     //Choose Image Video NewsFeed
     fun showImagePickerChooseNewsFeed(

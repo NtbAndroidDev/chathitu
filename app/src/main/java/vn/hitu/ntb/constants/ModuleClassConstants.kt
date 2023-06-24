@@ -89,12 +89,7 @@ class ModuleClassConstants {
         //MODULE danh bạ
         const val CONTACT = "vn.hitu.ntb.contact.ui.fragment.ContactFragment"
 
-        const val CHAT_MANAGER = "vn.hitu.ntb.ui.activity.HomeActivity"
 
-        //MODULE CHỈNH SỬA THÔNG TIN CÁ NHÂN
-        const val EDIT_PROFILE = "vn.hitu.ntb.edit_profile.ui.activity.EditProfileActivity"
-        const val DETAIL_PROFILE =
-            "vn.hitu.ntb.info_customer.ui.activity.DetailCustomerActivity"
         const val INFO_CUSTOMER = "vn.hitu.ntb.info_customer.ui.activity.InfoCustomerActivity"
         const val ALL_MY_FRIEND = "vn.hitu.ntb.ui.activity.AllMyFriendActivity"
         const val ALL_SUGGEST_FRIEND =
@@ -110,38 +105,11 @@ class ModuleClassConstants {
         const val MEDIA_SLIDER_ACTIVITY =
             "vn.hitu.ntb.media_slider.ui.activity.MediaSliderActivity"
 
-        // Draft bản nháp
-        const val DRAFT =
-            "vn.hitu.ntb.news_feed.ui.activity.DraftActivity"
-
-        const val CREATE_POST_NEWS_FEED =
-            "vn.hitu.ntb.news_feed.ui.activity.CreatePostNewsFeedActivity"
-
-        //        Chat
-        const val SETTING_BROWSE_MEMBER =
-            "vn.hitu.ntb.chat.ui.activity.SettingBrowseMemberActivity"
-
-        const val SETTING_CHAT =
-            "vn.hitu.ntb.chat.ui.activity.SettingChatActivity"
-
-        const val DETAIL_CHAT =
-            "vn.hitu.ntb.chat.ui.activity.DetailChatActivity"
-        const val TRANSFER_FER_RIGHT =
-            "vn.hitu.ntb.chat.ui.activity.TransferRightsActivity"
-
-        const val ADD_MEMBER_GROUP =
-            "vn.hitu.ntb.chat.ui.activity.AddMemberGroupActivity"
-
-        const val LIST_MEMBER_GROUP =
-            "vn.hitu.ntb.chat.ui.activity.ListMemberActivity"
-
-        const val SETTING_USER =
-            "vn.hitu.ntb.chat.ui.activity.SettingUserActivity"
-
-        const val ADD_DEPUTY =
-            "vn.hitu.ntb.chat.ui.activity.AddDeputyActivity"
 
 
-        const val ADD_GROUP = "vn.hitu.ntb.chat.ui.activity.AddGroupActivity"
+
+
+        const val STORY_FRAGMENT = "hitu.ntb.story.ui.fragment.StoryFragment"
+
     }
 }
